@@ -1,0 +1,1839 @@
+
+@layer {
+    :root {
+        --red-color: hsl(350 100% 50%);
+        --yellow-color: hsl(50 100% 50%);
+        --green-color: hsl(145 100% 40%);
+        --blue-color: hsl(215 100% 50%);
+        --purple-color: hsl(290 100% 50%);
+    }
+
+    /* @compile:state */
+    :root:not([data-color]),
+    [data-color="default"],
+    [data-color-scheme] {
+        --base-color: oklch(var(--darkness) 0 0);
+    }
+
+    [data-color="red"] {
+        --base-color: var(--red-color);
+    }
+
+    [data-color="yellow"] {
+        --base-color: var(--yellow-color);
+    }
+
+    [data-color="green"] {
+        --base-color: var(--green-color);
+    }
+
+    [data-color="blue"] {
+        --base-color: var(--blue-color);
+    }
+
+    [data-color="purple"] {
+        --base-color: var(--purple-color);
+    }
+
+    /* @compile:end */
+
+    /* @compile:state */
+    :root:not([data-layer]),
+    [data-layer="0"] {
+        --layer-rate: 0;
+    }
+
+    [data-layer="1"] {
+        --layer-rate: 1;
+    }
+
+    [data-layer="2"] {
+        --layer-rate: 2;
+    }
+
+    /* @compile:end */
+
+
+
+
+
+    /* @compile:state */
+    :root:not([data-color-scheme]),
+    [data-color-scheme="light"] {
+        --darkness: 0;
+        --border-width: 2px;
+        --card-shadow:
+            0 .75rlh 1.5rlh -.5rlh oklch(from currentcolor .25 c h / .15)
+            /* , inset 0 0 0 1px oklch(from currentcolor 1 calc(c * .5) h / 1) */
+        ;
+        --font-weight-text: 400;
+        --font-weight-title: 900;
+        color-scheme: light;
+    }
+
+
+    [data-color-scheme="dark"] {
+        --darkness: 1;
+        --border-width: 1px;
+        --card-shadow: 0 0 0 1px hsl(from currentcolor h s l / .15);
+        --font-weight-text: 200;
+        --font-weight-title: 700;
+        color-scheme: dark;
+    }
+
+    /* @compile:end */
+
+
+
+    :root,
+[data-color-scheme="light"],
+[data-layer="0"],
+[data-layer="0"][data-color-scheme="light"],
+[data-layer="0"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-layer="0"],
+[data-color-scheme="light"] [data-layer="0"],
+[data-color="default"],
+[data-color="default"][data-color-scheme="light"],
+[data-color="default"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="default"],
+[data-color-scheme="light"] [data-color="default"],
+[data-color="default"][data-layer="0"],
+[data-color="default"] [data-layer="0"],
+[data-layer="0"][data-color="default"],
+[data-layer="0"] [data-color="default"],
+[data-color="default"][data-layer="0"][data-color-scheme="light"],
+[data-color="default"] [data-layer="0"][data-color-scheme="light"],
+[data-color="default"][data-layer="0"] [data-color-scheme="light"],
+[data-color="default"] [data-layer="0"] [data-color-scheme="light"],
+[data-color="default"][data-color-scheme="light"][data-layer="0"],
+[data-color="default"] [data-color-scheme="light"][data-layer="0"],
+[data-color="default"][data-color-scheme="light"] [data-layer="0"],
+[data-color="default"] [data-color-scheme="light"] [data-layer="0"],
+[data-layer="0"][data-color="default"][data-color-scheme="light"],
+[data-layer="0"] [data-color="default"][data-color-scheme="light"],
+[data-layer="0"][data-color="default"] [data-color-scheme="light"],
+[data-layer="0"] [data-color="default"] [data-color-scheme="light"],
+[data-layer="0"][data-color-scheme="light"][data-color="default"],
+[data-layer="0"] [data-color-scheme="light"][data-color="default"],
+[data-layer="0"][data-color-scheme="light"] [data-color="default"],
+[data-layer="0"] [data-color-scheme="light"] [data-color="default"],
+[data-color-scheme="light"][data-layer="0"][data-color="default"],
+[data-color-scheme="light"] [data-layer="0"][data-color="default"],
+[data-color-scheme="light"][data-layer="0"] [data-color="default"],
+[data-color-scheme="light"] [data-layer="0"] [data-color="default"],
+[data-color-scheme="light"][data-color="default"][data-layer="0"],
+[data-color-scheme="light"] [data-color="default"][data-layer="0"],
+[data-color-scheme="light"][data-color="default"] [data-layer="0"],
+[data-color-scheme="light"] [data-color="default"] [data-layer="0"],
+:root,
+[data-color-scheme="light"],
+[data-layer="0"],
+[data-layer="0"][data-color-scheme="light"],
+[data-layer="0"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-layer="0"],
+[data-color-scheme="light"] [data-layer="0"] {
+    --surface-color: #dedede;
+    --text-color: #0b0b0b;
+    --title-color: #000000;
+    --accent-color: #000000;
+    --button-label-color: #000000;
+}
+
+[data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"],
+[data-layer="0"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-layer="0"],
+[data-color-scheme="dark"] [data-layer="0"],
+[data-color="default"][data-color-scheme="dark"],
+[data-color="default"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="default"],
+[data-color-scheme="dark"] [data-color="default"],
+[data-color="default"][data-layer="0"][data-color-scheme="dark"],
+[data-color="default"] [data-layer="0"][data-color-scheme="dark"],
+[data-color="default"][data-layer="0"] [data-color-scheme="dark"],
+[data-color="default"] [data-layer="0"] [data-color-scheme="dark"],
+[data-color="default"][data-color-scheme="dark"][data-layer="0"],
+[data-color="default"] [data-color-scheme="dark"][data-layer="0"],
+[data-color="default"][data-color-scheme="dark"] [data-layer="0"],
+[data-color="default"] [data-color-scheme="dark"] [data-layer="0"],
+[data-layer="0"][data-color="default"][data-color-scheme="dark"],
+[data-layer="0"] [data-color="default"][data-color-scheme="dark"],
+[data-layer="0"][data-color="default"] [data-color-scheme="dark"],
+[data-layer="0"] [data-color="default"] [data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"][data-color="default"],
+[data-layer="0"] [data-color-scheme="dark"][data-color="default"],
+[data-layer="0"][data-color-scheme="dark"] [data-color="default"],
+[data-layer="0"] [data-color-scheme="dark"] [data-color="default"],
+[data-color-scheme="dark"][data-layer="0"][data-color="default"],
+[data-color-scheme="dark"] [data-layer="0"][data-color="default"],
+[data-color-scheme="dark"][data-layer="0"] [data-color="default"],
+[data-color-scheme="dark"] [data-layer="0"] [data-color="default"],
+[data-color-scheme="dark"][data-color="default"][data-layer="0"],
+[data-color-scheme="dark"] [data-color="default"][data-layer="0"],
+[data-color-scheme="dark"][data-color="default"] [data-layer="0"],
+[data-color-scheme="dark"] [data-color="default"] [data-layer="0"],
+[data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"],
+[data-layer="0"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-layer="0"],
+[data-color-scheme="dark"] [data-layer="0"] {
+    --surface-color: #0b0b0b;
+    --text-color: #9e9e9e;
+    --title-color: #ffffff;
+    --accent-color: #ffffff;
+    --button-label-color: #ffffff;
+}
+
+[data-layer="1"],
+[data-layer="1"][data-color-scheme="light"],
+[data-layer="1"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-layer="1"],
+[data-color-scheme="light"] [data-layer="1"],
+[data-color="default"][data-layer="1"],
+[data-color="default"] [data-layer="1"],
+[data-layer="1"][data-color="default"],
+[data-layer="1"] [data-color="default"],
+[data-color="default"][data-layer="1"][data-color-scheme="light"],
+[data-color="default"] [data-layer="1"][data-color-scheme="light"],
+[data-color="default"][data-layer="1"] [data-color-scheme="light"],
+[data-color="default"] [data-layer="1"] [data-color-scheme="light"],
+[data-color="default"][data-color-scheme="light"][data-layer="1"],
+[data-color="default"] [data-color-scheme="light"][data-layer="1"],
+[data-color="default"][data-color-scheme="light"] [data-layer="1"],
+[data-color="default"] [data-color-scheme="light"] [data-layer="1"],
+[data-layer="1"][data-color="default"][data-color-scheme="light"],
+[data-layer="1"] [data-color="default"][data-color-scheme="light"],
+[data-layer="1"][data-color="default"] [data-color-scheme="light"],
+[data-layer="1"] [data-color="default"] [data-color-scheme="light"],
+[data-layer="1"][data-color-scheme="light"][data-color="default"],
+[data-layer="1"] [data-color-scheme="light"][data-color="default"],
+[data-layer="1"][data-color-scheme="light"] [data-color="default"],
+[data-layer="1"] [data-color-scheme="light"] [data-color="default"],
+[data-color-scheme="light"][data-layer="1"][data-color="default"],
+[data-color-scheme="light"] [data-layer="1"][data-color="default"],
+[data-color-scheme="light"][data-layer="1"] [data-color="default"],
+[data-color-scheme="light"] [data-layer="1"] [data-color="default"],
+[data-color-scheme="light"][data-color="default"][data-layer="1"],
+[data-color-scheme="light"] [data-color="default"][data-layer="1"],
+[data-color-scheme="light"][data-color="default"] [data-layer="1"],
+[data-color-scheme="light"] [data-color="default"] [data-layer="1"],
+[data-layer="1"],
+[data-layer="1"][data-color-scheme="light"],
+[data-layer="1"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-layer="1"],
+[data-color-scheme="light"] [data-layer="1"] {
+    --surface-color: #eeeeee;
+    --text-color: #101010;
+    --title-color: #000000;
+    --accent-color: #000000;
+    --button-label-color: #000000;
+}
+
+[data-layer="1"][data-color-scheme="dark"],
+[data-layer="1"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-layer="1"],
+[data-color-scheme="dark"] [data-layer="1"],
+[data-color="default"][data-layer="1"][data-color-scheme="dark"],
+[data-color="default"] [data-layer="1"][data-color-scheme="dark"],
+[data-color="default"][data-layer="1"] [data-color-scheme="dark"],
+[data-color="default"] [data-layer="1"] [data-color-scheme="dark"],
+[data-color="default"][data-color-scheme="dark"][data-layer="1"],
+[data-color="default"] [data-color-scheme="dark"][data-layer="1"],
+[data-color="default"][data-color-scheme="dark"] [data-layer="1"],
+[data-color="default"] [data-color-scheme="dark"] [data-layer="1"],
+[data-layer="1"][data-color="default"][data-color-scheme="dark"],
+[data-layer="1"] [data-color="default"][data-color-scheme="dark"],
+[data-layer="1"][data-color="default"] [data-color-scheme="dark"],
+[data-layer="1"] [data-color="default"] [data-color-scheme="dark"],
+[data-layer="1"][data-color-scheme="dark"][data-color="default"],
+[data-layer="1"] [data-color-scheme="dark"][data-color="default"],
+[data-layer="1"][data-color-scheme="dark"] [data-color="default"],
+[data-layer="1"] [data-color-scheme="dark"] [data-color="default"],
+[data-color-scheme="dark"][data-layer="1"][data-color="default"],
+[data-color-scheme="dark"] [data-layer="1"][data-color="default"],
+[data-color-scheme="dark"][data-layer="1"] [data-color="default"],
+[data-color-scheme="dark"] [data-layer="1"] [data-color="default"],
+[data-color-scheme="dark"][data-color="default"][data-layer="1"],
+[data-color-scheme="dark"] [data-color="default"][data-layer="1"],
+[data-color-scheme="dark"][data-color="default"] [data-layer="1"],
+[data-color-scheme="dark"] [data-color="default"] [data-layer="1"],
+[data-layer="1"][data-color-scheme="dark"],
+[data-layer="1"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-layer="1"],
+[data-color-scheme="dark"] [data-layer="1"] {
+    --surface-color: #171717;
+    --text-color: #ababab;
+    --title-color: #ffffff;
+    --accent-color: #ffffff;
+    --button-label-color: #ffffff;
+}
+
+[data-layer="2"],
+[data-layer="2"][data-color-scheme="light"],
+[data-layer="2"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-layer="2"],
+[data-color-scheme="light"] [data-layer="2"],
+[data-color="default"][data-layer="2"],
+[data-color="default"] [data-layer="2"],
+[data-layer="2"][data-color="default"],
+[data-layer="2"] [data-color="default"],
+[data-color="default"][data-layer="2"][data-color-scheme="light"],
+[data-color="default"] [data-layer="2"][data-color-scheme="light"],
+[data-color="default"][data-layer="2"] [data-color-scheme="light"],
+[data-color="default"] [data-layer="2"] [data-color-scheme="light"],
+[data-color="default"][data-color-scheme="light"][data-layer="2"],
+[data-color="default"] [data-color-scheme="light"][data-layer="2"],
+[data-color="default"][data-color-scheme="light"] [data-layer="2"],
+[data-color="default"] [data-color-scheme="light"] [data-layer="2"],
+[data-layer="2"][data-color="default"][data-color-scheme="light"],
+[data-layer="2"] [data-color="default"][data-color-scheme="light"],
+[data-layer="2"][data-color="default"] [data-color-scheme="light"],
+[data-layer="2"] [data-color="default"] [data-color-scheme="light"],
+[data-layer="2"][data-color-scheme="light"][data-color="default"],
+[data-layer="2"] [data-color-scheme="light"][data-color="default"],
+[data-layer="2"][data-color-scheme="light"] [data-color="default"],
+[data-layer="2"] [data-color-scheme="light"] [data-color="default"],
+[data-color-scheme="light"][data-layer="2"][data-color="default"],
+[data-color-scheme="light"] [data-layer="2"][data-color="default"],
+[data-color-scheme="light"][data-layer="2"] [data-color="default"],
+[data-color-scheme="light"] [data-layer="2"] [data-color="default"],
+[data-color-scheme="light"][data-color="default"][data-layer="2"],
+[data-color-scheme="light"] [data-color="default"][data-layer="2"],
+[data-color-scheme="light"][data-color="default"] [data-layer="2"],
+[data-color-scheme="light"] [data-color="default"] [data-layer="2"],
+[data-layer="2"],
+[data-layer="2"][data-color-scheme="light"],
+[data-layer="2"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-layer="2"],
+[data-color-scheme="light"] [data-layer="2"] {
+    --surface-color: #ffffff;
+    --text-color: #161616;
+    --title-color: #000000;
+    --accent-color: #030303;
+    --button-label-color: #020202;
+}
+
+[data-layer="2"][data-color-scheme="dark"],
+[data-layer="2"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-layer="2"],
+[data-color-scheme="dark"] [data-layer="2"],
+[data-color="default"][data-layer="2"][data-color-scheme="dark"],
+[data-color="default"] [data-layer="2"][data-color-scheme="dark"],
+[data-color="default"][data-layer="2"] [data-color-scheme="dark"],
+[data-color="default"] [data-layer="2"] [data-color-scheme="dark"],
+[data-color="default"][data-color-scheme="dark"][data-layer="2"],
+[data-color="default"] [data-color-scheme="dark"][data-layer="2"],
+[data-color="default"][data-color-scheme="dark"] [data-layer="2"],
+[data-color="default"] [data-color-scheme="dark"] [data-layer="2"],
+[data-layer="2"][data-color="default"][data-color-scheme="dark"],
+[data-layer="2"] [data-color="default"][data-color-scheme="dark"],
+[data-layer="2"][data-color="default"] [data-color-scheme="dark"],
+[data-layer="2"] [data-color="default"] [data-color-scheme="dark"],
+[data-layer="2"][data-color-scheme="dark"][data-color="default"],
+[data-layer="2"] [data-color-scheme="dark"][data-color="default"],
+[data-layer="2"][data-color-scheme="dark"] [data-color="default"],
+[data-layer="2"] [data-color-scheme="dark"] [data-color="default"],
+[data-color-scheme="dark"][data-layer="2"][data-color="default"],
+[data-color-scheme="dark"] [data-layer="2"][data-color="default"],
+[data-color-scheme="dark"][data-layer="2"] [data-color="default"],
+[data-color-scheme="dark"] [data-layer="2"] [data-color="default"],
+[data-color-scheme="dark"][data-color="default"][data-layer="2"],
+[data-color-scheme="dark"] [data-color="default"][data-layer="2"],
+[data-color-scheme="dark"][data-color="default"] [data-layer="2"],
+[data-color-scheme="dark"] [data-color="default"] [data-layer="2"],
+[data-layer="2"][data-color-scheme="dark"],
+[data-layer="2"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-layer="2"],
+[data-color-scheme="dark"] [data-layer="2"] {
+    --surface-color: #242424;
+    --text-color: #b7b7b7;
+    --title-color: #ffffff;
+    --accent-color: #ffffff;
+    --button-label-color: #ffffff;
+}
+
+[data-color="red"],
+[data-color="red"][data-color-scheme="light"],
+[data-color="red"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="red"],
+[data-color-scheme="light"] [data-color="red"],
+[data-color="red"][data-layer="0"],
+[data-color="red"] [data-layer="0"],
+[data-layer="0"][data-color="red"],
+[data-layer="0"] [data-color="red"],
+[data-color="red"][data-layer="0"][data-color-scheme="light"],
+[data-color="red"] [data-layer="0"][data-color-scheme="light"],
+[data-color="red"][data-layer="0"] [data-color-scheme="light"],
+[data-color="red"] [data-layer="0"] [data-color-scheme="light"],
+[data-color="red"][data-color-scheme="light"][data-layer="0"],
+[data-color="red"] [data-color-scheme="light"][data-layer="0"],
+[data-color="red"][data-color-scheme="light"] [data-layer="0"],
+[data-color="red"] [data-color-scheme="light"] [data-layer="0"],
+[data-layer="0"][data-color="red"][data-color-scheme="light"],
+[data-layer="0"] [data-color="red"][data-color-scheme="light"],
+[data-layer="0"][data-color="red"] [data-color-scheme="light"],
+[data-layer="0"] [data-color="red"] [data-color-scheme="light"],
+[data-layer="0"][data-color-scheme="light"][data-color="red"],
+[data-layer="0"] [data-color-scheme="light"][data-color="red"],
+[data-layer="0"][data-color-scheme="light"] [data-color="red"],
+[data-layer="0"] [data-color-scheme="light"] [data-color="red"],
+[data-color-scheme="light"][data-layer="0"][data-color="red"],
+[data-color-scheme="light"] [data-layer="0"][data-color="red"],
+[data-color-scheme="light"][data-layer="0"] [data-color="red"],
+[data-color-scheme="light"] [data-layer="0"] [data-color="red"],
+[data-color-scheme="light"][data-color="red"][data-layer="0"],
+[data-color-scheme="light"] [data-color="red"][data-layer="0"],
+[data-color-scheme="light"][data-color="red"] [data-layer="0"],
+[data-color-scheme="light"] [data-color="red"] [data-layer="0"] {
+    --surface-color: #ebd9d8;
+    --text-color: #ab0000;
+    --title-color: #ab0000;
+    --accent-color: #e10004;
+    --button-label-color: #b80000;
+}
+
+[data-color="red"][data-color-scheme="dark"],
+[data-color="red"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="red"],
+[data-color-scheme="dark"] [data-color="red"],
+[data-color="red"][data-layer="0"][data-color-scheme="dark"],
+[data-color="red"] [data-layer="0"][data-color-scheme="dark"],
+[data-color="red"][data-layer="0"] [data-color-scheme="dark"],
+[data-color="red"] [data-layer="0"] [data-color-scheme="dark"],
+[data-color="red"][data-color-scheme="dark"][data-layer="0"],
+[data-color="red"] [data-color-scheme="dark"][data-layer="0"],
+[data-color="red"][data-color-scheme="dark"] [data-layer="0"],
+[data-color="red"] [data-color-scheme="dark"] [data-layer="0"],
+[data-layer="0"][data-color="red"][data-color-scheme="dark"],
+[data-layer="0"] [data-color="red"][data-color-scheme="dark"],
+[data-layer="0"][data-color="red"] [data-color-scheme="dark"],
+[data-layer="0"] [data-color="red"] [data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"][data-color="red"],
+[data-layer="0"] [data-color-scheme="dark"][data-color="red"],
+[data-layer="0"][data-color-scheme="dark"] [data-color="red"],
+[data-layer="0"] [data-color-scheme="dark"] [data-color="red"],
+[data-color-scheme="dark"][data-layer="0"][data-color="red"],
+[data-color-scheme="dark"] [data-layer="0"][data-color="red"],
+[data-color-scheme="dark"][data-layer="0"] [data-color="red"],
+[data-color-scheme="dark"] [data-layer="0"] [data-color="red"],
+[data-color-scheme="dark"][data-color="red"][data-layer="0"],
+[data-color-scheme="dark"] [data-color="red"][data-layer="0"],
+[data-color-scheme="dark"][data-color="red"] [data-layer="0"],
+[data-color-scheme="dark"] [data-color="red"] [data-layer="0"] {
+    --surface-color: #150706;
+    --text-color: #e37d75;
+    --title-color: #ffc2b7;
+    --accent-color: #ff0033;
+    --button-label-color: #ff0033;
+}
+
+[data-color="red"][data-layer="1"],
+[data-color="red"] [data-layer="1"],
+[data-layer="1"][data-color="red"],
+[data-layer="1"] [data-color="red"],
+[data-color="red"][data-layer="1"][data-color-scheme="light"],
+[data-color="red"] [data-layer="1"][data-color-scheme="light"],
+[data-color="red"][data-layer="1"] [data-color-scheme="light"],
+[data-color="red"] [data-layer="1"] [data-color-scheme="light"],
+[data-color="red"][data-color-scheme="light"][data-layer="1"],
+[data-color="red"] [data-color-scheme="light"][data-layer="1"],
+[data-color="red"][data-color-scheme="light"] [data-layer="1"],
+[data-color="red"] [data-color-scheme="light"] [data-layer="1"],
+[data-layer="1"][data-color="red"][data-color-scheme="light"],
+[data-layer="1"] [data-color="red"][data-color-scheme="light"],
+[data-layer="1"][data-color="red"] [data-color-scheme="light"],
+[data-layer="1"] [data-color="red"] [data-color-scheme="light"],
+[data-layer="1"][data-color-scheme="light"][data-color="red"],
+[data-layer="1"] [data-color-scheme="light"][data-color="red"],
+[data-layer="1"][data-color-scheme="light"] [data-color="red"],
+[data-layer="1"] [data-color-scheme="light"] [data-color="red"],
+[data-color-scheme="light"][data-layer="1"][data-color="red"],
+[data-color-scheme="light"] [data-layer="1"][data-color="red"],
+[data-color-scheme="light"][data-layer="1"] [data-color="red"],
+[data-color-scheme="light"] [data-layer="1"] [data-color="red"],
+[data-color-scheme="light"][data-color="red"][data-layer="1"],
+[data-color-scheme="light"] [data-color="red"][data-layer="1"],
+[data-color-scheme="light"][data-color="red"] [data-layer="1"],
+[data-color-scheme="light"] [data-color="red"] [data-layer="1"] {
+    --surface-color: #fbeae8;
+    --text-color: #b40000;
+    --title-color: #b40000;
+    --accent-color: #f4001f;
+    --button-label-color: #c60000;
+}
+
+[data-color="red"][data-layer="1"][data-color-scheme="dark"],
+[data-color="red"] [data-layer="1"][data-color-scheme="dark"],
+[data-color="red"][data-layer="1"] [data-color-scheme="dark"],
+[data-color="red"] [data-layer="1"] [data-color-scheme="dark"],
+[data-color="red"][data-color-scheme="dark"][data-layer="1"],
+[data-color="red"] [data-color-scheme="dark"][data-layer="1"],
+[data-color="red"][data-color-scheme="dark"] [data-layer="1"],
+[data-color="red"] [data-color-scheme="dark"] [data-layer="1"],
+[data-layer="1"][data-color="red"][data-color-scheme="dark"],
+[data-layer="1"] [data-color="red"][data-color-scheme="dark"],
+[data-layer="1"][data-color="red"] [data-color-scheme="dark"],
+[data-layer="1"] [data-color="red"] [data-color-scheme="dark"],
+[data-layer="1"][data-color-scheme="dark"][data-color="red"],
+[data-layer="1"] [data-color-scheme="dark"][data-color="red"],
+[data-layer="1"][data-color-scheme="dark"] [data-color="red"],
+[data-layer="1"] [data-color-scheme="dark"] [data-color="red"],
+[data-color-scheme="dark"][data-layer="1"][data-color="red"],
+[data-color-scheme="dark"] [data-layer="1"][data-color="red"],
+[data-color-scheme="dark"][data-layer="1"] [data-color="red"],
+[data-color-scheme="dark"] [data-layer="1"] [data-color="red"],
+[data-color-scheme="dark"][data-color="red"][data-layer="1"],
+[data-color-scheme="dark"] [data-color="red"][data-layer="1"],
+[data-color-scheme="dark"][data-color="red"] [data-layer="1"],
+[data-color-scheme="dark"] [data-color="red"] [data-layer="1"] {
+    --surface-color: #221311;
+    --text-color: #f18981;
+    --title-color: #ffc8bd;
+    --accent-color: #ff003e;
+    --button-label-color: #ff003e;
+}
+
+[data-color="red"][data-layer="2"],
+[data-color="red"] [data-layer="2"],
+[data-layer="2"][data-color="red"],
+[data-layer="2"] [data-color="red"],
+[data-color="red"][data-layer="2"][data-color-scheme="light"],
+[data-color="red"] [data-layer="2"][data-color-scheme="light"],
+[data-color="red"][data-layer="2"] [data-color-scheme="light"],
+[data-color="red"] [data-layer="2"] [data-color-scheme="light"],
+[data-color="red"][data-color-scheme="light"][data-layer="2"],
+[data-color="red"] [data-color-scheme="light"][data-layer="2"],
+[data-color="red"][data-color-scheme="light"] [data-layer="2"],
+[data-color="red"] [data-color-scheme="light"] [data-layer="2"],
+[data-layer="2"][data-color="red"][data-color-scheme="light"],
+[data-layer="2"] [data-color="red"][data-color-scheme="light"],
+[data-layer="2"][data-color="red"] [data-color-scheme="light"],
+[data-layer="2"] [data-color="red"] [data-color-scheme="light"],
+[data-layer="2"][data-color-scheme="light"][data-color="red"],
+[data-layer="2"] [data-color-scheme="light"][data-color="red"],
+[data-layer="2"][data-color-scheme="light"] [data-color="red"],
+[data-layer="2"] [data-color-scheme="light"] [data-color="red"],
+[data-color-scheme="light"][data-layer="2"][data-color="red"],
+[data-color-scheme="light"] [data-layer="2"][data-color="red"],
+[data-color-scheme="light"][data-layer="2"] [data-color="red"],
+[data-color-scheme="light"] [data-layer="2"] [data-color="red"],
+[data-color-scheme="light"][data-color="red"][data-layer="2"],
+[data-color-scheme="light"] [data-color="red"][data-layer="2"],
+[data-color-scheme="light"][data-color="red"] [data-layer="2"],
+[data-color-scheme="light"] [data-color="red"] [data-layer="2"] {
+    --surface-color: #fffbf9;
+    --text-color: #bd0000;
+    --title-color: #bd0000;
+    --accent-color: #ff1932;
+    --button-label-color: #d50000;
+}
+
+[data-color="red"][data-layer="2"][data-color-scheme="dark"],
+[data-color="red"] [data-layer="2"][data-color-scheme="dark"],
+[data-color="red"][data-layer="2"] [data-color-scheme="dark"],
+[data-color="red"] [data-layer="2"] [data-color-scheme="dark"],
+[data-color="red"][data-color-scheme="dark"][data-layer="2"],
+[data-color="red"] [data-color-scheme="dark"][data-layer="2"],
+[data-color="red"][data-color-scheme="dark"] [data-layer="2"],
+[data-color="red"] [data-color-scheme="dark"] [data-layer="2"],
+[data-layer="2"][data-color="red"][data-color-scheme="dark"],
+[data-layer="2"] [data-color="red"][data-color-scheme="dark"],
+[data-layer="2"][data-color="red"] [data-color-scheme="dark"],
+[data-layer="2"] [data-color="red"] [data-color-scheme="dark"],
+[data-layer="2"][data-color-scheme="dark"][data-color="red"],
+[data-layer="2"] [data-color-scheme="dark"][data-color="red"],
+[data-layer="2"][data-color-scheme="dark"] [data-color="red"],
+[data-layer="2"] [data-color-scheme="dark"] [data-color="red"],
+[data-color-scheme="dark"][data-layer="2"][data-color="red"],
+[data-color-scheme="dark"] [data-layer="2"][data-color="red"],
+[data-color-scheme="dark"][data-layer="2"] [data-color="red"],
+[data-color-scheme="dark"] [data-layer="2"] [data-color="red"],
+[data-color-scheme="dark"][data-color="red"][data-layer="2"],
+[data-color-scheme="dark"] [data-color="red"][data-layer="2"],
+[data-color-scheme="dark"][data-color="red"] [data-layer="2"],
+[data-color-scheme="dark"] [data-color="red"] [data-layer="2"] {
+    --surface-color: #2f1f1e;
+    --text-color: #ff968d;
+    --title-color: #ffcdc2;
+    --accent-color: #ff0047;
+    --button-label-color: #ff0047;
+}
+
+[data-color="yellow"],
+[data-color="yellow"][data-color-scheme="light"],
+[data-color="yellow"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="yellow"],
+[data-color-scheme="light"] [data-color="yellow"],
+[data-color="yellow"][data-layer="0"],
+[data-color="yellow"] [data-layer="0"],
+[data-layer="0"][data-color="yellow"],
+[data-layer="0"] [data-color="yellow"],
+[data-color="yellow"][data-layer="0"][data-color-scheme="light"],
+[data-color="yellow"] [data-layer="0"][data-color-scheme="light"],
+[data-color="yellow"][data-layer="0"] [data-color-scheme="light"],
+[data-color="yellow"] [data-layer="0"] [data-color-scheme="light"],
+[data-color="yellow"][data-color-scheme="light"][data-layer="0"],
+[data-color="yellow"] [data-color-scheme="light"][data-layer="0"],
+[data-color="yellow"][data-color-scheme="light"] [data-layer="0"],
+[data-color="yellow"] [data-color-scheme="light"] [data-layer="0"],
+[data-layer="0"][data-color="yellow"][data-color-scheme="light"],
+[data-layer="0"] [data-color="yellow"][data-color-scheme="light"],
+[data-layer="0"][data-color="yellow"] [data-color-scheme="light"],
+[data-layer="0"] [data-color="yellow"] [data-color-scheme="light"],
+[data-layer="0"][data-color-scheme="light"][data-color="yellow"],
+[data-layer="0"] [data-color-scheme="light"][data-color="yellow"],
+[data-layer="0"][data-color-scheme="light"] [data-color="yellow"],
+[data-layer="0"] [data-color-scheme="light"] [data-color="yellow"],
+[data-color-scheme="light"][data-layer="0"][data-color="yellow"],
+[data-color-scheme="light"] [data-layer="0"][data-color="yellow"],
+[data-color-scheme="light"][data-layer="0"] [data-color="yellow"],
+[data-color-scheme="light"] [data-layer="0"] [data-color="yellow"],
+[data-color-scheme="light"][data-color="yellow"][data-layer="0"],
+[data-color-scheme="light"] [data-color="yellow"][data-layer="0"],
+[data-color-scheme="light"][data-color="yellow"] [data-layer="0"],
+[data-color-scheme="light"] [data-color="yellow"] [data-layer="0"] {
+    --surface-color: #e1ded4;
+    --text-color: #542b00;
+    --title-color: #542b00;
+    --accent-color: #946b00;
+    --button-label-color: #734b00;
+}
+
+[data-color="yellow"][data-color-scheme="dark"],
+[data-color="yellow"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="yellow"],
+[data-color-scheme="dark"] [data-color="yellow"],
+[data-color="yellow"][data-layer="0"][data-color-scheme="dark"],
+[data-color="yellow"] [data-layer="0"][data-color-scheme="dark"],
+[data-color="yellow"][data-layer="0"] [data-color-scheme="dark"],
+[data-color="yellow"] [data-layer="0"] [data-color-scheme="dark"],
+[data-color="yellow"][data-color-scheme="dark"][data-layer="0"],
+[data-color="yellow"] [data-color-scheme="dark"][data-layer="0"],
+[data-color="yellow"][data-color-scheme="dark"] [data-layer="0"],
+[data-color="yellow"] [data-color-scheme="dark"] [data-layer="0"],
+[data-layer="0"][data-color="yellow"][data-color-scheme="dark"],
+[data-layer="0"] [data-color="yellow"][data-color-scheme="dark"],
+[data-layer="0"][data-color="yellow"] [data-color-scheme="dark"],
+[data-layer="0"] [data-color="yellow"] [data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"][data-color="yellow"],
+[data-layer="0"] [data-color-scheme="dark"][data-color="yellow"],
+[data-layer="0"][data-color-scheme="dark"] [data-color="yellow"],
+[data-layer="0"] [data-color-scheme="dark"] [data-color="yellow"],
+[data-color-scheme="dark"][data-layer="0"][data-color="yellow"],
+[data-color-scheme="dark"] [data-layer="0"][data-color="yellow"],
+[data-color-scheme="dark"][data-layer="0"] [data-color="yellow"],
+[data-color-scheme="dark"] [data-layer="0"] [data-color="yellow"],
+[data-color-scheme="dark"][data-color="yellow"][data-layer="0"],
+[data-color-scheme="dark"] [data-color="yellow"][data-layer="0"],
+[data-color-scheme="dark"][data-color="yellow"] [data-layer="0"],
+[data-color-scheme="dark"] [data-color="yellow"] [data-layer="0"] {
+    --surface-color: #0e0b04;
+    --text-color: #b19e5a;
+    --title-color: #fffe84;
+    --accent-color: #ffef00;
+    --button-label-color: #ffef00;
+}
+
+[data-color="yellow"][data-layer="1"],
+[data-color="yellow"] [data-layer="1"],
+[data-layer="1"][data-color="yellow"],
+[data-layer="1"] [data-color="yellow"],
+[data-color="yellow"][data-layer="1"][data-color-scheme="light"],
+[data-color="yellow"] [data-layer="1"][data-color-scheme="light"],
+[data-color="yellow"][data-layer="1"] [data-color-scheme="light"],
+[data-color="yellow"] [data-layer="1"] [data-color-scheme="light"],
+[data-color="yellow"][data-color-scheme="light"][data-layer="1"],
+[data-color="yellow"] [data-color-scheme="light"][data-layer="1"],
+[data-color="yellow"][data-color-scheme="light"] [data-layer="1"],
+[data-color="yellow"] [data-color-scheme="light"] [data-layer="1"],
+[data-layer="1"][data-color="yellow"][data-color-scheme="light"],
+[data-layer="1"] [data-color="yellow"][data-color-scheme="light"],
+[data-layer="1"][data-color="yellow"] [data-color-scheme="light"],
+[data-layer="1"] [data-color="yellow"] [data-color-scheme="light"],
+[data-layer="1"][data-color-scheme="light"][data-color="yellow"],
+[data-layer="1"] [data-color-scheme="light"][data-color="yellow"],
+[data-layer="1"][data-color-scheme="light"] [data-color="yellow"],
+[data-layer="1"] [data-color-scheme="light"] [data-color="yellow"],
+[data-color-scheme="light"][data-layer="1"][data-color="yellow"],
+[data-color-scheme="light"] [data-layer="1"][data-color="yellow"],
+[data-color-scheme="light"][data-layer="1"] [data-color="yellow"],
+[data-color-scheme="light"] [data-layer="1"] [data-color="yellow"],
+[data-color-scheme="light"][data-color="yellow"][data-layer="1"],
+[data-color-scheme="light"] [data-color="yellow"][data-layer="1"],
+[data-color-scheme="light"][data-color="yellow"] [data-layer="1"],
+[data-color-scheme="light"] [data-color="yellow"] [data-layer="1"] {
+    --surface-color: #f1efe5;
+    --text-color: #5b3200;
+    --title-color: #5b3200;
+    --accent-color: #a47a00;
+    --button-label-color: #7f5600;
+}
+
+[data-color="yellow"][data-layer="1"][data-color-scheme="dark"],
+[data-color="yellow"] [data-layer="1"][data-color-scheme="dark"],
+[data-color="yellow"][data-layer="1"] [data-color-scheme="dark"],
+[data-color="yellow"] [data-layer="1"] [data-color-scheme="dark"],
+[data-color="yellow"][data-color-scheme="dark"][data-layer="1"],
+[data-color="yellow"] [data-color-scheme="dark"][data-layer="1"],
+[data-color="yellow"][data-color-scheme="dark"] [data-layer="1"],
+[data-color="yellow"] [data-color-scheme="dark"] [data-layer="1"],
+[data-layer="1"][data-color="yellow"][data-color-scheme="dark"],
+[data-layer="1"] [data-color="yellow"][data-color-scheme="dark"],
+[data-layer="1"][data-color="yellow"] [data-color-scheme="dark"],
+[data-layer="1"] [data-color="yellow"] [data-color-scheme="dark"],
+[data-layer="1"][data-color-scheme="dark"][data-color="yellow"],
+[data-layer="1"] [data-color-scheme="dark"][data-color="yellow"],
+[data-layer="1"][data-color-scheme="dark"] [data-color="yellow"],
+[data-layer="1"] [data-color-scheme="dark"] [data-color="yellow"],
+[data-color-scheme="dark"][data-layer="1"][data-color="yellow"],
+[data-color-scheme="dark"] [data-layer="1"][data-color="yellow"],
+[data-color-scheme="dark"][data-layer="1"] [data-color="yellow"],
+[data-color-scheme="dark"] [data-layer="1"] [data-color="yellow"],
+[data-color-scheme="dark"][data-color="yellow"][data-layer="1"],
+[data-color-scheme="dark"] [data-color="yellow"][data-layer="1"],
+[data-color-scheme="dark"][data-color="yellow"] [data-layer="1"],
+[data-color-scheme="dark"] [data-color="yellow"] [data-layer="1"] {
+    --surface-color: #1a170e;
+    --text-color: #bdaa66;
+    --title-color: #fffe94;
+    --accent-color: #fff000;
+    --button-label-color: #fff000;
+}
+
+[data-color="yellow"][data-layer="2"],
+[data-color="yellow"] [data-layer="2"],
+[data-layer="2"][data-color="yellow"],
+[data-layer="2"] [data-color="yellow"],
+[data-color="yellow"][data-layer="2"][data-color-scheme="light"],
+[data-color="yellow"] [data-layer="2"][data-color-scheme="light"],
+[data-color="yellow"][data-layer="2"] [data-color-scheme="light"],
+[data-color="yellow"] [data-layer="2"] [data-color-scheme="light"],
+[data-color="yellow"][data-color-scheme="light"][data-layer="2"],
+[data-color="yellow"] [data-color-scheme="light"][data-layer="2"],
+[data-color="yellow"][data-color-scheme="light"] [data-layer="2"],
+[data-color="yellow"] [data-color-scheme="light"] [data-layer="2"],
+[data-layer="2"][data-color="yellow"][data-color-scheme="light"],
+[data-layer="2"] [data-color="yellow"][data-color-scheme="light"],
+[data-layer="2"][data-color="yellow"] [data-color-scheme="light"],
+[data-layer="2"] [data-color="yellow"] [data-color-scheme="light"],
+[data-layer="2"][data-color-scheme="light"][data-color="yellow"],
+[data-layer="2"] [data-color-scheme="light"][data-color="yellow"],
+[data-layer="2"][data-color-scheme="light"] [data-color="yellow"],
+[data-layer="2"] [data-color-scheme="light"] [data-color="yellow"],
+[data-color-scheme="light"][data-layer="2"][data-color="yellow"],
+[data-color-scheme="light"] [data-layer="2"][data-color="yellow"],
+[data-color-scheme="light"][data-layer="2"] [data-color="yellow"],
+[data-color-scheme="light"] [data-layer="2"] [data-color="yellow"],
+[data-color-scheme="light"][data-color="yellow"][data-layer="2"],
+[data-color-scheme="light"] [data-color="yellow"][data-layer="2"],
+[data-color-scheme="light"][data-color="yellow"] [data-layer="2"],
+[data-color-scheme="light"] [data-color="yellow"] [data-layer="2"] {
+    --surface-color: #fffff5;
+    --text-color: #623900;
+    --title-color: #623900;
+    --accent-color: #b38a00;
+    --button-label-color: #8b6200;
+}
+
+[data-color="yellow"][data-layer="2"][data-color-scheme="dark"],
+[data-color="yellow"] [data-layer="2"][data-color-scheme="dark"],
+[data-color="yellow"][data-layer="2"] [data-color-scheme="dark"],
+[data-color="yellow"] [data-layer="2"] [data-color-scheme="dark"],
+[data-color="yellow"][data-color-scheme="dark"][data-layer="2"],
+[data-color="yellow"] [data-color-scheme="dark"][data-layer="2"],
+[data-color="yellow"][data-color-scheme="dark"] [data-layer="2"],
+[data-color="yellow"] [data-color-scheme="dark"] [data-layer="2"],
+[data-layer="2"][data-color="yellow"][data-color-scheme="dark"],
+[data-layer="2"] [data-color="yellow"][data-color-scheme="dark"],
+[data-layer="2"][data-color="yellow"] [data-color-scheme="dark"],
+[data-layer="2"] [data-color="yellow"] [data-color-scheme="dark"],
+[data-layer="2"][data-color-scheme="dark"][data-color="yellow"],
+[data-layer="2"] [data-color-scheme="dark"][data-color="yellow"],
+[data-layer="2"][data-color-scheme="dark"] [data-color="yellow"],
+[data-layer="2"] [data-color-scheme="dark"] [data-color="yellow"],
+[data-color-scheme="dark"][data-layer="2"][data-color="yellow"],
+[data-color-scheme="dark"] [data-layer="2"][data-color="yellow"],
+[data-color-scheme="dark"][data-layer="2"] [data-color="yellow"],
+[data-color-scheme="dark"] [data-layer="2"] [data-color="yellow"],
+[data-color-scheme="dark"][data-color="yellow"][data-layer="2"],
+[data-color-scheme="dark"] [data-color="yellow"][data-layer="2"],
+[data-color-scheme="dark"][data-color="yellow"] [data-layer="2"],
+[data-color-scheme="dark"] [data-color="yellow"] [data-layer="2"] {
+    --surface-color: #27241a;
+    --text-color: #cab773;
+    --title-color: #ffffa3;
+    --accent-color: #fff100;
+    --button-label-color: #fff100;
+}
+
+[data-color="green"],
+[data-color="green"][data-color-scheme="light"],
+[data-color="green"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="green"],
+[data-color-scheme="light"] [data-color="green"],
+[data-color="green"][data-layer="0"],
+[data-color="green"] [data-layer="0"],
+[data-layer="0"][data-color="green"],
+[data-layer="0"] [data-color="green"],
+[data-color="green"][data-layer="0"][data-color-scheme="light"],
+[data-color="green"] [data-layer="0"][data-color-scheme="light"],
+[data-color="green"][data-layer="0"] [data-color-scheme="light"],
+[data-color="green"] [data-layer="0"] [data-color-scheme="light"],
+[data-color="green"][data-color-scheme="light"][data-layer="0"],
+[data-color="green"] [data-color-scheme="light"][data-layer="0"],
+[data-color="green"][data-color-scheme="light"] [data-layer="0"],
+[data-color="green"] [data-color-scheme="light"] [data-layer="0"],
+[data-layer="0"][data-color="green"][data-color-scheme="light"],
+[data-layer="0"] [data-color="green"][data-color-scheme="light"],
+[data-layer="0"][data-color="green"] [data-color-scheme="light"],
+[data-layer="0"] [data-color="green"] [data-color-scheme="light"],
+[data-layer="0"][data-color-scheme="light"][data-color="green"],
+[data-layer="0"] [data-color-scheme="light"][data-color="green"],
+[data-layer="0"][data-color-scheme="light"] [data-color="green"],
+[data-layer="0"] [data-color-scheme="light"] [data-color="green"],
+[data-color-scheme="light"][data-layer="0"][data-color="green"],
+[data-color-scheme="light"] [data-layer="0"][data-color="green"],
+[data-color-scheme="light"][data-layer="0"] [data-color="green"],
+[data-color-scheme="light"] [data-layer="0"] [data-color="green"],
+[data-color-scheme="light"][data-color="green"][data-layer="0"],
+[data-color-scheme="light"] [data-color="green"][data-layer="0"],
+[data-color-scheme="light"][data-color="green"] [data-layer="0"],
+[data-color-scheme="light"] [data-color="green"] [data-layer="0"] {
+    --surface-color: #d7e1d8;
+    --text-color: #005600;
+    --title-color: #005600;
+    --accent-color: #008f0c;
+    --button-label-color: #006d00;
+}
+
+[data-color="green"][data-color-scheme="dark"],
+[data-color="green"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="green"],
+[data-color-scheme="dark"] [data-color="green"],
+[data-color="green"][data-layer="0"][data-color-scheme="dark"],
+[data-color="green"] [data-layer="0"][data-color-scheme="dark"],
+[data-color="green"][data-layer="0"] [data-color-scheme="dark"],
+[data-color="green"] [data-layer="0"] [data-color-scheme="dark"],
+[data-color="green"][data-color-scheme="dark"][data-layer="0"],
+[data-color="green"] [data-color-scheme="dark"][data-layer="0"],
+[data-color="green"][data-color-scheme="dark"] [data-layer="0"],
+[data-color="green"] [data-color-scheme="dark"] [data-layer="0"],
+[data-layer="0"][data-color="green"][data-color-scheme="dark"],
+[data-layer="0"] [data-color="green"][data-color-scheme="dark"],
+[data-layer="0"][data-color="green"] [data-color-scheme="dark"],
+[data-layer="0"] [data-color="green"] [data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"][data-color="green"],
+[data-layer="0"] [data-color-scheme="dark"][data-color="green"],
+[data-layer="0"][data-color-scheme="dark"] [data-color="green"],
+[data-layer="0"] [data-color-scheme="dark"] [data-color="green"],
+[data-color-scheme="dark"][data-layer="0"][data-color="green"],
+[data-color-scheme="dark"] [data-layer="0"][data-color="green"],
+[data-color-scheme="dark"][data-layer="0"] [data-color="green"],
+[data-color-scheme="dark"] [data-layer="0"] [data-color="green"],
+[data-color-scheme="dark"][data-color="green"][data-layer="0"],
+[data-color-scheme="dark"] [data-color="green"][data-layer="0"],
+[data-color-scheme="dark"][data-color="green"] [data-layer="0"],
+[data-color-scheme="dark"] [data-color="green"] [data-layer="0"] {
+    --surface-color: #050e07;
+    --text-color: #6eb179;
+    --title-color: #a9ffbd;
+    --accent-color: #00ff0f;
+    --button-label-color: #00ff0f;
+}
+
+[data-color="green"][data-layer="1"],
+[data-color="green"] [data-layer="1"],
+[data-layer="1"][data-color="green"],
+[data-layer="1"] [data-color="green"],
+[data-color="green"][data-layer="1"][data-color-scheme="light"],
+[data-color="green"] [data-layer="1"][data-color-scheme="light"],
+[data-color="green"][data-layer="1"] [data-color-scheme="light"],
+[data-color="green"] [data-layer="1"] [data-color-scheme="light"],
+[data-color="green"][data-color-scheme="light"][data-layer="1"],
+[data-color="green"] [data-color-scheme="light"][data-layer="1"],
+[data-color="green"][data-color-scheme="light"] [data-layer="1"],
+[data-color="green"] [data-color-scheme="light"] [data-layer="1"],
+[data-layer="1"][data-color="green"][data-color-scheme="light"],
+[data-layer="1"] [data-color="green"][data-color-scheme="light"],
+[data-layer="1"][data-color="green"] [data-color-scheme="light"],
+[data-layer="1"] [data-color="green"] [data-color-scheme="light"],
+[data-layer="1"][data-color-scheme="light"][data-color="green"],
+[data-layer="1"] [data-color-scheme="light"][data-color="green"],
+[data-layer="1"][data-color-scheme="light"] [data-color="green"],
+[data-layer="1"] [data-color-scheme="light"] [data-color="green"],
+[data-color-scheme="light"][data-layer="1"][data-color="green"],
+[data-color-scheme="light"] [data-layer="1"][data-color="green"],
+[data-color-scheme="light"][data-layer="1"] [data-color="green"],
+[data-color-scheme="light"] [data-layer="1"] [data-color="green"],
+[data-color-scheme="light"][data-color="green"][data-layer="1"],
+[data-color-scheme="light"] [data-color="green"][data-layer="1"],
+[data-color-scheme="light"][data-color="green"] [data-layer="1"],
+[data-color-scheme="light"] [data-color="green"] [data-layer="1"] {
+    --surface-color: #e8f2e9;
+    --text-color: #005d00;
+    --title-color: #005d00;
+    --accent-color: #009f25;
+    --button-label-color: #007a00;
+}
+
+[data-color="green"][data-layer="1"][data-color-scheme="dark"],
+[data-color="green"] [data-layer="1"][data-color-scheme="dark"],
+[data-color="green"][data-layer="1"] [data-color-scheme="dark"],
+[data-color="green"] [data-layer="1"] [data-color-scheme="dark"],
+[data-color="green"][data-color-scheme="dark"][data-layer="1"],
+[data-color="green"] [data-color-scheme="dark"][data-layer="1"],
+[data-color="green"][data-color-scheme="dark"] [data-layer="1"],
+[data-color="green"] [data-color-scheme="dark"] [data-layer="1"],
+[data-layer="1"][data-color="green"][data-color-scheme="dark"],
+[data-layer="1"] [data-color="green"][data-color-scheme="dark"],
+[data-layer="1"][data-color="green"] [data-color-scheme="dark"],
+[data-layer="1"] [data-color="green"] [data-color-scheme="dark"],
+[data-layer="1"][data-color-scheme="dark"][data-color="green"],
+[data-layer="1"] [data-color-scheme="dark"][data-color="green"],
+[data-layer="1"][data-color-scheme="dark"] [data-color="green"],
+[data-layer="1"] [data-color-scheme="dark"] [data-color="green"],
+[data-color-scheme="dark"][data-layer="1"][data-color="green"],
+[data-color-scheme="dark"] [data-layer="1"][data-color="green"],
+[data-color-scheme="dark"][data-layer="1"] [data-color="green"],
+[data-color-scheme="dark"] [data-layer="1"] [data-color="green"],
+[data-color-scheme="dark"][data-color="green"][data-layer="1"],
+[data-color-scheme="dark"] [data-color="green"][data-layer="1"],
+[data-color-scheme="dark"][data-color="green"] [data-layer="1"],
+[data-color-scheme="dark"] [data-color="green"] [data-layer="1"] {
+    --surface-color: #101a12;
+    --text-color: #7bbd85;
+    --title-color: #b2ffc4;
+    --accent-color: #00ff2b;
+    --button-label-color: #00ff2b;
+}
+
+[data-color="green"][data-layer="2"],
+[data-color="green"] [data-layer="2"],
+[data-layer="2"][data-color="green"],
+[data-layer="2"] [data-color="green"],
+[data-color="green"][data-layer="2"][data-color-scheme="light"],
+[data-color="green"] [data-layer="2"][data-color-scheme="light"],
+[data-color="green"][data-layer="2"] [data-color-scheme="light"],
+[data-color="green"] [data-layer="2"] [data-color-scheme="light"],
+[data-color="green"][data-color-scheme="light"][data-layer="2"],
+[data-color="green"] [data-color-scheme="light"][data-layer="2"],
+[data-color="green"][data-color-scheme="light"] [data-layer="2"],
+[data-color="green"] [data-color-scheme="light"] [data-layer="2"],
+[data-layer="2"][data-color="green"][data-color-scheme="light"],
+[data-layer="2"] [data-color="green"][data-color-scheme="light"],
+[data-layer="2"][data-color="green"] [data-color-scheme="light"],
+[data-layer="2"] [data-color="green"] [data-color-scheme="light"],
+[data-layer="2"][data-color-scheme="light"][data-color="green"],
+[data-layer="2"] [data-color-scheme="light"][data-color="green"],
+[data-layer="2"][data-color-scheme="light"] [data-color="green"],
+[data-layer="2"] [data-color-scheme="light"] [data-color="green"],
+[data-color-scheme="light"][data-layer="2"][data-color="green"],
+[data-color-scheme="light"] [data-layer="2"][data-color="green"],
+[data-color-scheme="light"][data-layer="2"] [data-color="green"],
+[data-color-scheme="light"] [data-layer="2"] [data-color="green"],
+[data-color-scheme="light"][data-color="green"][data-layer="2"],
+[data-color-scheme="light"] [data-color="green"][data-layer="2"],
+[data-color-scheme="light"][data-color="green"] [data-layer="2"],
+[data-color-scheme="light"] [data-color="green"] [data-layer="2"] {
+    --surface-color: #f8fff9;
+    --text-color: #006500;
+    --title-color: #006500;
+    --accent-color: #00af38;
+    --button-label-color: #008600;
+}
+
+[data-color="green"][data-layer="2"][data-color-scheme="dark"],
+[data-color="green"] [data-layer="2"][data-color-scheme="dark"],
+[data-color="green"][data-layer="2"] [data-color-scheme="dark"],
+[data-color="green"] [data-layer="2"] [data-color-scheme="dark"],
+[data-color="green"][data-color-scheme="dark"][data-layer="2"],
+[data-color="green"] [data-color-scheme="dark"][data-layer="2"],
+[data-color="green"][data-color-scheme="dark"] [data-layer="2"],
+[data-color="green"] [data-color-scheme="dark"] [data-layer="2"],
+[data-layer="2"][data-color="green"][data-color-scheme="dark"],
+[data-layer="2"] [data-color="green"][data-color-scheme="dark"],
+[data-layer="2"][data-color="green"] [data-color-scheme="dark"],
+[data-layer="2"] [data-color="green"] [data-color-scheme="dark"],
+[data-layer="2"][data-color-scheme="dark"][data-color="green"],
+[data-layer="2"] [data-color-scheme="dark"][data-color="green"],
+[data-layer="2"][data-color-scheme="dark"] [data-color="green"],
+[data-layer="2"] [data-color-scheme="dark"] [data-color="green"],
+[data-color-scheme="dark"][data-layer="2"][data-color="green"],
+[data-color-scheme="dark"] [data-layer="2"][data-color="green"],
+[data-color-scheme="dark"][data-layer="2"] [data-color="green"],
+[data-color-scheme="dark"] [data-layer="2"] [data-color="green"],
+[data-color-scheme="dark"][data-color="green"][data-layer="2"],
+[data-color-scheme="dark"] [data-color="green"][data-layer="2"],
+[data-color-scheme="dark"][data-color="green"] [data-layer="2"],
+[data-color-scheme="dark"] [data-color="green"] [data-layer="2"] {
+    --surface-color: #1d271e;
+    --text-color: #87ca91;
+    --title-color: #bbffca;
+    --accent-color: #00ff3b;
+    --button-label-color: #00ff3b;
+}
+
+[data-color="blue"],
+[data-color="blue"][data-color-scheme="light"],
+[data-color="blue"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="blue"],
+[data-color-scheme="light"] [data-color="blue"],
+[data-color="blue"][data-layer="0"],
+[data-color="blue"] [data-layer="0"],
+[data-layer="0"][data-color="blue"],
+[data-layer="0"] [data-color="blue"],
+[data-color="blue"][data-layer="0"][data-color-scheme="light"],
+[data-color="blue"] [data-layer="0"][data-color-scheme="light"],
+[data-color="blue"][data-layer="0"] [data-color-scheme="light"],
+[data-color="blue"] [data-layer="0"] [data-color-scheme="light"],
+[data-color="blue"][data-color-scheme="light"][data-layer="0"],
+[data-color="blue"] [data-color-scheme="light"][data-layer="0"],
+[data-color="blue"][data-color-scheme="light"] [data-layer="0"],
+[data-color="blue"] [data-color-scheme="light"] [data-layer="0"],
+[data-layer="0"][data-color="blue"][data-color-scheme="light"],
+[data-layer="0"] [data-color="blue"][data-color-scheme="light"],
+[data-layer="0"][data-color="blue"] [data-color-scheme="light"],
+[data-layer="0"] [data-color="blue"] [data-color-scheme="light"],
+[data-layer="0"][data-color-scheme="light"][data-color="blue"],
+[data-layer="0"] [data-color-scheme="light"][data-color="blue"],
+[data-layer="0"][data-color-scheme="light"] [data-color="blue"],
+[data-layer="0"] [data-color-scheme="light"] [data-color="blue"],
+[data-color-scheme="light"][data-layer="0"][data-color="blue"],
+[data-color-scheme="light"] [data-layer="0"][data-color="blue"],
+[data-color-scheme="light"][data-layer="0"] [data-color="blue"],
+[data-color-scheme="light"] [data-layer="0"] [data-color="blue"],
+[data-color-scheme="light"][data-color="blue"][data-layer="0"],
+[data-color-scheme="light"] [data-color="blue"][data-layer="0"],
+[data-color-scheme="light"][data-color="blue"] [data-layer="0"],
+[data-color-scheme="light"] [data-color="blue"] [data-layer="0"] {
+    --surface-color: #d7deea;
+    --text-color: #0027be;
+    --title-color: #0027be;
+    --accent-color: #0063f7;
+    --button-label-color: #003cd1;
+}
+
+[data-color="blue"][data-color-scheme="dark"],
+[data-color="blue"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="blue"],
+[data-color-scheme="dark"] [data-color="blue"],
+[data-color="blue"][data-layer="0"][data-color-scheme="dark"],
+[data-color="blue"] [data-layer="0"][data-color-scheme="dark"],
+[data-color="blue"][data-layer="0"] [data-color-scheme="dark"],
+[data-color="blue"] [data-layer="0"] [data-color-scheme="dark"],
+[data-color="blue"][data-color-scheme="dark"][data-layer="0"],
+[data-color="blue"] [data-color-scheme="dark"][data-layer="0"],
+[data-color="blue"][data-color-scheme="dark"] [data-layer="0"],
+[data-color="blue"] [data-color-scheme="dark"] [data-layer="0"],
+[data-layer="0"][data-color="blue"][data-color-scheme="dark"],
+[data-layer="0"] [data-color="blue"][data-color-scheme="dark"],
+[data-layer="0"][data-color="blue"] [data-color-scheme="dark"],
+[data-layer="0"] [data-color="blue"] [data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"][data-color="blue"],
+[data-layer="0"] [data-color-scheme="dark"][data-color="blue"],
+[data-layer="0"][data-color-scheme="dark"] [data-color="blue"],
+[data-layer="0"] [data-color-scheme="dark"] [data-color="blue"],
+[data-color-scheme="dark"][data-layer="0"][data-color="blue"],
+[data-color-scheme="dark"] [data-layer="0"][data-color="blue"],
+[data-color-scheme="dark"][data-layer="0"] [data-color="blue"],
+[data-color-scheme="dark"] [data-layer="0"] [data-color="blue"],
+[data-color-scheme="dark"][data-color="blue"][data-layer="0"],
+[data-color-scheme="dark"] [data-color="blue"][data-layer="0"],
+[data-color-scheme="dark"][data-color="blue"] [data-layer="0"],
+[data-color-scheme="dark"] [data-color="blue"] [data-layer="0"] {
+    --surface-color: #060b15;
+    --text-color: #739fe8;
+    --title-color: #b2ffff;
+    --accent-color: #00e2ff;
+    --button-label-color: #00e2ff;
+}
+
+[data-color="blue"][data-layer="1"],
+[data-color="blue"] [data-layer="1"],
+[data-layer="1"][data-color="blue"],
+[data-layer="1"] [data-color="blue"],
+[data-color="blue"][data-layer="1"][data-color-scheme="light"],
+[data-color="blue"] [data-layer="1"][data-color-scheme="light"],
+[data-color="blue"][data-layer="1"] [data-color-scheme="light"],
+[data-color="blue"] [data-layer="1"] [data-color-scheme="light"],
+[data-color="blue"][data-color-scheme="light"][data-layer="1"],
+[data-color="blue"] [data-color-scheme="light"][data-layer="1"],
+[data-color="blue"][data-color-scheme="light"] [data-layer="1"],
+[data-color="blue"] [data-color-scheme="light"] [data-layer="1"],
+[data-layer="1"][data-color="blue"][data-color-scheme="light"],
+[data-layer="1"] [data-color="blue"][data-color-scheme="light"],
+[data-layer="1"][data-color="blue"] [data-color-scheme="light"],
+[data-layer="1"] [data-color="blue"] [data-color-scheme="light"],
+[data-layer="1"][data-color-scheme="light"][data-color="blue"],
+[data-layer="1"] [data-color-scheme="light"][data-color="blue"],
+[data-layer="1"][data-color-scheme="light"] [data-color="blue"],
+[data-layer="1"] [data-color-scheme="light"] [data-color="blue"],
+[data-color-scheme="light"][data-layer="1"][data-color="blue"],
+[data-color-scheme="light"] [data-layer="1"][data-color="blue"],
+[data-color-scheme="light"][data-layer="1"] [data-color="blue"],
+[data-color-scheme="light"] [data-layer="1"] [data-color="blue"],
+[data-color-scheme="light"][data-color="blue"][data-layer="1"],
+[data-color-scheme="light"] [data-color="blue"][data-layer="1"],
+[data-color-scheme="light"][data-color="blue"] [data-layer="1"],
+[data-color-scheme="light"] [data-color="blue"] [data-layer="1"] {
+    --surface-color: #e8effb;
+    --text-color: #0031c6;
+    --title-color: #0031c6;
+    --accent-color: #1374ff;
+    --button-label-color: #004bdf;
+}
+
+[data-color="blue"][data-layer="1"][data-color-scheme="dark"],
+[data-color="blue"] [data-layer="1"][data-color-scheme="dark"],
+[data-color="blue"][data-layer="1"] [data-color-scheme="dark"],
+[data-color="blue"] [data-layer="1"] [data-color-scheme="dark"],
+[data-color="blue"][data-color-scheme="dark"][data-layer="1"],
+[data-color="blue"] [data-color-scheme="dark"][data-layer="1"],
+[data-color="blue"][data-color-scheme="dark"] [data-layer="1"],
+[data-color="blue"] [data-color-scheme="dark"] [data-layer="1"],
+[data-layer="1"][data-color="blue"][data-color-scheme="dark"],
+[data-layer="1"] [data-color="blue"][data-color-scheme="dark"],
+[data-layer="1"][data-color="blue"] [data-color-scheme="dark"],
+[data-layer="1"] [data-color="blue"] [data-color-scheme="dark"],
+[data-layer="1"][data-color-scheme="dark"][data-color="blue"],
+[data-layer="1"] [data-color-scheme="dark"][data-color="blue"],
+[data-layer="1"][data-color-scheme="dark"] [data-color="blue"],
+[data-layer="1"] [data-color-scheme="dark"] [data-color="blue"],
+[data-color-scheme="dark"][data-layer="1"][data-color="blue"],
+[data-color-scheme="dark"] [data-layer="1"][data-color="blue"],
+[data-color-scheme="dark"][data-layer="1"] [data-color="blue"],
+[data-color-scheme="dark"] [data-layer="1"] [data-color="blue"],
+[data-color-scheme="dark"][data-color="blue"][data-layer="1"],
+[data-color-scheme="dark"] [data-color="blue"][data-layer="1"],
+[data-color-scheme="dark"][data-color="blue"] [data-layer="1"],
+[data-color-scheme="dark"] [data-color="blue"] [data-layer="1"] {
+    --surface-color: #111722;
+    --text-color: #7fabf5;
+    --title-color: #b9ffff;
+    --accent-color: #00e4ff;
+    --button-label-color: #00e4ff;
+}
+
+[data-color="blue"][data-layer="2"],
+[data-color="blue"] [data-layer="2"],
+[data-layer="2"][data-color="blue"],
+[data-layer="2"] [data-color="blue"],
+[data-color="blue"][data-layer="2"][data-color-scheme="light"],
+[data-color="blue"] [data-layer="2"][data-color-scheme="light"],
+[data-color="blue"][data-layer="2"] [data-color-scheme="light"],
+[data-color="blue"] [data-layer="2"] [data-color-scheme="light"],
+[data-color="blue"][data-color-scheme="light"][data-layer="2"],
+[data-color="blue"] [data-color-scheme="light"][data-layer="2"],
+[data-color="blue"][data-color-scheme="light"] [data-layer="2"],
+[data-color="blue"] [data-color-scheme="light"] [data-layer="2"],
+[data-layer="2"][data-color="blue"][data-color-scheme="light"],
+[data-layer="2"] [data-color="blue"][data-color-scheme="light"],
+[data-layer="2"][data-color="blue"] [data-color-scheme="light"],
+[data-layer="2"] [data-color="blue"] [data-color-scheme="light"],
+[data-layer="2"][data-color-scheme="light"][data-color="blue"],
+[data-layer="2"] [data-color-scheme="light"][data-color="blue"],
+[data-layer="2"][data-color-scheme="light"] [data-color="blue"],
+[data-layer="2"] [data-color-scheme="light"] [data-color="blue"],
+[data-color-scheme="light"][data-layer="2"][data-color="blue"],
+[data-color-scheme="light"] [data-layer="2"][data-color="blue"],
+[data-color-scheme="light"][data-layer="2"] [data-color="blue"],
+[data-color-scheme="light"] [data-layer="2"] [data-color="blue"],
+[data-color-scheme="light"][data-color="blue"][data-layer="2"],
+[data-color-scheme="light"] [data-color="blue"][data-layer="2"],
+[data-color-scheme="light"][data-color="blue"] [data-layer="2"],
+[data-color-scheme="light"] [data-color="blue"] [data-layer="2"] {
+    --surface-color: #f8ffff;
+    --text-color: #003bcf;
+    --title-color: #003bcf;
+    --accent-color: #2885ff;
+    --button-label-color: #0059ed;
+}
+
+[data-color="blue"][data-layer="2"][data-color-scheme="dark"],
+[data-color="blue"] [data-layer="2"][data-color-scheme="dark"],
+[data-color="blue"][data-layer="2"] [data-color-scheme="dark"],
+[data-color="blue"] [data-layer="2"] [data-color-scheme="dark"],
+[data-color="blue"][data-color-scheme="dark"][data-layer="2"],
+[data-color="blue"] [data-color-scheme="dark"][data-layer="2"],
+[data-color="blue"][data-color-scheme="dark"] [data-layer="2"],
+[data-color="blue"] [data-color-scheme="dark"] [data-layer="2"],
+[data-layer="2"][data-color="blue"][data-color-scheme="dark"],
+[data-layer="2"] [data-color="blue"][data-color-scheme="dark"],
+[data-layer="2"][data-color="blue"] [data-color-scheme="dark"],
+[data-layer="2"] [data-color="blue"] [data-color-scheme="dark"],
+[data-layer="2"][data-color-scheme="dark"][data-color="blue"],
+[data-layer="2"] [data-color-scheme="dark"][data-color="blue"],
+[data-layer="2"][data-color-scheme="dark"] [data-color="blue"],
+[data-layer="2"] [data-color-scheme="dark"] [data-color="blue"],
+[data-color-scheme="dark"][data-layer="2"][data-color="blue"],
+[data-color-scheme="dark"] [data-layer="2"][data-color="blue"],
+[data-color-scheme="dark"][data-layer="2"] [data-color="blue"],
+[data-color-scheme="dark"] [data-layer="2"] [data-color="blue"],
+[data-color-scheme="dark"][data-color="blue"][data-layer="2"],
+[data-color-scheme="dark"] [data-color="blue"][data-layer="2"],
+[data-color-scheme="dark"][data-color="blue"] [data-layer="2"],
+[data-color-scheme="dark"] [data-color="blue"] [data-layer="2"] {
+    --surface-color: #1d2430;
+    --text-color: #8bb8ff;
+    --title-color: #bfffff;
+    --accent-color: #20e6ff;
+    --button-label-color: #20e6ff;
+}
+
+[data-color="purple"],
+[data-color="purple"][data-color-scheme="light"],
+[data-color="purple"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="purple"],
+[data-color-scheme="light"] [data-color="purple"],
+[data-color="purple"][data-layer="0"],
+[data-color="purple"] [data-layer="0"],
+[data-layer="0"][data-color="purple"],
+[data-layer="0"] [data-color="purple"],
+[data-color="purple"][data-layer="0"][data-color-scheme="light"],
+[data-color="purple"] [data-layer="0"][data-color-scheme="light"],
+[data-color="purple"][data-layer="0"] [data-color-scheme="light"],
+[data-color="purple"] [data-layer="0"] [data-color-scheme="light"],
+[data-color="purple"][data-color-scheme="light"][data-layer="0"],
+[data-color="purple"] [data-color-scheme="light"][data-layer="0"],
+[data-color="purple"][data-color-scheme="light"] [data-layer="0"],
+[data-color="purple"] [data-color-scheme="light"] [data-layer="0"],
+[data-layer="0"][data-color="purple"][data-color-scheme="light"],
+[data-layer="0"] [data-color="purple"][data-color-scheme="light"],
+[data-layer="0"][data-color="purple"] [data-color-scheme="light"],
+[data-layer="0"] [data-color="purple"] [data-color-scheme="light"],
+[data-layer="0"][data-color-scheme="light"][data-color="purple"],
+[data-layer="0"] [data-color-scheme="light"][data-color="purple"],
+[data-layer="0"][data-color-scheme="light"] [data-color="purple"],
+[data-layer="0"] [data-color-scheme="light"] [data-color="purple"],
+[data-color-scheme="light"][data-layer="0"][data-color="purple"],
+[data-color-scheme="light"] [data-layer="0"][data-color="purple"],
+[data-color-scheme="light"][data-layer="0"] [data-color="purple"],
+[data-color-scheme="light"] [data-layer="0"] [data-color="purple"],
+[data-color-scheme="light"][data-color="purple"][data-layer="0"],
+[data-color-scheme="light"] [data-color="purple"][data-layer="0"],
+[data-color-scheme="light"][data-color="purple"] [data-layer="0"],
+[data-color-scheme="light"] [data-color="purple"] [data-layer="0"] {
+    --surface-color: #e5d9e8;
+    --text-color: #9800c0;
+    --title-color: #9800c0;
+    --accent-color: #b600e0;
+    --button-label-color: #9200ba;
+}
+
+[data-color="purple"][data-color-scheme="dark"],
+[data-color="purple"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="purple"],
+[data-color-scheme="dark"] [data-color="purple"],
+[data-color="purple"][data-layer="0"][data-color-scheme="dark"],
+[data-color="purple"] [data-layer="0"][data-color-scheme="dark"],
+[data-color="purple"][data-layer="0"] [data-color-scheme="dark"],
+[data-color="purple"] [data-layer="0"] [data-color-scheme="dark"],
+[data-color="purple"][data-color-scheme="dark"][data-layer="0"],
+[data-color="purple"] [data-color-scheme="dark"][data-layer="0"],
+[data-color="purple"][data-color-scheme="dark"] [data-layer="0"],
+[data-color="purple"] [data-color-scheme="dark"] [data-layer="0"],
+[data-layer="0"][data-color="purple"][data-color-scheme="dark"],
+[data-layer="0"] [data-color="purple"][data-color-scheme="dark"],
+[data-layer="0"][data-color="purple"] [data-color-scheme="dark"],
+[data-layer="0"] [data-color="purple"] [data-color-scheme="dark"],
+[data-layer="0"][data-color-scheme="dark"][data-color="purple"],
+[data-layer="0"] [data-color-scheme="dark"][data-color="purple"],
+[data-layer="0"][data-color-scheme="dark"] [data-color="purple"],
+[data-layer="0"] [data-color-scheme="dark"] [data-color="purple"],
+[data-color-scheme="dark"][data-layer="0"][data-color="purple"],
+[data-color-scheme="dark"] [data-layer="0"][data-color="purple"],
+[data-color-scheme="dark"][data-layer="0"] [data-color="purple"],
+[data-color-scheme="dark"] [data-layer="0"] [data-color="purple"],
+[data-color-scheme="dark"][data-color="purple"][data-layer="0"],
+[data-color-scheme="dark"] [data-color="purple"][data-layer="0"],
+[data-color-scheme="dark"][data-color="purple"] [data-layer="0"],
+[data-color-scheme="dark"] [data-color="purple"] [data-layer="0"] {
+    --surface-color: #110713;
+    --text-color: #c67cdb;
+    --title-color: #ffc2ff;
+    --accent-color: #ff00ff;
+    --button-label-color: #ff00ff;
+}
+
+[data-color="purple"][data-layer="1"],
+[data-color="purple"] [data-layer="1"],
+[data-layer="1"][data-color="purple"],
+[data-layer="1"] [data-color="purple"],
+[data-color="purple"][data-layer="1"][data-color-scheme="light"],
+[data-color="purple"] [data-layer="1"][data-color-scheme="light"],
+[data-color="purple"][data-layer="1"] [data-color-scheme="light"],
+[data-color="purple"] [data-layer="1"] [data-color-scheme="light"],
+[data-color="purple"][data-color-scheme="light"][data-layer="1"],
+[data-color="purple"] [data-color-scheme="light"][data-layer="1"],
+[data-color="purple"][data-color-scheme="light"] [data-layer="1"],
+[data-color="purple"] [data-color-scheme="light"] [data-layer="1"],
+[data-layer="1"][data-color="purple"][data-color-scheme="light"],
+[data-layer="1"] [data-color="purple"][data-color-scheme="light"],
+[data-layer="1"][data-color="purple"] [data-color-scheme="light"],
+[data-layer="1"] [data-color="purple"] [data-color-scheme="light"],
+[data-layer="1"][data-color-scheme="light"][data-color="purple"],
+[data-layer="1"] [data-color-scheme="light"][data-color="purple"],
+[data-layer="1"][data-color-scheme="light"] [data-color="purple"],
+[data-layer="1"] [data-color-scheme="light"] [data-color="purple"],
+[data-color-scheme="light"][data-layer="1"][data-color="purple"],
+[data-color-scheme="light"] [data-layer="1"][data-color="purple"],
+[data-color-scheme="light"][data-layer="1"] [data-color="purple"],
+[data-color-scheme="light"] [data-layer="1"] [data-color="purple"],
+[data-color-scheme="light"][data-color="purple"][data-layer="1"],
+[data-color-scheme="light"] [data-color="purple"][data-layer="1"],
+[data-color-scheme="light"][data-color="purple"] [data-layer="1"],
+[data-color-scheme="light"] [data-color="purple"] [data-layer="1"] {
+    --surface-color: #f5eaf9;
+    --text-color: #a000c9;
+    --title-color: #a000c9;
+    --accent-color: #c700f1;
+    --button-label-color: #9f00c7;
+}
+
+[data-color="purple"][data-layer="1"][data-color-scheme="dark"],
+[data-color="purple"] [data-layer="1"][data-color-scheme="dark"],
+[data-color="purple"][data-layer="1"] [data-color-scheme="dark"],
+[data-color="purple"] [data-layer="1"] [data-color-scheme="dark"],
+[data-color="purple"][data-color-scheme="dark"][data-layer="1"],
+[data-color="purple"] [data-color-scheme="dark"][data-layer="1"],
+[data-color="purple"][data-color-scheme="dark"] [data-layer="1"],
+[data-color="purple"] [data-color-scheme="dark"] [data-layer="1"],
+[data-layer="1"][data-color="purple"][data-color-scheme="dark"],
+[data-layer="1"] [data-color="purple"][data-color-scheme="dark"],
+[data-layer="1"][data-color="purple"] [data-color-scheme="dark"],
+[data-layer="1"] [data-color="purple"] [data-color-scheme="dark"],
+[data-layer="1"][data-color-scheme="dark"][data-color="purple"],
+[data-layer="1"] [data-color-scheme="dark"][data-color="purple"],
+[data-layer="1"][data-color-scheme="dark"] [data-color="purple"],
+[data-layer="1"] [data-color-scheme="dark"] [data-color="purple"],
+[data-color-scheme="dark"][data-layer="1"][data-color="purple"],
+[data-color-scheme="dark"] [data-layer="1"][data-color="purple"],
+[data-color-scheme="dark"][data-layer="1"] [data-color="purple"],
+[data-color-scheme="dark"] [data-layer="1"] [data-color="purple"],
+[data-color-scheme="dark"][data-color="purple"][data-layer="1"],
+[data-color-scheme="dark"] [data-color="purple"][data-layer="1"],
+[data-color-scheme="dark"][data-color="purple"] [data-layer="1"],
+[data-color-scheme="dark"] [data-color="purple"] [data-layer="1"] {
+    --surface-color: #1d1320;
+    --text-color: #d489e9;
+    --title-color: #ffc7ff;
+    --accent-color: #ff00ff;
+    --button-label-color: #ff00ff;
+}
+
+[data-color="purple"][data-layer="2"],
+[data-color="purple"] [data-layer="2"],
+[data-layer="2"][data-color="purple"],
+[data-layer="2"] [data-color="purple"],
+[data-color="purple"][data-layer="2"][data-color-scheme="light"],
+[data-color="purple"] [data-layer="2"][data-color-scheme="light"],
+[data-color="purple"][data-layer="2"] [data-color-scheme="light"],
+[data-color="purple"] [data-layer="2"] [data-color-scheme="light"],
+[data-color="purple"][data-color-scheme="light"][data-layer="2"],
+[data-color="purple"] [data-color-scheme="light"][data-layer="2"],
+[data-color="purple"][data-color-scheme="light"] [data-layer="2"],
+[data-color="purple"] [data-color-scheme="light"] [data-layer="2"],
+[data-layer="2"][data-color="purple"][data-color-scheme="light"],
+[data-layer="2"] [data-color="purple"][data-color-scheme="light"],
+[data-layer="2"][data-color="purple"] [data-color-scheme="light"],
+[data-layer="2"] [data-color="purple"] [data-color-scheme="light"],
+[data-layer="2"][data-color-scheme="light"][data-color="purple"],
+[data-layer="2"] [data-color-scheme="light"][data-color="purple"],
+[data-layer="2"][data-color-scheme="light"] [data-color="purple"],
+[data-layer="2"] [data-color-scheme="light"] [data-color="purple"],
+[data-color-scheme="light"][data-layer="2"][data-color="purple"],
+[data-color-scheme="light"] [data-layer="2"][data-color="purple"],
+[data-color-scheme="light"][data-layer="2"] [data-color="purple"],
+[data-color-scheme="light"] [data-layer="2"] [data-color="purple"],
+[data-color-scheme="light"][data-color="purple"][data-layer="2"],
+[data-color-scheme="light"] [data-color="purple"][data-layer="2"],
+[data-color-scheme="light"][data-color="purple"] [data-layer="2"],
+[data-color-scheme="light"] [data-color="purple"] [data-layer="2"] {
+    --surface-color: #fffbff;
+    --text-color: #a900d1;
+    --title-color: #a900d1;
+    --accent-color: #d810ff;
+    --button-label-color: #ac00d5;
+}
+
+[data-color="purple"][data-layer="2"][data-color-scheme="dark"],
+[data-color="purple"] [data-layer="2"][data-color-scheme="dark"],
+[data-color="purple"][data-layer="2"] [data-color-scheme="dark"],
+[data-color="purple"] [data-layer="2"] [data-color-scheme="dark"],
+[data-color="purple"][data-color-scheme="dark"][data-layer="2"],
+[data-color="purple"] [data-color-scheme="dark"][data-layer="2"],
+[data-color="purple"][data-color-scheme="dark"] [data-layer="2"],
+[data-color="purple"] [data-color-scheme="dark"] [data-layer="2"],
+[data-layer="2"][data-color="purple"][data-color-scheme="dark"],
+[data-layer="2"] [data-color="purple"][data-color-scheme="dark"],
+[data-layer="2"][data-color="purple"] [data-color-scheme="dark"],
+[data-layer="2"] [data-color="purple"] [data-color-scheme="dark"],
+[data-layer="2"][data-color-scheme="dark"][data-color="purple"],
+[data-layer="2"] [data-color-scheme="dark"][data-color="purple"],
+[data-layer="2"][data-color-scheme="dark"] [data-color="purple"],
+[data-layer="2"] [data-color-scheme="dark"] [data-color="purple"],
+[data-color-scheme="dark"][data-layer="2"][data-color="purple"],
+[data-color-scheme="dark"] [data-layer="2"][data-color="purple"],
+[data-color-scheme="dark"][data-layer="2"] [data-color="purple"],
+[data-color-scheme="dark"] [data-layer="2"] [data-color="purple"],
+[data-color-scheme="dark"][data-color="purple"][data-layer="2"],
+[data-color-scheme="dark"] [data-color="purple"][data-layer="2"],
+[data-color-scheme="dark"][data-color="purple"] [data-layer="2"],
+[data-color-scheme="dark"] [data-color="purple"] [data-layer="2"] {
+    --surface-color: #2a1f2e;
+    --text-color: #e195f6;
+    --title-color: #ffcbff;
+    --accent-color: #ff00ff;
+    --button-label-color: #ff00ff;
+}
+
+
+
+
+    :root,
+    [data-color-scheme],
+    [data-color],
+    [data-layer] {
+        color: var(--text-color);
+        accent-color: var(--base-color);
+    }
+
+    [data-color-scheme] {
+        font-weight: var(--font-weight-text);
+    }
+
+
+
+}
+:root {
+
+
+    --gap-s: .5rlh;
+    --gap-m: 1rlh;
+    --gap-l: 2rlh;
+
+    --border-radius-s: .5rlh;
+    --border-radius-m: 1rlh;
+    --border-radius-l: 2rlh;
+
+    --padding-s: .75rlh;
+    --padding-m: 1.5rlh;
+    --padding-l: 3rlh;
+
+    --control-size-m: 3em;
+    --control-size-sm: 2.25rem;
+    --control-size-s: 1.5rem;
+}
+
+@supports (corner-shape: squircle) {
+    :root {
+        --border-radius-s: 1rlh;
+        --border-radius-m: 2rlh;
+        --border-radius-l: 4rlh;
+    }
+}
+
+[data-layer] {
+    font-size: .925em;
+}
+
+
+
+:root {
+    --text-font-size: 1.15rem;
+    --text-line-height: 1.75;
+}
+.card {
+    padding: 1.25lh;
+    border-radius: 1rlh;
+    background-color: var(--surface-color);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25lh;
+}
+
+.card__title {
+    color: var(--title-color);
+}
+@layer control, control_type;
+
+@layer control {
+    .control {
+
+
+        /*   ============= COLOR ============ */
+        --_color: var(--base-color);
+
+        --_default-label-color: var(--button-label-color);
+        --_fill-label-color: oklch(from var(--_color) round(1.2 - l) 0 h);
+
+        --_default-background-color: oklch(from var(--_color) .65 c h / 15%);
+        --_fill-background-color: var(--_color);
+
+
+        /*   ============= NUMBER ============ */
+
+        --_padding: calc(var(--_height) * .4);
+        --_height: var(--control-size-m);
+        --_icon-width: calc(var(--_height) * .5);
+        --_icon-unmargin: calc((var(--_height) - var(--_icon-width)) / 2 - var(--_padding));
+
+
+        /*   ============= PROPERTIES ============ */
+
+        appearance: none;
+        font-family: monospace;
+        border: none;
+        height: var(--_height);
+        min-width: var(--_height);
+        gap: var(--_padding);
+        font-size: .95rem;
+        cursor: pointer;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline: var(--_padding);
+        corner-shape: squircle;
+        border-radius: var(--border-radius-s);
+        background-color: var(--_background-color);
+        color: var(--_label-color);
+        isolation: isolate;
+    }
+
+
+    /*   ============= STATES ============ */
+
+    @media (hover: hover) {
+        .control:is(:hover, :focus-visible) {
+            --_default-background-color: oklch(from var(--_color) .7 c h / 20%);
+            /* --_fill-background-color: oklch(from var(--_color) calc(l - .05 + round(1 - l) * .35) c h); */
+            --_fill-background-color: oklch(from var(--_color) calc(l * .9) c h);
+        }
+    }
+    
+    .control:active {
+        --_default-background-color: oklch(from var(--_color) .65 c h / 20%);
+        /* --_fill-background-color: oklch(from var(--_color) calc(l - .025 + round(1 - l) * .175) c h); */
+        --_fill-background-color: oklch(from var(--_color) calc(l - .03) c h);
+    }
+
+    .control:not(:hover):not(:active):not(:focus):not(:has(:focus)) {
+        transition: background-color .2s ease;
+    }
+
+    .control:disabled:not(.control_loading) {
+        opacity: 0.5;
+        pointer-events: none;
+        filter: saturate(.25);
+    }
+
+    .control[readonly] {
+        background-image: url("data:image/svg+xml,\<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>\<path fill='%239995' d='M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2zm-7-2a2 2 0 1 1 4 0v2h-4V7z'/>\</svg>");
+        background-position: right calc(var(--_height) / 4) top calc(var(--_height) / 4);
+        background-repeat: no-repeat;
+        background-size: calc(var(--_height) / 2);
+        padding-inline-end: var(--_height);
+    }
+
+    .control_loading {
+        --_loading-color: color-mix(in oklch, currentColor 25%, transparent);
+        --_loading-size: 20px;
+        background-image: linear-gradient(-45deg,
+                var(--_loading-color) 0%,
+                var(--_loading-color) 25%,
+                transparent 25%,
+                transparent 50%,
+                var(--_loading-color) 50%,
+                var(--_loading-color) 75%,
+                transparent 75%,
+                transparent 100%);
+        background-size: var(--_loading-size) var(--_loading-size);
+        animation: loading 1s linear infinite;
+
+    }
+
+    @keyframes loading {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: var(--_loading-size) 0;
+        }
+    }
+
+
+    /*   ============= ELEMENTS ============ */
+
+    .control__input {
+        appearance: none;
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        corner-shape: inherit;
+        z-index: -1;
+        cursor: inherit;
+    }
+
+    .control__icon {
+        width: var(--_icon-width);
+        margin-inline: calc((var(--_height) - var(--_icon-width)) / 2 - var(--_padding));
+        aspect-ratio: 1;
+        background-color: currentColor;
+        mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSI+PGcgZmlsbD0iIzAwMCIgY2xpcC1wYXRoPSJ1cmwoI2EpIj48cGF0aCBkPSJNMTIuNjMgNS44N3EuMzQgMCAuNi41LjIzLjQ1LjM3IDEuMy4xNS44Mi4yMiAxLjk2LjA2IDEuMTEuMDYgMi4zNyAwIDMuMjEtLjMxIDQuNjctLjMyIDEuNDctLjk1IDEuNDYtLjM0IDAtLjU4LS40N2E1IDUgMCAwIDEtLjM4LTEuMjggMTYgMTYgMCAwIDEtLjIyLTEuOTNxLS4wNi0xLjE0LS4wNi0yLjQ1IDAtNi4xMyAxLjI0LTYuMTMiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNiAwYzMuNzcgMCA1LjY2IDAgNi44MyAxLjE3UzI0IDQuMjMgMjQgOHY4YzAgMy43NyAwIDUuNjYtMS4xNyA2LjgzUzE5Ljc3IDI0IDE2IDI0SDhjLTMuNzcgMC01LjY2IDAtNi44My0xLjE3UzAgMTkuNzcgMCAxNlY4YzAtMy43NyAwLTUuNjYgMS4xNy02LjgzUzQuMjMgMCA4IDB6TTguMTEgM3EtLjUxIDAtMS4wMy40Mi0uNTEuNDItLjkgMS40Ni0uNCAxLjAxLS42NSAyLjc0YTMzIDMzIDAgMCAwLS4yNCA0LjM2cTAgMi41Mi4yMiA0LjI1LjIxIDEuNzIuNiAyLjguMzcgMS4wNS44OCAxLjUyLjUuNDUgMS4xLjQ1LjQ1IDAgLjkyLS4yNXQuNzYtLjc5bC0uMjctMi42MnEtLjIuMzEtLjQ5LjU3YTEgMSAwIDAgMS0uNjUuMjJxLS40MyAwLS43NC0uNDRhNCA0IDAgMCAxLS41MS0xLjI2cS0uMi0uODMtLjMtMS45My0uMDgtMS4xNC0uMDgtMi41IDAtMy4xNi40LTQuNjUuNC0xLjQ4IDEuMTUtMS40OC4zOCAwIC42NS4xNS4yOC4xMi40OS4zN2wuMjctMi43NWEzIDMgMCAwIDAtLjY1LS40NFE4LjY1IDMgOC4xIDNtNC41MiAwcS0xLjM2IDAtMi4wMiAyLjNUOS45NSAxMnEwIDIuMDUuMTUgMy43My4xNSAxLjY2LjQ3IDIuODUuMzMgMS4xNi44MyAxLjguNTEuNjIgMS4yMi42MiAxLjM0IDAgMi4wMS0yLjMuNjktMi4zLjY5LTYuNyAwLTIuMDUtLjE3LTMuNy0uMTUtMS43LS40Ny0yLjg1LS4zMy0xLjItLjg0LTEuOEExLjUgMS41IDAgMCAwIDEyLjYzIDNtMy40OS4yMnYxNy40M2gxLjI5VjEyLjFsLS4xOC0zaC4wNmwuNSAzLjA1IDIuMTYgOC42M0gyMVYzLjM1aC0xLjN2OC42M2wuMTggMi45NGgtLjA2bC0uNDctMy0yLjE4LTguN3pNMyAzLjM1djE3LjNoMS4zN1YzLjM1eiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgyNHYyNEgweiIvPjwvY2xpcFBhdGg+PC9kZWZzPjwvc3ZnPg==");
+        mask-position: center;
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .control::placeholder {
+        color: oklch(from currentColor calc(l * .75) calc(c * .5) h / .5);
+    }
+
+
+
+    /*   ============= VARIANT ============ */
+
+    .control,
+    .control_variant_outline,
+    .control_variant_ghost {
+        background-color: var(--_default-background-color);
+        color: var(--_default-label-color);
+    }
+
+    .control_variant_fill {
+        background-color: var(--_fill-background-color);
+        color: var(--_fill-label-color);
+    }
+
+    .control_variant_outline {
+        box-shadow: inset 0 0 0 var(--border-width) currentColor;
+    }
+
+
+    :is(.control_variant_ghost, .control_variant_outline):not(:hover):not(:active):not(:focus-visible) {
+        background-color: transparent;
+    }
+
+
+    /*   ============= SHAPE ============ */
+
+    .control_shape_pill {
+        corner-shape: round;
+        border-radius: 100vmax;
+    }
+}
+.main {
+    width: min(100vw - 10vw, 60ch);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25lh;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.html {
+    font-family: System-ui;
+    background-color: var(--surface-color);
+}
+
+.body {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 100vw;
+    min-height: 100vh;
+    line-height: var(--text-line-height);
+}
+@layer control_type {
+    .control_type_button {
+        user-select: none;
+        --_height: var(--control-size-m);
+      }
+}
+@layer control_type {
+    .control_type_checkbox {
+        --_height: var(--control-size-s);
+        aspect-ratio: 1;
+        padding: 0;
+    }
+
+
+
+    .control_type_checkbox:checked:after {
+        content: "";
+        position: absolute;
+
+        left: 32%;
+        top: 12%;
+
+        width: 25%;
+        height: 50%;
+
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+
+        transform: rotate(45deg);
+
+    }
+}
+@layer control_type {
+
+    .control_type_checkbutton {
+        isolation: isolate;
+        user-select: none;
+    }
+
+
+    .control_type_checkbutton:has(.control__input:checked) {
+        background-color: var(--_fill-background-color);
+        color: var(--_fill-label-color);
+        box-shadow: none;
+    }
+
+    .control_variant_ghost.control_type_checkbutton:has(.control__input:checked) {
+        background-color: var(--_default-background-color);
+        color: var(--_default-label-color);
+    }
+}
+@layer control_type {
+    .control_type_input {
+        --_height: var(--control-size-m);
+        cursor: text;
+      }
+
+      .control_type_input {
+        --_padding: calc(var(--_height) / 4);
+        padding-block: var(--_padding);
+      }
+
+      .control_type_input[readonly] {
+        padding-inline-end: var(--_height);
+      }
+
+
+      .control_type_input:required:user-invalid:not(:placeholder-shown) {
+        --_color: var(--red-color);
+      }
+
+      .control_type_input:required:user-valid:not(:placeholder-shown) {
+        --_color: var(--green-color);
+      }
+}
+@layer control_type {
+
+    .control_type_radio {
+        appearance: none;
+        --_height: var(--control-size-s);
+        aspect-ratio: 1;
+        padding: 0;
+        border-radius: var(--_height);
+        corner-shape: round;
+    }
+
+    .control_type_radio:checked::after {
+        content: '';
+        position: absolute;
+        width: 35%;
+        height: 35%;
+        background-color: currentColor;
+        border-radius: var(--_height);
+    }
+
+
+}
+@layer control_type {
+    
+      .control_type_radiobutton {
+        padding: 0;
+        gap: 0;
+      }
+
+      .control_type_radiobutton .control__item {
+        white-space: nowrap;
+        isolation: isolate;
+        --_variant-ghost: 1;
+        --_color: inherit;
+        color: inherit;
+        user-select: none;
+      }
+      
+
+      .control_type_radiobutton .control__item:has(.control_type_radiobutton .control__input:checked) {
+        color: var(--_fill-label-color);
+      }
+
+      .control_type_radiobutton .control__item:has(.control_type_radiobutton .control__input:checked):before {
+        content: '';
+        position: absolute;
+        corner-shape: squircle;
+
+        --_inset: 4px;
+        inset: var(--_inset);
+        background-color: var(--_fill-background-color);
+        border-radius: calc(var(--_border-radius) - var(--_inset));
+        z-index: -1;
+      }
+
+      .control_type_radiobutton .control__item:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      .control_type_radiobutton .control__item:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+}
+@layer control_type {
+    .control_type_select {
+        padding-inline-end: calc(var(--_height) * .85);
+        user-select: none;
+      }
+
+    .control__select-wrapper {
+        position: relative;
+        isolation: isolate;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .control__icon ~ .control_type_select {
+        padding-inline-start: var(--_height);
+        margin-inline-start: calc(var(--_height) * -1);
+    }
+
+    .control__select-wrapper::after {
+        content: '▼';
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 100%;
+        aspect-ratio: 1;
+    }
+    
+    
+
+}
+@layer control_type {
+
+    .control_type_textarea {
+        --_padding: calc(var(--_height) / 4);
+        padding-block: var(--_padding);
+    }
+
+    .control_type_textarea[readonly] {
+        padding-inline-end: var(--_height);
+    }
+
+}
