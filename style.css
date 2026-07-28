@@ -1,6 +1,436 @@
 
 @layer {
+
+     /* @compile:state */
+    :root:not([data-color]),
+    [data-color="default"],
+    [data-color-scheme] {
+        --_base-color: oklch(var(--darkness) 0 0);
+    }
+
+    [data-color="red"],
+    [data-color-scheme] [data-color="red"],
+    [data-color="red"] [data-color-scheme] {
+        --_base-color: var(--red-color);
+    }
+
+    [data-color="yellow"],
+    [data-color-scheme] [data-color="yellow"],
+    [data-color="yellow"] [data-color-scheme] {
+        --_base-color: var(--yellow-color);
+    }
+
+    [data-color="green"],
+    [data-color-scheme] [data-color="green"],
+    [data-color="green"] [data-color-scheme] {
+        --_base-color: var(--green-color);
+    }
+
+    [data-color="blue"],
+    [data-color-scheme] [data-color="blue"],
+    [data-color="blue"] [data-color-scheme] {
+        --_base-color: var(--blue-color);
+    }
+
+    [data-color="purple"],
+    [data-color-scheme] [data-color="purple"],
+    [data-color="purple"] [data-color-scheme] {
+        --_base-color: var(--purple-color);
+    }
+
+    /* @compile:end */
+
+
+    /* @compile:state */
+    :root:not([data-color-scheme]),
+    [data-color-scheme="light"],
+    [data-color-scheme="light"] [data-color],
+    [data-color] [data-color-scheme="light"]  {
+        --darkness: 0;
+        --border-width: 2px;
+        --surface-shadow: 0 .75rlh 1.5rlh -.5rlh var(--surface-shadow-color);
+        --font-weight-text: 400;
+        --font-weight-title: 900;
+        color-scheme: light;
+    }
+
+
+    [data-color-scheme="dark"],
+    [data-color-scheme="dark"] [data-color],
+    [data-color] [data-color-scheme="dark"] {
+        --darkness: 1;
+        --border-width: 1px;
+        --surface-shadow: inset 0 0 0 1px var(--surface-shadow-color);
+        --font-weight-title: 700;
+        color-scheme: dark;
+    }
+
+    /* @compile:end */
+
+   
+    :root,
+[data-color-scheme="light"],
+[data-color="default"],
+[data-color="default"][data-color-scheme="light"],
+[data-color="default"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="default"],
+[data-color-scheme="light"] [data-color="default"] {
+    --base-color: #000000;
+    --accent-color: #000000;
+    --button-label-color: #000000;
+    --surface-color-layer-0: #e4e4e4;
+    --surface-color-layer-1: #f7f7f7;
+    --surface-color-layer-2: #ffffff;
+    --text-color-layer-0: #0b0b0b;
+    --text-color-layer-1: #101010;
+    --text-color-layer-2: #161616;
+    --text-color: #0b0b0b;
+    --title-color-layer-0: #000000;
+    --title-color-layer-1: #000000;
+    --title-color-layer-2: #000000;
+    --title-color: #000000;
+    --surface-shadow-color: #222222;
+    --_control-default-background-color: #0b0b0b;
+    --_control-fill-background-color: #0b0b0b;
+    --_control-default-label-color: #0b0b0b;
+    --_control-fill-label-color: #0b0b0b;
+    --_control-default-background-color-hover: #0b0b0b;
+    --_control-fill-background-color-hover: #0b0b0b;
+    --_control-default-background-color-active: #0b0b0b;
+    --_control-fill-background-color-active: #0b0b0b;
+}
+
+[data-color-scheme="dark"],
+[data-color="default"][data-color-scheme="dark"],
+[data-color="default"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="default"],
+[data-color-scheme="dark"] [data-color="default"] {
+    --base-color: #ffffff;
+    --accent-color: #ffffff;
+    --button-label-color: #ffffff;
+    --surface-color-layer-0: #030303;
+    --surface-color-layer-1: #161616;
+    --surface-color-layer-2: #222222;
+    --text-color-layer-0: #9e9e9e;
+    --text-color-layer-1: #aaaaaa;
+    --text-color-layer-2: #b6b6b6;
+    --text-color: #9e9e9e;
+    --title-color-layer-0: #ffffff;
+    --title-color-layer-1: #ffffff;
+    --title-color-layer-2: #ffffff;
+    --title-color: #ffffff;
+    --surface-shadow-color: #ffffff;
+    --_control-default-background-color: #9e9e9e;
+    --_control-fill-background-color: #9e9e9e;
+    --_control-default-label-color: #9e9e9e;
+    --_control-fill-label-color: #9e9e9e;
+    --_control-default-background-color-hover: #9e9e9e;
+    --_control-fill-background-color-hover: #9e9e9e;
+    --_control-default-background-color-active: #9e9e9e;
+    --_control-fill-background-color-active: #9e9e9e;
+}
+
+[data-color="red"],
+[data-color="red"][data-color-scheme="light"],
+[data-color="red"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="red"],
+[data-color-scheme="light"] [data-color="red"] {
+    --base-color: #ff002a;
+    --accent-color: #fd0029;
+    --button-label-color: #c20000;
+    --surface-color-layer-0: #f1e0de;
+    --surface-color-layer-1: #fff4f2;
+    --surface-color-layer-2: #fffefd;
+    --text-color-layer-0: #ab0000;
+    --text-color-layer-1: #b40000;
+    --text-color-layer-2: #bd0000;
+    --text-color: #ab0000;
+    --title-color-layer-0: #ab0000;
+    --title-color-layer-1: #bd0000;
+    --title-color-layer-2: #d00000;
+    --title-color: #ab0000;
+    --surface-shadow-color: #710000;
+    --_control-default-background-color: #ab0000;
+    --_control-fill-background-color: #ab0000;
+    --_control-default-label-color: #ab0000;
+    --_control-fill-label-color: #ab0000;
+    --_control-default-background-color-hover: #ab0000;
+    --_control-fill-background-color-hover: #ab0000;
+    --_control-default-background-color-active: #ab0000;
+    --_control-fill-background-color-active: #ab0000;
+}
+
+[data-color="red"][data-color-scheme="dark"],
+[data-color="red"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="red"],
+[data-color-scheme="dark"] [data-color="red"] {
+    --base-color: #ff002a;
+    --accent-color: #ff0033;
+    --button-label-color: #ff0033;
+    --surface-color-layer-0: #090101;
+    --surface-color-layer-1: #201110;
+    --surface-color-layer-2: #2d1d1b;
+    --text-color-layer-0: #e37d75;
+    --text-color-layer-1: #f08881;
+    --text-color-layer-2: #fd948c;
+    --text-color: #e37d75;
+    --title-color-layer-0: #ffc2b7;
+    --title-color-layer-1: #ffc4b8;
+    --title-color-layer-2: #ffc5ba;
+    --title-color: #ffc2b7;
+    --surface-shadow-color: #ffc7bc;
+    --_control-default-background-color: #e37d75;
+    --_control-fill-background-color: #e37d75;
+    --_control-default-label-color: #e37d75;
+    --_control-fill-label-color: #e37d75;
+    --_control-default-background-color-hover: #e37d75;
+    --_control-fill-background-color-hover: #e37d75;
+    --_control-default-background-color-active: #e37d75;
+    --_control-fill-background-color-active: #e37d75;
+}
+
+[data-color="yellow"],
+[data-color="yellow"][data-color-scheme="light"],
+[data-color="yellow"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="yellow"],
+[data-color-scheme="light"] [data-color="yellow"] {
+    --base-color: #ffd400;
+    --accent-color: #ab8200;
+    --button-label-color: #7c5300;
+    --surface-color-layer-0: #e7e5db;
+    --surface-color-layer-1: #f9f7f0;
+    --surface-color-layer-2: #fffffc;
+    --text-color-layer-0: #542b00;
+    --text-color-layer-1: #5b3200;
+    --text-color-layer-2: #623900;
+    --text-color: #542b00;
+    --title-color-layer-0: #542b00;
+    --title-color-layer-1: #623900;
+    --title-color-layer-2: #714800;
+    --title-color: #542b00;
+    --surface-shadow-color: #3d1400;
+    --_control-default-background-color: #542b00;
+    --_control-fill-background-color: #542b00;
+    --_control-default-label-color: #542b00;
+    --_control-fill-label-color: #542b00;
+    --_control-default-background-color-hover: #542b00;
+    --_control-fill-background-color-hover: #542b00;
+    --_control-default-background-color-active: #542b00;
+    --_control-fill-background-color-active: #542b00;
+}
+
+[data-color="yellow"][data-color-scheme="dark"],
+[data-color="yellow"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="yellow"],
+[data-color-scheme="dark"] [data-color="yellow"] {
+    --base-color: #ffd400;
+    --accent-color: #ffef00;
+    --button-label-color: #ffef00;
+    --surface-color-layer-0: #050300;
+    --surface-color-layer-1: #19160d;
+    --surface-color-layer-2: #242218;
+    --text-color-layer-0: #b19e5a;
+    --text-color-layer-1: #bca966;
+    --text-color-layer-2: #c8b571;
+    --text-color: #b19e5a;
+    --title-color-layer-0: #fffe84;
+    --title-color-layer-1: #fffe87;
+    --title-color-layer-2: #fffe8a;
+    --title-color: #fffe84;
+    --surface-shadow-color: #fffe8e;
+    --_control-default-background-color: #b19e5a;
+    --_control-fill-background-color: #b19e5a;
+    --_control-default-label-color: #b19e5a;
+    --_control-fill-label-color: #b19e5a;
+    --_control-default-background-color-hover: #b19e5a;
+    --_control-fill-background-color-hover: #b19e5a;
+    --_control-default-background-color-active: #b19e5a;
+    --_control-fill-background-color-active: #b19e5a;
+}
+
+[data-color="green"],
+[data-color="green"][data-color-scheme="light"],
+[data-color="green"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="green"],
+[data-color-scheme="light"] [data-color="green"] {
+    --base-color: #00cc55;
+    --accent-color: #00a72f;
+    --button-label-color: #007600;
+    --surface-color-layer-0: #dee8df;
+    --surface-color-layer-1: #f2f9f3;
+    --surface-color-layer-2: #fdfffd;
+    --text-color-layer-0: #005600;
+    --text-color-layer-1: #005d00;
+    --text-color-layer-2: #006500;
+    --text-color: #005600;
+    --title-color-layer-0: #005600;
+    --title-color-layer-1: #006500;
+    --title-color-layer-2: #007400;
+    --title-color: #005600;
+    --surface-shadow-color: #003500;
+    --_control-default-background-color: #005600;
+    --_control-fill-background-color: #005600;
+    --_control-default-label-color: #005600;
+    --_control-fill-label-color: #005600;
+    --_control-default-background-color-hover: #005600;
+    --_control-fill-background-color-hover: #005600;
+    --_control-default-background-color-active: #005600;
+    --_control-fill-background-color-active: #005600;
+}
+
+[data-color="green"][data-color-scheme="dark"],
+[data-color="green"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="green"],
+[data-color-scheme="dark"] [data-color="green"] {
+    --base-color: #00cc55;
+    --accent-color: #00ff0f;
+    --button-label-color: #00ff0f;
+    --surface-color-layer-0: #010501;
+    --surface-color-layer-1: #0f1911;
+    --surface-color-layer-2: #1b251c;
+    --text-color-layer-0: #6eb179;
+    --text-color-layer-1: #7abd84;
+    --text-color-layer-2: #86c990;
+    --text-color: #6eb179;
+    --title-color-layer-0: #a9ffbd;
+    --title-color-layer-1: #abffbf;
+    --title-color-layer-2: #adffc0;
+    --title-color: #a9ffbd;
+    --surface-shadow-color: #afffc2;
+    --_control-default-background-color: #6eb179;
+    --_control-fill-background-color: #6eb179;
+    --_control-default-label-color: #6eb179;
+    --_control-fill-label-color: #6eb179;
+    --_control-default-background-color-hover: #6eb179;
+    --_control-fill-background-color-hover: #6eb179;
+    --_control-default-background-color-active: #6eb179;
+    --_control-fill-background-color-active: #6eb179;
+}
+
+[data-color="blue"],
+[data-color="blue"][data-color-scheme="light"],
+[data-color="blue"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="blue"],
+[data-color-scheme="light"] [data-color="blue"] {
+    --base-color: #006aff;
+    --accent-color: #1e7cff;
+    --button-label-color: #0047db;
+    --surface-color-layer-0: #dee5f1;
+    --surface-color-layer-1: #f2f7ff;
+    --surface-color-layer-2: #fdffff;
+    --text-color-layer-0: #0027be;
+    --text-color-layer-1: #0031c6;
+    --text-color-layer-2: #003bcf;
+    --text-color: #0027be;
+    --title-color-layer-0: #0027be;
+    --title-color-layer-1: #003bcf;
+    --title-color-layer-2: #004de1;
+    --title-color: #0027be;
+    --surface-shadow-color: #01008f;
+    --_control-default-background-color: #0027be;
+    --_control-fill-background-color: #0027be;
+    --_control-default-label-color: #0027be;
+    --_control-fill-label-color: #0027be;
+    --_control-default-background-color-hover: #0027be;
+    --_control-fill-background-color-hover: #0027be;
+    --_control-default-background-color-active: #0027be;
+    --_control-fill-background-color-active: #0027be;
+}
+
+[data-color="blue"][data-color-scheme="dark"],
+[data-color="blue"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="blue"],
+[data-color-scheme="dark"] [data-color="blue"] {
+    --base-color: #006aff;
+    --accent-color: #00e2ff;
+    --button-label-color: #00e2ff;
+    --surface-color-layer-0: #01030a;
+    --surface-color-layer-1: #101621;
+    --surface-color-layer-2: #1b222d;
+    --text-color-layer-0: #739fe8;
+    --text-color-layer-1: #7eaaf4;
+    --text-color-layer-2: #89b6ff;
+    --text-color: #739fe8;
+    --title-color-layer-0: #b2ffff;
+    --title-color-layer-1: #b4ffff;
+    --title-color-layer-2: #b5ffff;
+    --title-color: #b2ffff;
+    --surface-shadow-color: #b7ffff;
+    --_control-default-background-color: #739fe8;
+    --_control-fill-background-color: #739fe8;
+    --_control-default-label-color: #739fe8;
+    --_control-fill-label-color: #739fe8;
+    --_control-default-background-color-hover: #739fe8;
+    --_control-fill-background-color-hover: #739fe8;
+    --_control-default-background-color-active: #739fe8;
+    --_control-fill-background-color-active: #739fe8;
+}
+
+[data-color="purple"],
+[data-color="purple"][data-color-scheme="light"],
+[data-color="purple"] [data-color-scheme="light"],
+[data-color-scheme="light"][data-color="purple"],
+[data-color-scheme="light"] [data-color="purple"] {
+    --base-color: #d400ff;
+    --accent-color: #d000fa;
+    --button-label-color: #9b00c4;
+    --surface-color-layer-0: #ebe0ef;
+    --surface-color-layer-1: #fbf4fe;
+    --surface-color-layer-2: #fffeff;
+    --text-color-layer-0: #9800c0;
+    --text-color-layer-1: #a000c9;
+    --text-color-layer-2: #a900d1;
+    --text-color: #9800c0;
+    --title-color-layer-0: #9800c0;
+    --title-color-layer-1: #a900d1;
+    --title-color-layer-2: #b900e3;
+    --title-color: #9800c0;
+    --surface-shadow-color: #55007a;
+    --_control-default-background-color: #9800c0;
+    --_control-fill-background-color: #9800c0;
+    --_control-default-label-color: #9800c0;
+    --_control-fill-label-color: #9800c0;
+    --_control-default-background-color-hover: #9800c0;
+    --_control-fill-background-color-hover: #9800c0;
+    --_control-default-background-color-active: #9800c0;
+    --_control-fill-background-color-active: #9800c0;
+}
+
+[data-color="purple"][data-color-scheme="dark"],
+[data-color="purple"] [data-color-scheme="dark"],
+[data-color-scheme="dark"][data-color="purple"],
+[data-color-scheme="dark"] [data-color="purple"] {
+    --base-color: #d400ff;
+    --accent-color: #ff00ff;
+    --button-label-color: #ff00ff;
+    --surface-color-layer-0: #060109;
+    --surface-color-layer-1: #1c111f;
+    --surface-color-layer-2: #281d2b;
+    --text-color-layer-0: #c67cdb;
+    --text-color-layer-1: #d388e8;
+    --text-color-layer-2: #df94f5;
+    --text-color: #c67cdb;
+    --title-color-layer-0: #ffc2ff;
+    --title-color-layer-1: #ffc3ff;
+    --title-color-layer-2: #ffc5ff;
+    --title-color: #ffc2ff;
+    --surface-shadow-color: #ffc7ff;
+    --_control-default-background-color: #c67cdb;
+    --_control-fill-background-color: #c67cdb;
+    --_control-default-label-color: #c67cdb;
+    --_control-fill-label-color: #c67cdb;
+    --_control-default-background-color-hover: #c67cdb;
+    --_control-fill-background-color-hover: #c67cdb;
+    --_control-default-background-color-active: #c67cdb;
+    --_control-fill-background-color-active: #c67cdb;
+}
+
+
+
+
+
     :root {
+        --default-color: hsl(0 0% 50%);
         --red-color: hsl(350 100% 50%);
         --yellow-color: hsl(50 100% 50%);
         --green-color: hsl(145 100% 40%);
@@ -8,1403 +438,86 @@
         --purple-color: hsl(290 100% 50%);
     }
 
-    /* @compile:state */
-    :root:not([data-color]),
-    [data-color="default"],
-    [data-color-scheme] {
-        --base-color: oklch(var(--darkness) 0 0);
-    }
+   
 
-    [data-color="red"] {
-        --base-color: var(--red-color);
-    }
 
-    [data-color="yellow"] {
-        --base-color: var(--yellow-color);
-    }
-
-    [data-color="green"] {
-        --base-color: var(--green-color);
-    }
-
-    [data-color="blue"] {
-        --base-color: var(--blue-color);
-    }
-
-    [data-color="purple"] {
-        --base-color: var(--purple-color);
-    }
-
-    /* @compile:end */
-
-    /* @compile:state */
-    :root:not([data-layer]),
-    [data-layer="0"] {
-        --layer-rate: 0;
-    }
-
-    [data-layer="1"] {
-        --layer-rate: 1;
-    }
-
-    [data-layer="2"] {
-        --layer-rate: 2;
-    }
-
-    /* @compile:end */
+    
 
 
 
 
 
-    /* @compile:state */
+
+
+
     :root:not([data-color-scheme]),
-    [data-color-scheme="light"] {
-        --darkness: 0;
+    [data-color-scheme="light"]{
         --border-width: 2px;
-        --card-shadow:
-            0 .75rlh 1.5rlh -.5rlh oklch(from currentcolor .25 c h / .15)
-            /* , inset 0 0 0 1px oklch(from currentcolor 1 calc(c * .5) h / 1) */
-        ;
+        --surface-shadow: 0 .75rlh 1.5rlh -.5rlh var(--surface-shadow-color);
         --font-weight-text: 400;
         --font-weight-title: 900;
         color-scheme: light;
     }
 
 
-    [data-color-scheme="dark"] {
-        --darkness: 1;
+    [data-color-scheme="dark"]{
         --border-width: 1px;
-        --card-shadow: 0 0 0 1px hsl(from currentcolor h s l / .15);
-        --font-weight-text: 200;
+        --surface-shadow: 0 0 0 1px var(--surface-shadow-color);
         --font-weight-title: 700;
         color-scheme: dark;
     }
 
-    /* @compile:end */
+    
+
+   
 
 
-
-    :root,
-[data-color-scheme="light"],
-[data-layer="0"],
-[data-layer="0"][data-color-scheme="light"],
-[data-layer="0"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-layer="0"],
-[data-color-scheme="light"] [data-layer="0"],
-[data-color="default"],
-[data-color="default"][data-color-scheme="light"],
-[data-color="default"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-color="default"],
-[data-color-scheme="light"] [data-color="default"],
-[data-color="default"][data-layer="0"],
-[data-color="default"] [data-layer="0"],
-[data-layer="0"][data-color="default"],
-[data-layer="0"] [data-color="default"],
-[data-color="default"][data-layer="0"][data-color-scheme="light"],
-[data-color="default"] [data-layer="0"][data-color-scheme="light"],
-[data-color="default"][data-layer="0"] [data-color-scheme="light"],
-[data-color="default"] [data-layer="0"] [data-color-scheme="light"],
-[data-color="default"][data-color-scheme="light"][data-layer="0"],
-[data-color="default"] [data-color-scheme="light"][data-layer="0"],
-[data-color="default"][data-color-scheme="light"] [data-layer="0"],
-[data-color="default"] [data-color-scheme="light"] [data-layer="0"],
-[data-layer="0"][data-color="default"][data-color-scheme="light"],
-[data-layer="0"] [data-color="default"][data-color-scheme="light"],
-[data-layer="0"][data-color="default"] [data-color-scheme="light"],
-[data-layer="0"] [data-color="default"] [data-color-scheme="light"],
-[data-layer="0"][data-color-scheme="light"][data-color="default"],
-[data-layer="0"] [data-color-scheme="light"][data-color="default"],
-[data-layer="0"][data-color-scheme="light"] [data-color="default"],
-[data-layer="0"] [data-color-scheme="light"] [data-color="default"],
-[data-color-scheme="light"][data-layer="0"][data-color="default"],
-[data-color-scheme="light"] [data-layer="0"][data-color="default"],
-[data-color-scheme="light"][data-layer="0"] [data-color="default"],
-[data-color-scheme="light"] [data-layer="0"] [data-color="default"],
-[data-color-scheme="light"][data-color="default"][data-layer="0"],
-[data-color-scheme="light"] [data-color="default"][data-layer="0"],
-[data-color-scheme="light"][data-color="default"] [data-layer="0"],
-[data-color-scheme="light"] [data-color="default"] [data-layer="0"],
-:root,
-[data-color-scheme="light"],
-[data-layer="0"],
-[data-layer="0"][data-color-scheme="light"],
-[data-layer="0"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-layer="0"],
-[data-color-scheme="light"] [data-layer="0"] {
-    --surface-color: #dedede;
-    --text-color: #0b0b0b;
-    --title-color: #000000;
-    --accent-color: #000000;
-    --button-label-color: #000000;
-}
-
-[data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"],
-[data-layer="0"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-layer="0"],
-[data-color-scheme="dark"] [data-layer="0"],
-[data-color="default"][data-color-scheme="dark"],
-[data-color="default"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-color="default"],
-[data-color-scheme="dark"] [data-color="default"],
-[data-color="default"][data-layer="0"][data-color-scheme="dark"],
-[data-color="default"] [data-layer="0"][data-color-scheme="dark"],
-[data-color="default"][data-layer="0"] [data-color-scheme="dark"],
-[data-color="default"] [data-layer="0"] [data-color-scheme="dark"],
-[data-color="default"][data-color-scheme="dark"][data-layer="0"],
-[data-color="default"] [data-color-scheme="dark"][data-layer="0"],
-[data-color="default"][data-color-scheme="dark"] [data-layer="0"],
-[data-color="default"] [data-color-scheme="dark"] [data-layer="0"],
-[data-layer="0"][data-color="default"][data-color-scheme="dark"],
-[data-layer="0"] [data-color="default"][data-color-scheme="dark"],
-[data-layer="0"][data-color="default"] [data-color-scheme="dark"],
-[data-layer="0"] [data-color="default"] [data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"][data-color="default"],
-[data-layer="0"] [data-color-scheme="dark"][data-color="default"],
-[data-layer="0"][data-color-scheme="dark"] [data-color="default"],
-[data-layer="0"] [data-color-scheme="dark"] [data-color="default"],
-[data-color-scheme="dark"][data-layer="0"][data-color="default"],
-[data-color-scheme="dark"] [data-layer="0"][data-color="default"],
-[data-color-scheme="dark"][data-layer="0"] [data-color="default"],
-[data-color-scheme="dark"] [data-layer="0"] [data-color="default"],
-[data-color-scheme="dark"][data-color="default"][data-layer="0"],
-[data-color-scheme="dark"] [data-color="default"][data-layer="0"],
-[data-color-scheme="dark"][data-color="default"] [data-layer="0"],
-[data-color-scheme="dark"] [data-color="default"] [data-layer="0"],
-[data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"],
-[data-layer="0"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-layer="0"],
-[data-color-scheme="dark"] [data-layer="0"] {
-    --surface-color: #0b0b0b;
-    --text-color: #9e9e9e;
-    --title-color: #ffffff;
-    --accent-color: #ffffff;
-    --button-label-color: #ffffff;
-}
-
-[data-layer="1"],
-[data-layer="1"][data-color-scheme="light"],
-[data-layer="1"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-layer="1"],
-[data-color-scheme="light"] [data-layer="1"],
-[data-color="default"][data-layer="1"],
-[data-color="default"] [data-layer="1"],
-[data-layer="1"][data-color="default"],
-[data-layer="1"] [data-color="default"],
-[data-color="default"][data-layer="1"][data-color-scheme="light"],
-[data-color="default"] [data-layer="1"][data-color-scheme="light"],
-[data-color="default"][data-layer="1"] [data-color-scheme="light"],
-[data-color="default"] [data-layer="1"] [data-color-scheme="light"],
-[data-color="default"][data-color-scheme="light"][data-layer="1"],
-[data-color="default"] [data-color-scheme="light"][data-layer="1"],
-[data-color="default"][data-color-scheme="light"] [data-layer="1"],
-[data-color="default"] [data-color-scheme="light"] [data-layer="1"],
-[data-layer="1"][data-color="default"][data-color-scheme="light"],
-[data-layer="1"] [data-color="default"][data-color-scheme="light"],
-[data-layer="1"][data-color="default"] [data-color-scheme="light"],
-[data-layer="1"] [data-color="default"] [data-color-scheme="light"],
-[data-layer="1"][data-color-scheme="light"][data-color="default"],
-[data-layer="1"] [data-color-scheme="light"][data-color="default"],
-[data-layer="1"][data-color-scheme="light"] [data-color="default"],
-[data-layer="1"] [data-color-scheme="light"] [data-color="default"],
-[data-color-scheme="light"][data-layer="1"][data-color="default"],
-[data-color-scheme="light"] [data-layer="1"][data-color="default"],
-[data-color-scheme="light"][data-layer="1"] [data-color="default"],
-[data-color-scheme="light"] [data-layer="1"] [data-color="default"],
-[data-color-scheme="light"][data-color="default"][data-layer="1"],
-[data-color-scheme="light"] [data-color="default"][data-layer="1"],
-[data-color-scheme="light"][data-color="default"] [data-layer="1"],
-[data-color-scheme="light"] [data-color="default"] [data-layer="1"],
-[data-layer="1"],
-[data-layer="1"][data-color-scheme="light"],
-[data-layer="1"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-layer="1"],
-[data-color-scheme="light"] [data-layer="1"] {
-    --surface-color: #eeeeee;
-    --text-color: #101010;
-    --title-color: #000000;
-    --accent-color: #000000;
-    --button-label-color: #000000;
-}
-
-[data-layer="1"][data-color-scheme="dark"],
-[data-layer="1"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-layer="1"],
-[data-color-scheme="dark"] [data-layer="1"],
-[data-color="default"][data-layer="1"][data-color-scheme="dark"],
-[data-color="default"] [data-layer="1"][data-color-scheme="dark"],
-[data-color="default"][data-layer="1"] [data-color-scheme="dark"],
-[data-color="default"] [data-layer="1"] [data-color-scheme="dark"],
-[data-color="default"][data-color-scheme="dark"][data-layer="1"],
-[data-color="default"] [data-color-scheme="dark"][data-layer="1"],
-[data-color="default"][data-color-scheme="dark"] [data-layer="1"],
-[data-color="default"] [data-color-scheme="dark"] [data-layer="1"],
-[data-layer="1"][data-color="default"][data-color-scheme="dark"],
-[data-layer="1"] [data-color="default"][data-color-scheme="dark"],
-[data-layer="1"][data-color="default"] [data-color-scheme="dark"],
-[data-layer="1"] [data-color="default"] [data-color-scheme="dark"],
-[data-layer="1"][data-color-scheme="dark"][data-color="default"],
-[data-layer="1"] [data-color-scheme="dark"][data-color="default"],
-[data-layer="1"][data-color-scheme="dark"] [data-color="default"],
-[data-layer="1"] [data-color-scheme="dark"] [data-color="default"],
-[data-color-scheme="dark"][data-layer="1"][data-color="default"],
-[data-color-scheme="dark"] [data-layer="1"][data-color="default"],
-[data-color-scheme="dark"][data-layer="1"] [data-color="default"],
-[data-color-scheme="dark"] [data-layer="1"] [data-color="default"],
-[data-color-scheme="dark"][data-color="default"][data-layer="1"],
-[data-color-scheme="dark"] [data-color="default"][data-layer="1"],
-[data-color-scheme="dark"][data-color="default"] [data-layer="1"],
-[data-color-scheme="dark"] [data-color="default"] [data-layer="1"],
-[data-layer="1"][data-color-scheme="dark"],
-[data-layer="1"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-layer="1"],
-[data-color-scheme="dark"] [data-layer="1"] {
-    --surface-color: #171717;
-    --text-color: #ababab;
-    --title-color: #ffffff;
-    --accent-color: #ffffff;
-    --button-label-color: #ffffff;
-}
-
-[data-layer="2"],
-[data-layer="2"][data-color-scheme="light"],
-[data-layer="2"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-layer="2"],
-[data-color-scheme="light"] [data-layer="2"],
-[data-color="default"][data-layer="2"],
-[data-color="default"] [data-layer="2"],
-[data-layer="2"][data-color="default"],
-[data-layer="2"] [data-color="default"],
-[data-color="default"][data-layer="2"][data-color-scheme="light"],
-[data-color="default"] [data-layer="2"][data-color-scheme="light"],
-[data-color="default"][data-layer="2"] [data-color-scheme="light"],
-[data-color="default"] [data-layer="2"] [data-color-scheme="light"],
-[data-color="default"][data-color-scheme="light"][data-layer="2"],
-[data-color="default"] [data-color-scheme="light"][data-layer="2"],
-[data-color="default"][data-color-scheme="light"] [data-layer="2"],
-[data-color="default"] [data-color-scheme="light"] [data-layer="2"],
-[data-layer="2"][data-color="default"][data-color-scheme="light"],
-[data-layer="2"] [data-color="default"][data-color-scheme="light"],
-[data-layer="2"][data-color="default"] [data-color-scheme="light"],
-[data-layer="2"] [data-color="default"] [data-color-scheme="light"],
-[data-layer="2"][data-color-scheme="light"][data-color="default"],
-[data-layer="2"] [data-color-scheme="light"][data-color="default"],
-[data-layer="2"][data-color-scheme="light"] [data-color="default"],
-[data-layer="2"] [data-color-scheme="light"] [data-color="default"],
-[data-color-scheme="light"][data-layer="2"][data-color="default"],
-[data-color-scheme="light"] [data-layer="2"][data-color="default"],
-[data-color-scheme="light"][data-layer="2"] [data-color="default"],
-[data-color-scheme="light"] [data-layer="2"] [data-color="default"],
-[data-color-scheme="light"][data-color="default"][data-layer="2"],
-[data-color-scheme="light"] [data-color="default"][data-layer="2"],
-[data-color-scheme="light"][data-color="default"] [data-layer="2"],
-[data-color-scheme="light"] [data-color="default"] [data-layer="2"],
-[data-layer="2"],
-[data-layer="2"][data-color-scheme="light"],
-[data-layer="2"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-layer="2"],
-[data-color-scheme="light"] [data-layer="2"] {
-    --surface-color: #ffffff;
-    --text-color: #161616;
-    --title-color: #000000;
-    --accent-color: #030303;
-    --button-label-color: #020202;
-}
-
-[data-layer="2"][data-color-scheme="dark"],
-[data-layer="2"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-layer="2"],
-[data-color-scheme="dark"] [data-layer="2"],
-[data-color="default"][data-layer="2"][data-color-scheme="dark"],
-[data-color="default"] [data-layer="2"][data-color-scheme="dark"],
-[data-color="default"][data-layer="2"] [data-color-scheme="dark"],
-[data-color="default"] [data-layer="2"] [data-color-scheme="dark"],
-[data-color="default"][data-color-scheme="dark"][data-layer="2"],
-[data-color="default"] [data-color-scheme="dark"][data-layer="2"],
-[data-color="default"][data-color-scheme="dark"] [data-layer="2"],
-[data-color="default"] [data-color-scheme="dark"] [data-layer="2"],
-[data-layer="2"][data-color="default"][data-color-scheme="dark"],
-[data-layer="2"] [data-color="default"][data-color-scheme="dark"],
-[data-layer="2"][data-color="default"] [data-color-scheme="dark"],
-[data-layer="2"] [data-color="default"] [data-color-scheme="dark"],
-[data-layer="2"][data-color-scheme="dark"][data-color="default"],
-[data-layer="2"] [data-color-scheme="dark"][data-color="default"],
-[data-layer="2"][data-color-scheme="dark"] [data-color="default"],
-[data-layer="2"] [data-color-scheme="dark"] [data-color="default"],
-[data-color-scheme="dark"][data-layer="2"][data-color="default"],
-[data-color-scheme="dark"] [data-layer="2"][data-color="default"],
-[data-color-scheme="dark"][data-layer="2"] [data-color="default"],
-[data-color-scheme="dark"] [data-layer="2"] [data-color="default"],
-[data-color-scheme="dark"][data-color="default"][data-layer="2"],
-[data-color-scheme="dark"] [data-color="default"][data-layer="2"],
-[data-color-scheme="dark"][data-color="default"] [data-layer="2"],
-[data-color-scheme="dark"] [data-color="default"] [data-layer="2"],
-[data-layer="2"][data-color-scheme="dark"],
-[data-layer="2"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-layer="2"],
-[data-color-scheme="dark"] [data-layer="2"] {
-    --surface-color: #242424;
-    --text-color: #b7b7b7;
-    --title-color: #ffffff;
-    --accent-color: #ffffff;
-    --button-label-color: #ffffff;
-}
-
-[data-color="red"],
-[data-color="red"][data-color-scheme="light"],
-[data-color="red"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-color="red"],
-[data-color-scheme="light"] [data-color="red"],
-[data-color="red"][data-layer="0"],
-[data-color="red"] [data-layer="0"],
-[data-layer="0"][data-color="red"],
-[data-layer="0"] [data-color="red"],
-[data-color="red"][data-layer="0"][data-color-scheme="light"],
-[data-color="red"] [data-layer="0"][data-color-scheme="light"],
-[data-color="red"][data-layer="0"] [data-color-scheme="light"],
-[data-color="red"] [data-layer="0"] [data-color-scheme="light"],
-[data-color="red"][data-color-scheme="light"][data-layer="0"],
-[data-color="red"] [data-color-scheme="light"][data-layer="0"],
-[data-color="red"][data-color-scheme="light"] [data-layer="0"],
-[data-color="red"] [data-color-scheme="light"] [data-layer="0"],
-[data-layer="0"][data-color="red"][data-color-scheme="light"],
-[data-layer="0"] [data-color="red"][data-color-scheme="light"],
-[data-layer="0"][data-color="red"] [data-color-scheme="light"],
-[data-layer="0"] [data-color="red"] [data-color-scheme="light"],
-[data-layer="0"][data-color-scheme="light"][data-color="red"],
-[data-layer="0"] [data-color-scheme="light"][data-color="red"],
-[data-layer="0"][data-color-scheme="light"] [data-color="red"],
-[data-layer="0"] [data-color-scheme="light"] [data-color="red"],
-[data-color-scheme="light"][data-layer="0"][data-color="red"],
-[data-color-scheme="light"] [data-layer="0"][data-color="red"],
-[data-color-scheme="light"][data-layer="0"] [data-color="red"],
-[data-color-scheme="light"] [data-layer="0"] [data-color="red"],
-[data-color-scheme="light"][data-color="red"][data-layer="0"],
-[data-color-scheme="light"] [data-color="red"][data-layer="0"],
-[data-color-scheme="light"][data-color="red"] [data-layer="0"],
-[data-color-scheme="light"] [data-color="red"] [data-layer="0"] {
-    --surface-color: #ebd9d8;
-    --text-color: #ab0000;
-    --title-color: #ab0000;
-    --accent-color: #e10004;
-    --button-label-color: #b80000;
-}
-
-[data-color="red"][data-color-scheme="dark"],
-[data-color="red"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-color="red"],
-[data-color-scheme="dark"] [data-color="red"],
-[data-color="red"][data-layer="0"][data-color-scheme="dark"],
-[data-color="red"] [data-layer="0"][data-color-scheme="dark"],
-[data-color="red"][data-layer="0"] [data-color-scheme="dark"],
-[data-color="red"] [data-layer="0"] [data-color-scheme="dark"],
-[data-color="red"][data-color-scheme="dark"][data-layer="0"],
-[data-color="red"] [data-color-scheme="dark"][data-layer="0"],
-[data-color="red"][data-color-scheme="dark"] [data-layer="0"],
-[data-color="red"] [data-color-scheme="dark"] [data-layer="0"],
-[data-layer="0"][data-color="red"][data-color-scheme="dark"],
-[data-layer="0"] [data-color="red"][data-color-scheme="dark"],
-[data-layer="0"][data-color="red"] [data-color-scheme="dark"],
-[data-layer="0"] [data-color="red"] [data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"][data-color="red"],
-[data-layer="0"] [data-color-scheme="dark"][data-color="red"],
-[data-layer="0"][data-color-scheme="dark"] [data-color="red"],
-[data-layer="0"] [data-color-scheme="dark"] [data-color="red"],
-[data-color-scheme="dark"][data-layer="0"][data-color="red"],
-[data-color-scheme="dark"] [data-layer="0"][data-color="red"],
-[data-color-scheme="dark"][data-layer="0"] [data-color="red"],
-[data-color-scheme="dark"] [data-layer="0"] [data-color="red"],
-[data-color-scheme="dark"][data-color="red"][data-layer="0"],
-[data-color-scheme="dark"] [data-color="red"][data-layer="0"],
-[data-color-scheme="dark"][data-color="red"] [data-layer="0"],
-[data-color-scheme="dark"] [data-color="red"] [data-layer="0"] {
-    --surface-color: #150706;
-    --text-color: #e37d75;
-    --title-color: #ffc2b7;
-    --accent-color: #ff0033;
-    --button-label-color: #ff0033;
-}
-
-[data-color="red"][data-layer="1"],
-[data-color="red"] [data-layer="1"],
-[data-layer="1"][data-color="red"],
-[data-layer="1"] [data-color="red"],
-[data-color="red"][data-layer="1"][data-color-scheme="light"],
-[data-color="red"] [data-layer="1"][data-color-scheme="light"],
-[data-color="red"][data-layer="1"] [data-color-scheme="light"],
-[data-color="red"] [data-layer="1"] [data-color-scheme="light"],
-[data-color="red"][data-color-scheme="light"][data-layer="1"],
-[data-color="red"] [data-color-scheme="light"][data-layer="1"],
-[data-color="red"][data-color-scheme="light"] [data-layer="1"],
-[data-color="red"] [data-color-scheme="light"] [data-layer="1"],
-[data-layer="1"][data-color="red"][data-color-scheme="light"],
-[data-layer="1"] [data-color="red"][data-color-scheme="light"],
-[data-layer="1"][data-color="red"] [data-color-scheme="light"],
-[data-layer="1"] [data-color="red"] [data-color-scheme="light"],
-[data-layer="1"][data-color-scheme="light"][data-color="red"],
-[data-layer="1"] [data-color-scheme="light"][data-color="red"],
-[data-layer="1"][data-color-scheme="light"] [data-color="red"],
-[data-layer="1"] [data-color-scheme="light"] [data-color="red"],
-[data-color-scheme="light"][data-layer="1"][data-color="red"],
-[data-color-scheme="light"] [data-layer="1"][data-color="red"],
-[data-color-scheme="light"][data-layer="1"] [data-color="red"],
-[data-color-scheme="light"] [data-layer="1"] [data-color="red"],
-[data-color-scheme="light"][data-color="red"][data-layer="1"],
-[data-color-scheme="light"] [data-color="red"][data-layer="1"],
-[data-color-scheme="light"][data-color="red"] [data-layer="1"],
-[data-color-scheme="light"] [data-color="red"] [data-layer="1"] {
-    --surface-color: #fbeae8;
-    --text-color: #b40000;
-    --title-color: #b40000;
-    --accent-color: #f4001f;
-    --button-label-color: #c60000;
-}
-
-[data-color="red"][data-layer="1"][data-color-scheme="dark"],
-[data-color="red"] [data-layer="1"][data-color-scheme="dark"],
-[data-color="red"][data-layer="1"] [data-color-scheme="dark"],
-[data-color="red"] [data-layer="1"] [data-color-scheme="dark"],
-[data-color="red"][data-color-scheme="dark"][data-layer="1"],
-[data-color="red"] [data-color-scheme="dark"][data-layer="1"],
-[data-color="red"][data-color-scheme="dark"] [data-layer="1"],
-[data-color="red"] [data-color-scheme="dark"] [data-layer="1"],
-[data-layer="1"][data-color="red"][data-color-scheme="dark"],
-[data-layer="1"] [data-color="red"][data-color-scheme="dark"],
-[data-layer="1"][data-color="red"] [data-color-scheme="dark"],
-[data-layer="1"] [data-color="red"] [data-color-scheme="dark"],
-[data-layer="1"][data-color-scheme="dark"][data-color="red"],
-[data-layer="1"] [data-color-scheme="dark"][data-color="red"],
-[data-layer="1"][data-color-scheme="dark"] [data-color="red"],
-[data-layer="1"] [data-color-scheme="dark"] [data-color="red"],
-[data-color-scheme="dark"][data-layer="1"][data-color="red"],
-[data-color-scheme="dark"] [data-layer="1"][data-color="red"],
-[data-color-scheme="dark"][data-layer="1"] [data-color="red"],
-[data-color-scheme="dark"] [data-layer="1"] [data-color="red"],
-[data-color-scheme="dark"][data-color="red"][data-layer="1"],
-[data-color-scheme="dark"] [data-color="red"][data-layer="1"],
-[data-color-scheme="dark"][data-color="red"] [data-layer="1"],
-[data-color-scheme="dark"] [data-color="red"] [data-layer="1"] {
-    --surface-color: #221311;
-    --text-color: #f18981;
-    --title-color: #ffc8bd;
-    --accent-color: #ff003e;
-    --button-label-color: #ff003e;
-}
-
-[data-color="red"][data-layer="2"],
-[data-color="red"] [data-layer="2"],
-[data-layer="2"][data-color="red"],
-[data-layer="2"] [data-color="red"],
-[data-color="red"][data-layer="2"][data-color-scheme="light"],
-[data-color="red"] [data-layer="2"][data-color-scheme="light"],
-[data-color="red"][data-layer="2"] [data-color-scheme="light"],
-[data-color="red"] [data-layer="2"] [data-color-scheme="light"],
-[data-color="red"][data-color-scheme="light"][data-layer="2"],
-[data-color="red"] [data-color-scheme="light"][data-layer="2"],
-[data-color="red"][data-color-scheme="light"] [data-layer="2"],
-[data-color="red"] [data-color-scheme="light"] [data-layer="2"],
-[data-layer="2"][data-color="red"][data-color-scheme="light"],
-[data-layer="2"] [data-color="red"][data-color-scheme="light"],
-[data-layer="2"][data-color="red"] [data-color-scheme="light"],
-[data-layer="2"] [data-color="red"] [data-color-scheme="light"],
-[data-layer="2"][data-color-scheme="light"][data-color="red"],
-[data-layer="2"] [data-color-scheme="light"][data-color="red"],
-[data-layer="2"][data-color-scheme="light"] [data-color="red"],
-[data-layer="2"] [data-color-scheme="light"] [data-color="red"],
-[data-color-scheme="light"][data-layer="2"][data-color="red"],
-[data-color-scheme="light"] [data-layer="2"][data-color="red"],
-[data-color-scheme="light"][data-layer="2"] [data-color="red"],
-[data-color-scheme="light"] [data-layer="2"] [data-color="red"],
-[data-color-scheme="light"][data-color="red"][data-layer="2"],
-[data-color-scheme="light"] [data-color="red"][data-layer="2"],
-[data-color-scheme="light"][data-color="red"] [data-layer="2"],
-[data-color-scheme="light"] [data-color="red"] [data-layer="2"] {
-    --surface-color: #fffbf9;
-    --text-color: #bd0000;
-    --title-color: #bd0000;
-    --accent-color: #ff1932;
-    --button-label-color: #d50000;
-}
-
-[data-color="red"][data-layer="2"][data-color-scheme="dark"],
-[data-color="red"] [data-layer="2"][data-color-scheme="dark"],
-[data-color="red"][data-layer="2"] [data-color-scheme="dark"],
-[data-color="red"] [data-layer="2"] [data-color-scheme="dark"],
-[data-color="red"][data-color-scheme="dark"][data-layer="2"],
-[data-color="red"] [data-color-scheme="dark"][data-layer="2"],
-[data-color="red"][data-color-scheme="dark"] [data-layer="2"],
-[data-color="red"] [data-color-scheme="dark"] [data-layer="2"],
-[data-layer="2"][data-color="red"][data-color-scheme="dark"],
-[data-layer="2"] [data-color="red"][data-color-scheme="dark"],
-[data-layer="2"][data-color="red"] [data-color-scheme="dark"],
-[data-layer="2"] [data-color="red"] [data-color-scheme="dark"],
-[data-layer="2"][data-color-scheme="dark"][data-color="red"],
-[data-layer="2"] [data-color-scheme="dark"][data-color="red"],
-[data-layer="2"][data-color-scheme="dark"] [data-color="red"],
-[data-layer="2"] [data-color-scheme="dark"] [data-color="red"],
-[data-color-scheme="dark"][data-layer="2"][data-color="red"],
-[data-color-scheme="dark"] [data-layer="2"][data-color="red"],
-[data-color-scheme="dark"][data-layer="2"] [data-color="red"],
-[data-color-scheme="dark"] [data-layer="2"] [data-color="red"],
-[data-color-scheme="dark"][data-color="red"][data-layer="2"],
-[data-color-scheme="dark"] [data-color="red"][data-layer="2"],
-[data-color-scheme="dark"][data-color="red"] [data-layer="2"],
-[data-color-scheme="dark"] [data-color="red"] [data-layer="2"] {
-    --surface-color: #2f1f1e;
-    --text-color: #ff968d;
-    --title-color: #ffcdc2;
-    --accent-color: #ff0047;
-    --button-label-color: #ff0047;
-}
-
-[data-color="yellow"],
-[data-color="yellow"][data-color-scheme="light"],
-[data-color="yellow"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-color="yellow"],
-[data-color-scheme="light"] [data-color="yellow"],
-[data-color="yellow"][data-layer="0"],
-[data-color="yellow"] [data-layer="0"],
-[data-layer="0"][data-color="yellow"],
-[data-layer="0"] [data-color="yellow"],
-[data-color="yellow"][data-layer="0"][data-color-scheme="light"],
-[data-color="yellow"] [data-layer="0"][data-color-scheme="light"],
-[data-color="yellow"][data-layer="0"] [data-color-scheme="light"],
-[data-color="yellow"] [data-layer="0"] [data-color-scheme="light"],
-[data-color="yellow"][data-color-scheme="light"][data-layer="0"],
-[data-color="yellow"] [data-color-scheme="light"][data-layer="0"],
-[data-color="yellow"][data-color-scheme="light"] [data-layer="0"],
-[data-color="yellow"] [data-color-scheme="light"] [data-layer="0"],
-[data-layer="0"][data-color="yellow"][data-color-scheme="light"],
-[data-layer="0"] [data-color="yellow"][data-color-scheme="light"],
-[data-layer="0"][data-color="yellow"] [data-color-scheme="light"],
-[data-layer="0"] [data-color="yellow"] [data-color-scheme="light"],
-[data-layer="0"][data-color-scheme="light"][data-color="yellow"],
-[data-layer="0"] [data-color-scheme="light"][data-color="yellow"],
-[data-layer="0"][data-color-scheme="light"] [data-color="yellow"],
-[data-layer="0"] [data-color-scheme="light"] [data-color="yellow"],
-[data-color-scheme="light"][data-layer="0"][data-color="yellow"],
-[data-color-scheme="light"] [data-layer="0"][data-color="yellow"],
-[data-color-scheme="light"][data-layer="0"] [data-color="yellow"],
-[data-color-scheme="light"] [data-layer="0"] [data-color="yellow"],
-[data-color-scheme="light"][data-color="yellow"][data-layer="0"],
-[data-color-scheme="light"] [data-color="yellow"][data-layer="0"],
-[data-color-scheme="light"][data-color="yellow"] [data-layer="0"],
-[data-color-scheme="light"] [data-color="yellow"] [data-layer="0"] {
-    --surface-color: #e1ded4;
-    --text-color: #542b00;
-    --title-color: #542b00;
-    --accent-color: #946b00;
-    --button-label-color: #734b00;
-}
-
-[data-color="yellow"][data-color-scheme="dark"],
-[data-color="yellow"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-color="yellow"],
-[data-color-scheme="dark"] [data-color="yellow"],
-[data-color="yellow"][data-layer="0"][data-color-scheme="dark"],
-[data-color="yellow"] [data-layer="0"][data-color-scheme="dark"],
-[data-color="yellow"][data-layer="0"] [data-color-scheme="dark"],
-[data-color="yellow"] [data-layer="0"] [data-color-scheme="dark"],
-[data-color="yellow"][data-color-scheme="dark"][data-layer="0"],
-[data-color="yellow"] [data-color-scheme="dark"][data-layer="0"],
-[data-color="yellow"][data-color-scheme="dark"] [data-layer="0"],
-[data-color="yellow"] [data-color-scheme="dark"] [data-layer="0"],
-[data-layer="0"][data-color="yellow"][data-color-scheme="dark"],
-[data-layer="0"] [data-color="yellow"][data-color-scheme="dark"],
-[data-layer="0"][data-color="yellow"] [data-color-scheme="dark"],
-[data-layer="0"] [data-color="yellow"] [data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"][data-color="yellow"],
-[data-layer="0"] [data-color-scheme="dark"][data-color="yellow"],
-[data-layer="0"][data-color-scheme="dark"] [data-color="yellow"],
-[data-layer="0"] [data-color-scheme="dark"] [data-color="yellow"],
-[data-color-scheme="dark"][data-layer="0"][data-color="yellow"],
-[data-color-scheme="dark"] [data-layer="0"][data-color="yellow"],
-[data-color-scheme="dark"][data-layer="0"] [data-color="yellow"],
-[data-color-scheme="dark"] [data-layer="0"] [data-color="yellow"],
-[data-color-scheme="dark"][data-color="yellow"][data-layer="0"],
-[data-color-scheme="dark"] [data-color="yellow"][data-layer="0"],
-[data-color-scheme="dark"][data-color="yellow"] [data-layer="0"],
-[data-color-scheme="dark"] [data-color="yellow"] [data-layer="0"] {
-    --surface-color: #0e0b04;
-    --text-color: #b19e5a;
-    --title-color: #fffe84;
-    --accent-color: #ffef00;
-    --button-label-color: #ffef00;
-}
-
-[data-color="yellow"][data-layer="1"],
-[data-color="yellow"] [data-layer="1"],
-[data-layer="1"][data-color="yellow"],
-[data-layer="1"] [data-color="yellow"],
-[data-color="yellow"][data-layer="1"][data-color-scheme="light"],
-[data-color="yellow"] [data-layer="1"][data-color-scheme="light"],
-[data-color="yellow"][data-layer="1"] [data-color-scheme="light"],
-[data-color="yellow"] [data-layer="1"] [data-color-scheme="light"],
-[data-color="yellow"][data-color-scheme="light"][data-layer="1"],
-[data-color="yellow"] [data-color-scheme="light"][data-layer="1"],
-[data-color="yellow"][data-color-scheme="light"] [data-layer="1"],
-[data-color="yellow"] [data-color-scheme="light"] [data-layer="1"],
-[data-layer="1"][data-color="yellow"][data-color-scheme="light"],
-[data-layer="1"] [data-color="yellow"][data-color-scheme="light"],
-[data-layer="1"][data-color="yellow"] [data-color-scheme="light"],
-[data-layer="1"] [data-color="yellow"] [data-color-scheme="light"],
-[data-layer="1"][data-color-scheme="light"][data-color="yellow"],
-[data-layer="1"] [data-color-scheme="light"][data-color="yellow"],
-[data-layer="1"][data-color-scheme="light"] [data-color="yellow"],
-[data-layer="1"] [data-color-scheme="light"] [data-color="yellow"],
-[data-color-scheme="light"][data-layer="1"][data-color="yellow"],
-[data-color-scheme="light"] [data-layer="1"][data-color="yellow"],
-[data-color-scheme="light"][data-layer="1"] [data-color="yellow"],
-[data-color-scheme="light"] [data-layer="1"] [data-color="yellow"],
-[data-color-scheme="light"][data-color="yellow"][data-layer="1"],
-[data-color-scheme="light"] [data-color="yellow"][data-layer="1"],
-[data-color-scheme="light"][data-color="yellow"] [data-layer="1"],
-[data-color-scheme="light"] [data-color="yellow"] [data-layer="1"] {
-    --surface-color: #f1efe5;
-    --text-color: #5b3200;
-    --title-color: #5b3200;
-    --accent-color: #a47a00;
-    --button-label-color: #7f5600;
-}
-
-[data-color="yellow"][data-layer="1"][data-color-scheme="dark"],
-[data-color="yellow"] [data-layer="1"][data-color-scheme="dark"],
-[data-color="yellow"][data-layer="1"] [data-color-scheme="dark"],
-[data-color="yellow"] [data-layer="1"] [data-color-scheme="dark"],
-[data-color="yellow"][data-color-scheme="dark"][data-layer="1"],
-[data-color="yellow"] [data-color-scheme="dark"][data-layer="1"],
-[data-color="yellow"][data-color-scheme="dark"] [data-layer="1"],
-[data-color="yellow"] [data-color-scheme="dark"] [data-layer="1"],
-[data-layer="1"][data-color="yellow"][data-color-scheme="dark"],
-[data-layer="1"] [data-color="yellow"][data-color-scheme="dark"],
-[data-layer="1"][data-color="yellow"] [data-color-scheme="dark"],
-[data-layer="1"] [data-color="yellow"] [data-color-scheme="dark"],
-[data-layer="1"][data-color-scheme="dark"][data-color="yellow"],
-[data-layer="1"] [data-color-scheme="dark"][data-color="yellow"],
-[data-layer="1"][data-color-scheme="dark"] [data-color="yellow"],
-[data-layer="1"] [data-color-scheme="dark"] [data-color="yellow"],
-[data-color-scheme="dark"][data-layer="1"][data-color="yellow"],
-[data-color-scheme="dark"] [data-layer="1"][data-color="yellow"],
-[data-color-scheme="dark"][data-layer="1"] [data-color="yellow"],
-[data-color-scheme="dark"] [data-layer="1"] [data-color="yellow"],
-[data-color-scheme="dark"][data-color="yellow"][data-layer="1"],
-[data-color-scheme="dark"] [data-color="yellow"][data-layer="1"],
-[data-color-scheme="dark"][data-color="yellow"] [data-layer="1"],
-[data-color-scheme="dark"] [data-color="yellow"] [data-layer="1"] {
-    --surface-color: #1a170e;
-    --text-color: #bdaa66;
-    --title-color: #fffe94;
-    --accent-color: #fff000;
-    --button-label-color: #fff000;
-}
-
-[data-color="yellow"][data-layer="2"],
-[data-color="yellow"] [data-layer="2"],
-[data-layer="2"][data-color="yellow"],
-[data-layer="2"] [data-color="yellow"],
-[data-color="yellow"][data-layer="2"][data-color-scheme="light"],
-[data-color="yellow"] [data-layer="2"][data-color-scheme="light"],
-[data-color="yellow"][data-layer="2"] [data-color-scheme="light"],
-[data-color="yellow"] [data-layer="2"] [data-color-scheme="light"],
-[data-color="yellow"][data-color-scheme="light"][data-layer="2"],
-[data-color="yellow"] [data-color-scheme="light"][data-layer="2"],
-[data-color="yellow"][data-color-scheme="light"] [data-layer="2"],
-[data-color="yellow"] [data-color-scheme="light"] [data-layer="2"],
-[data-layer="2"][data-color="yellow"][data-color-scheme="light"],
-[data-layer="2"] [data-color="yellow"][data-color-scheme="light"],
-[data-layer="2"][data-color="yellow"] [data-color-scheme="light"],
-[data-layer="2"] [data-color="yellow"] [data-color-scheme="light"],
-[data-layer="2"][data-color-scheme="light"][data-color="yellow"],
-[data-layer="2"] [data-color-scheme="light"][data-color="yellow"],
-[data-layer="2"][data-color-scheme="light"] [data-color="yellow"],
-[data-layer="2"] [data-color-scheme="light"] [data-color="yellow"],
-[data-color-scheme="light"][data-layer="2"][data-color="yellow"],
-[data-color-scheme="light"] [data-layer="2"][data-color="yellow"],
-[data-color-scheme="light"][data-layer="2"] [data-color="yellow"],
-[data-color-scheme="light"] [data-layer="2"] [data-color="yellow"],
-[data-color-scheme="light"][data-color="yellow"][data-layer="2"],
-[data-color-scheme="light"] [data-color="yellow"][data-layer="2"],
-[data-color-scheme="light"][data-color="yellow"] [data-layer="2"],
-[data-color-scheme="light"] [data-color="yellow"] [data-layer="2"] {
-    --surface-color: #fffff5;
-    --text-color: #623900;
-    --title-color: #623900;
-    --accent-color: #b38a00;
-    --button-label-color: #8b6200;
-}
-
-[data-color="yellow"][data-layer="2"][data-color-scheme="dark"],
-[data-color="yellow"] [data-layer="2"][data-color-scheme="dark"],
-[data-color="yellow"][data-layer="2"] [data-color-scheme="dark"],
-[data-color="yellow"] [data-layer="2"] [data-color-scheme="dark"],
-[data-color="yellow"][data-color-scheme="dark"][data-layer="2"],
-[data-color="yellow"] [data-color-scheme="dark"][data-layer="2"],
-[data-color="yellow"][data-color-scheme="dark"] [data-layer="2"],
-[data-color="yellow"] [data-color-scheme="dark"] [data-layer="2"],
-[data-layer="2"][data-color="yellow"][data-color-scheme="dark"],
-[data-layer="2"] [data-color="yellow"][data-color-scheme="dark"],
-[data-layer="2"][data-color="yellow"] [data-color-scheme="dark"],
-[data-layer="2"] [data-color="yellow"] [data-color-scheme="dark"],
-[data-layer="2"][data-color-scheme="dark"][data-color="yellow"],
-[data-layer="2"] [data-color-scheme="dark"][data-color="yellow"],
-[data-layer="2"][data-color-scheme="dark"] [data-color="yellow"],
-[data-layer="2"] [data-color-scheme="dark"] [data-color="yellow"],
-[data-color-scheme="dark"][data-layer="2"][data-color="yellow"],
-[data-color-scheme="dark"] [data-layer="2"][data-color="yellow"],
-[data-color-scheme="dark"][data-layer="2"] [data-color="yellow"],
-[data-color-scheme="dark"] [data-layer="2"] [data-color="yellow"],
-[data-color-scheme="dark"][data-color="yellow"][data-layer="2"],
-[data-color-scheme="dark"] [data-color="yellow"][data-layer="2"],
-[data-color-scheme="dark"][data-color="yellow"] [data-layer="2"],
-[data-color-scheme="dark"] [data-color="yellow"] [data-layer="2"] {
-    --surface-color: #27241a;
-    --text-color: #cab773;
-    --title-color: #ffffa3;
-    --accent-color: #fff100;
-    --button-label-color: #fff100;
-}
-
-[data-color="green"],
-[data-color="green"][data-color-scheme="light"],
-[data-color="green"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-color="green"],
-[data-color-scheme="light"] [data-color="green"],
-[data-color="green"][data-layer="0"],
-[data-color="green"] [data-layer="0"],
-[data-layer="0"][data-color="green"],
-[data-layer="0"] [data-color="green"],
-[data-color="green"][data-layer="0"][data-color-scheme="light"],
-[data-color="green"] [data-layer="0"][data-color-scheme="light"],
-[data-color="green"][data-layer="0"] [data-color-scheme="light"],
-[data-color="green"] [data-layer="0"] [data-color-scheme="light"],
-[data-color="green"][data-color-scheme="light"][data-layer="0"],
-[data-color="green"] [data-color-scheme="light"][data-layer="0"],
-[data-color="green"][data-color-scheme="light"] [data-layer="0"],
-[data-color="green"] [data-color-scheme="light"] [data-layer="0"],
-[data-layer="0"][data-color="green"][data-color-scheme="light"],
-[data-layer="0"] [data-color="green"][data-color-scheme="light"],
-[data-layer="0"][data-color="green"] [data-color-scheme="light"],
-[data-layer="0"] [data-color="green"] [data-color-scheme="light"],
-[data-layer="0"][data-color-scheme="light"][data-color="green"],
-[data-layer="0"] [data-color-scheme="light"][data-color="green"],
-[data-layer="0"][data-color-scheme="light"] [data-color="green"],
-[data-layer="0"] [data-color-scheme="light"] [data-color="green"],
-[data-color-scheme="light"][data-layer="0"][data-color="green"],
-[data-color-scheme="light"] [data-layer="0"][data-color="green"],
-[data-color-scheme="light"][data-layer="0"] [data-color="green"],
-[data-color-scheme="light"] [data-layer="0"] [data-color="green"],
-[data-color-scheme="light"][data-color="green"][data-layer="0"],
-[data-color-scheme="light"] [data-color="green"][data-layer="0"],
-[data-color-scheme="light"][data-color="green"] [data-layer="0"],
-[data-color-scheme="light"] [data-color="green"] [data-layer="0"] {
-    --surface-color: #d7e1d8;
-    --text-color: #005600;
-    --title-color: #005600;
-    --accent-color: #008f0c;
-    --button-label-color: #006d00;
-}
-
-[data-color="green"][data-color-scheme="dark"],
-[data-color="green"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-color="green"],
-[data-color-scheme="dark"] [data-color="green"],
-[data-color="green"][data-layer="0"][data-color-scheme="dark"],
-[data-color="green"] [data-layer="0"][data-color-scheme="dark"],
-[data-color="green"][data-layer="0"] [data-color-scheme="dark"],
-[data-color="green"] [data-layer="0"] [data-color-scheme="dark"],
-[data-color="green"][data-color-scheme="dark"][data-layer="0"],
-[data-color="green"] [data-color-scheme="dark"][data-layer="0"],
-[data-color="green"][data-color-scheme="dark"] [data-layer="0"],
-[data-color="green"] [data-color-scheme="dark"] [data-layer="0"],
-[data-layer="0"][data-color="green"][data-color-scheme="dark"],
-[data-layer="0"] [data-color="green"][data-color-scheme="dark"],
-[data-layer="0"][data-color="green"] [data-color-scheme="dark"],
-[data-layer="0"] [data-color="green"] [data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"][data-color="green"],
-[data-layer="0"] [data-color-scheme="dark"][data-color="green"],
-[data-layer="0"][data-color-scheme="dark"] [data-color="green"],
-[data-layer="0"] [data-color-scheme="dark"] [data-color="green"],
-[data-color-scheme="dark"][data-layer="0"][data-color="green"],
-[data-color-scheme="dark"] [data-layer="0"][data-color="green"],
-[data-color-scheme="dark"][data-layer="0"] [data-color="green"],
-[data-color-scheme="dark"] [data-layer="0"] [data-color="green"],
-[data-color-scheme="dark"][data-color="green"][data-layer="0"],
-[data-color-scheme="dark"] [data-color="green"][data-layer="0"],
-[data-color-scheme="dark"][data-color="green"] [data-layer="0"],
-[data-color-scheme="dark"] [data-color="green"] [data-layer="0"] {
-    --surface-color: #050e07;
-    --text-color: #6eb179;
-    --title-color: #a9ffbd;
-    --accent-color: #00ff0f;
-    --button-label-color: #00ff0f;
-}
-
-[data-color="green"][data-layer="1"],
-[data-color="green"] [data-layer="1"],
-[data-layer="1"][data-color="green"],
-[data-layer="1"] [data-color="green"],
-[data-color="green"][data-layer="1"][data-color-scheme="light"],
-[data-color="green"] [data-layer="1"][data-color-scheme="light"],
-[data-color="green"][data-layer="1"] [data-color-scheme="light"],
-[data-color="green"] [data-layer="1"] [data-color-scheme="light"],
-[data-color="green"][data-color-scheme="light"][data-layer="1"],
-[data-color="green"] [data-color-scheme="light"][data-layer="1"],
-[data-color="green"][data-color-scheme="light"] [data-layer="1"],
-[data-color="green"] [data-color-scheme="light"] [data-layer="1"],
-[data-layer="1"][data-color="green"][data-color-scheme="light"],
-[data-layer="1"] [data-color="green"][data-color-scheme="light"],
-[data-layer="1"][data-color="green"] [data-color-scheme="light"],
-[data-layer="1"] [data-color="green"] [data-color-scheme="light"],
-[data-layer="1"][data-color-scheme="light"][data-color="green"],
-[data-layer="1"] [data-color-scheme="light"][data-color="green"],
-[data-layer="1"][data-color-scheme="light"] [data-color="green"],
-[data-layer="1"] [data-color-scheme="light"] [data-color="green"],
-[data-color-scheme="light"][data-layer="1"][data-color="green"],
-[data-color-scheme="light"] [data-layer="1"][data-color="green"],
-[data-color-scheme="light"][data-layer="1"] [data-color="green"],
-[data-color-scheme="light"] [data-layer="1"] [data-color="green"],
-[data-color-scheme="light"][data-color="green"][data-layer="1"],
-[data-color-scheme="light"] [data-color="green"][data-layer="1"],
-[data-color-scheme="light"][data-color="green"] [data-layer="1"],
-[data-color-scheme="light"] [data-color="green"] [data-layer="1"] {
-    --surface-color: #e8f2e9;
-    --text-color: #005d00;
-    --title-color: #005d00;
-    --accent-color: #009f25;
-    --button-label-color: #007a00;
-}
-
-[data-color="green"][data-layer="1"][data-color-scheme="dark"],
-[data-color="green"] [data-layer="1"][data-color-scheme="dark"],
-[data-color="green"][data-layer="1"] [data-color-scheme="dark"],
-[data-color="green"] [data-layer="1"] [data-color-scheme="dark"],
-[data-color="green"][data-color-scheme="dark"][data-layer="1"],
-[data-color="green"] [data-color-scheme="dark"][data-layer="1"],
-[data-color="green"][data-color-scheme="dark"] [data-layer="1"],
-[data-color="green"] [data-color-scheme="dark"] [data-layer="1"],
-[data-layer="1"][data-color="green"][data-color-scheme="dark"],
-[data-layer="1"] [data-color="green"][data-color-scheme="dark"],
-[data-layer="1"][data-color="green"] [data-color-scheme="dark"],
-[data-layer="1"] [data-color="green"] [data-color-scheme="dark"],
-[data-layer="1"][data-color-scheme="dark"][data-color="green"],
-[data-layer="1"] [data-color-scheme="dark"][data-color="green"],
-[data-layer="1"][data-color-scheme="dark"] [data-color="green"],
-[data-layer="1"] [data-color-scheme="dark"] [data-color="green"],
-[data-color-scheme="dark"][data-layer="1"][data-color="green"],
-[data-color-scheme="dark"] [data-layer="1"][data-color="green"],
-[data-color-scheme="dark"][data-layer="1"] [data-color="green"],
-[data-color-scheme="dark"] [data-layer="1"] [data-color="green"],
-[data-color-scheme="dark"][data-color="green"][data-layer="1"],
-[data-color-scheme="dark"] [data-color="green"][data-layer="1"],
-[data-color-scheme="dark"][data-color="green"] [data-layer="1"],
-[data-color-scheme="dark"] [data-color="green"] [data-layer="1"] {
-    --surface-color: #101a12;
-    --text-color: #7bbd85;
-    --title-color: #b2ffc4;
-    --accent-color: #00ff2b;
-    --button-label-color: #00ff2b;
-}
-
-[data-color="green"][data-layer="2"],
-[data-color="green"] [data-layer="2"],
-[data-layer="2"][data-color="green"],
-[data-layer="2"] [data-color="green"],
-[data-color="green"][data-layer="2"][data-color-scheme="light"],
-[data-color="green"] [data-layer="2"][data-color-scheme="light"],
-[data-color="green"][data-layer="2"] [data-color-scheme="light"],
-[data-color="green"] [data-layer="2"] [data-color-scheme="light"],
-[data-color="green"][data-color-scheme="light"][data-layer="2"],
-[data-color="green"] [data-color-scheme="light"][data-layer="2"],
-[data-color="green"][data-color-scheme="light"] [data-layer="2"],
-[data-color="green"] [data-color-scheme="light"] [data-layer="2"],
-[data-layer="2"][data-color="green"][data-color-scheme="light"],
-[data-layer="2"] [data-color="green"][data-color-scheme="light"],
-[data-layer="2"][data-color="green"] [data-color-scheme="light"],
-[data-layer="2"] [data-color="green"] [data-color-scheme="light"],
-[data-layer="2"][data-color-scheme="light"][data-color="green"],
-[data-layer="2"] [data-color-scheme="light"][data-color="green"],
-[data-layer="2"][data-color-scheme="light"] [data-color="green"],
-[data-layer="2"] [data-color-scheme="light"] [data-color="green"],
-[data-color-scheme="light"][data-layer="2"][data-color="green"],
-[data-color-scheme="light"] [data-layer="2"][data-color="green"],
-[data-color-scheme="light"][data-layer="2"] [data-color="green"],
-[data-color-scheme="light"] [data-layer="2"] [data-color="green"],
-[data-color-scheme="light"][data-color="green"][data-layer="2"],
-[data-color-scheme="light"] [data-color="green"][data-layer="2"],
-[data-color-scheme="light"][data-color="green"] [data-layer="2"],
-[data-color-scheme="light"] [data-color="green"] [data-layer="2"] {
-    --surface-color: #f8fff9;
-    --text-color: #006500;
-    --title-color: #006500;
-    --accent-color: #00af38;
-    --button-label-color: #008600;
-}
-
-[data-color="green"][data-layer="2"][data-color-scheme="dark"],
-[data-color="green"] [data-layer="2"][data-color-scheme="dark"],
-[data-color="green"][data-layer="2"] [data-color-scheme="dark"],
-[data-color="green"] [data-layer="2"] [data-color-scheme="dark"],
-[data-color="green"][data-color-scheme="dark"][data-layer="2"],
-[data-color="green"] [data-color-scheme="dark"][data-layer="2"],
-[data-color="green"][data-color-scheme="dark"] [data-layer="2"],
-[data-color="green"] [data-color-scheme="dark"] [data-layer="2"],
-[data-layer="2"][data-color="green"][data-color-scheme="dark"],
-[data-layer="2"] [data-color="green"][data-color-scheme="dark"],
-[data-layer="2"][data-color="green"] [data-color-scheme="dark"],
-[data-layer="2"] [data-color="green"] [data-color-scheme="dark"],
-[data-layer="2"][data-color-scheme="dark"][data-color="green"],
-[data-layer="2"] [data-color-scheme="dark"][data-color="green"],
-[data-layer="2"][data-color-scheme="dark"] [data-color="green"],
-[data-layer="2"] [data-color-scheme="dark"] [data-color="green"],
-[data-color-scheme="dark"][data-layer="2"][data-color="green"],
-[data-color-scheme="dark"] [data-layer="2"][data-color="green"],
-[data-color-scheme="dark"][data-layer="2"] [data-color="green"],
-[data-color-scheme="dark"] [data-layer="2"] [data-color="green"],
-[data-color-scheme="dark"][data-color="green"][data-layer="2"],
-[data-color-scheme="dark"] [data-color="green"][data-layer="2"],
-[data-color-scheme="dark"][data-color="green"] [data-layer="2"],
-[data-color-scheme="dark"] [data-color="green"] [data-layer="2"] {
-    --surface-color: #1d271e;
-    --text-color: #87ca91;
-    --title-color: #bbffca;
-    --accent-color: #00ff3b;
-    --button-label-color: #00ff3b;
-}
-
-[data-color="blue"],
-[data-color="blue"][data-color-scheme="light"],
-[data-color="blue"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-color="blue"],
-[data-color-scheme="light"] [data-color="blue"],
-[data-color="blue"][data-layer="0"],
-[data-color="blue"] [data-layer="0"],
-[data-layer="0"][data-color="blue"],
-[data-layer="0"] [data-color="blue"],
-[data-color="blue"][data-layer="0"][data-color-scheme="light"],
-[data-color="blue"] [data-layer="0"][data-color-scheme="light"],
-[data-color="blue"][data-layer="0"] [data-color-scheme="light"],
-[data-color="blue"] [data-layer="0"] [data-color-scheme="light"],
-[data-color="blue"][data-color-scheme="light"][data-layer="0"],
-[data-color="blue"] [data-color-scheme="light"][data-layer="0"],
-[data-color="blue"][data-color-scheme="light"] [data-layer="0"],
-[data-color="blue"] [data-color-scheme="light"] [data-layer="0"],
-[data-layer="0"][data-color="blue"][data-color-scheme="light"],
-[data-layer="0"] [data-color="blue"][data-color-scheme="light"],
-[data-layer="0"][data-color="blue"] [data-color-scheme="light"],
-[data-layer="0"] [data-color="blue"] [data-color-scheme="light"],
-[data-layer="0"][data-color-scheme="light"][data-color="blue"],
-[data-layer="0"] [data-color-scheme="light"][data-color="blue"],
-[data-layer="0"][data-color-scheme="light"] [data-color="blue"],
-[data-layer="0"] [data-color-scheme="light"] [data-color="blue"],
-[data-color-scheme="light"][data-layer="0"][data-color="blue"],
-[data-color-scheme="light"] [data-layer="0"][data-color="blue"],
-[data-color-scheme="light"][data-layer="0"] [data-color="blue"],
-[data-color-scheme="light"] [data-layer="0"] [data-color="blue"],
-[data-color-scheme="light"][data-color="blue"][data-layer="0"],
-[data-color-scheme="light"] [data-color="blue"][data-layer="0"],
-[data-color-scheme="light"][data-color="blue"] [data-layer="0"],
-[data-color-scheme="light"] [data-color="blue"] [data-layer="0"] {
-    --surface-color: #d7deea;
-    --text-color: #0027be;
-    --title-color: #0027be;
-    --accent-color: #0063f7;
-    --button-label-color: #003cd1;
-}
-
-[data-color="blue"][data-color-scheme="dark"],
-[data-color="blue"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-color="blue"],
-[data-color-scheme="dark"] [data-color="blue"],
-[data-color="blue"][data-layer="0"][data-color-scheme="dark"],
-[data-color="blue"] [data-layer="0"][data-color-scheme="dark"],
-[data-color="blue"][data-layer="0"] [data-color-scheme="dark"],
-[data-color="blue"] [data-layer="0"] [data-color-scheme="dark"],
-[data-color="blue"][data-color-scheme="dark"][data-layer="0"],
-[data-color="blue"] [data-color-scheme="dark"][data-layer="0"],
-[data-color="blue"][data-color-scheme="dark"] [data-layer="0"],
-[data-color="blue"] [data-color-scheme="dark"] [data-layer="0"],
-[data-layer="0"][data-color="blue"][data-color-scheme="dark"],
-[data-layer="0"] [data-color="blue"][data-color-scheme="dark"],
-[data-layer="0"][data-color="blue"] [data-color-scheme="dark"],
-[data-layer="0"] [data-color="blue"] [data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"][data-color="blue"],
-[data-layer="0"] [data-color-scheme="dark"][data-color="blue"],
-[data-layer="0"][data-color-scheme="dark"] [data-color="blue"],
-[data-layer="0"] [data-color-scheme="dark"] [data-color="blue"],
-[data-color-scheme="dark"][data-layer="0"][data-color="blue"],
-[data-color-scheme="dark"] [data-layer="0"][data-color="blue"],
-[data-color-scheme="dark"][data-layer="0"] [data-color="blue"],
-[data-color-scheme="dark"] [data-layer="0"] [data-color="blue"],
-[data-color-scheme="dark"][data-color="blue"][data-layer="0"],
-[data-color-scheme="dark"] [data-color="blue"][data-layer="0"],
-[data-color-scheme="dark"][data-color="blue"] [data-layer="0"],
-[data-color-scheme="dark"] [data-color="blue"] [data-layer="0"] {
-    --surface-color: #060b15;
-    --text-color: #739fe8;
-    --title-color: #b2ffff;
-    --accent-color: #00e2ff;
-    --button-label-color: #00e2ff;
-}
-
-[data-color="blue"][data-layer="1"],
-[data-color="blue"] [data-layer="1"],
-[data-layer="1"][data-color="blue"],
-[data-layer="1"] [data-color="blue"],
-[data-color="blue"][data-layer="1"][data-color-scheme="light"],
-[data-color="blue"] [data-layer="1"][data-color-scheme="light"],
-[data-color="blue"][data-layer="1"] [data-color-scheme="light"],
-[data-color="blue"] [data-layer="1"] [data-color-scheme="light"],
-[data-color="blue"][data-color-scheme="light"][data-layer="1"],
-[data-color="blue"] [data-color-scheme="light"][data-layer="1"],
-[data-color="blue"][data-color-scheme="light"] [data-layer="1"],
-[data-color="blue"] [data-color-scheme="light"] [data-layer="1"],
-[data-layer="1"][data-color="blue"][data-color-scheme="light"],
-[data-layer="1"] [data-color="blue"][data-color-scheme="light"],
-[data-layer="1"][data-color="blue"] [data-color-scheme="light"],
-[data-layer="1"] [data-color="blue"] [data-color-scheme="light"],
-[data-layer="1"][data-color-scheme="light"][data-color="blue"],
-[data-layer="1"] [data-color-scheme="light"][data-color="blue"],
-[data-layer="1"][data-color-scheme="light"] [data-color="blue"],
-[data-layer="1"] [data-color-scheme="light"] [data-color="blue"],
-[data-color-scheme="light"][data-layer="1"][data-color="blue"],
-[data-color-scheme="light"] [data-layer="1"][data-color="blue"],
-[data-color-scheme="light"][data-layer="1"] [data-color="blue"],
-[data-color-scheme="light"] [data-layer="1"] [data-color="blue"],
-[data-color-scheme="light"][data-color="blue"][data-layer="1"],
-[data-color-scheme="light"] [data-color="blue"][data-layer="1"],
-[data-color-scheme="light"][data-color="blue"] [data-layer="1"],
-[data-color-scheme="light"] [data-color="blue"] [data-layer="1"] {
-    --surface-color: #e8effb;
-    --text-color: #0031c6;
-    --title-color: #0031c6;
-    --accent-color: #1374ff;
-    --button-label-color: #004bdf;
-}
-
-[data-color="blue"][data-layer="1"][data-color-scheme="dark"],
-[data-color="blue"] [data-layer="1"][data-color-scheme="dark"],
-[data-color="blue"][data-layer="1"] [data-color-scheme="dark"],
-[data-color="blue"] [data-layer="1"] [data-color-scheme="dark"],
-[data-color="blue"][data-color-scheme="dark"][data-layer="1"],
-[data-color="blue"] [data-color-scheme="dark"][data-layer="1"],
-[data-color="blue"][data-color-scheme="dark"] [data-layer="1"],
-[data-color="blue"] [data-color-scheme="dark"] [data-layer="1"],
-[data-layer="1"][data-color="blue"][data-color-scheme="dark"],
-[data-layer="1"] [data-color="blue"][data-color-scheme="dark"],
-[data-layer="1"][data-color="blue"] [data-color-scheme="dark"],
-[data-layer="1"] [data-color="blue"] [data-color-scheme="dark"],
-[data-layer="1"][data-color-scheme="dark"][data-color="blue"],
-[data-layer="1"] [data-color-scheme="dark"][data-color="blue"],
-[data-layer="1"][data-color-scheme="dark"] [data-color="blue"],
-[data-layer="1"] [data-color-scheme="dark"] [data-color="blue"],
-[data-color-scheme="dark"][data-layer="1"][data-color="blue"],
-[data-color-scheme="dark"] [data-layer="1"][data-color="blue"],
-[data-color-scheme="dark"][data-layer="1"] [data-color="blue"],
-[data-color-scheme="dark"] [data-layer="1"] [data-color="blue"],
-[data-color-scheme="dark"][data-color="blue"][data-layer="1"],
-[data-color-scheme="dark"] [data-color="blue"][data-layer="1"],
-[data-color-scheme="dark"][data-color="blue"] [data-layer="1"],
-[data-color-scheme="dark"] [data-color="blue"] [data-layer="1"] {
-    --surface-color: #111722;
-    --text-color: #7fabf5;
-    --title-color: #b9ffff;
-    --accent-color: #00e4ff;
-    --button-label-color: #00e4ff;
-}
-
-[data-color="blue"][data-layer="2"],
-[data-color="blue"] [data-layer="2"],
-[data-layer="2"][data-color="blue"],
-[data-layer="2"] [data-color="blue"],
-[data-color="blue"][data-layer="2"][data-color-scheme="light"],
-[data-color="blue"] [data-layer="2"][data-color-scheme="light"],
-[data-color="blue"][data-layer="2"] [data-color-scheme="light"],
-[data-color="blue"] [data-layer="2"] [data-color-scheme="light"],
-[data-color="blue"][data-color-scheme="light"][data-layer="2"],
-[data-color="blue"] [data-color-scheme="light"][data-layer="2"],
-[data-color="blue"][data-color-scheme="light"] [data-layer="2"],
-[data-color="blue"] [data-color-scheme="light"] [data-layer="2"],
-[data-layer="2"][data-color="blue"][data-color-scheme="light"],
-[data-layer="2"] [data-color="blue"][data-color-scheme="light"],
-[data-layer="2"][data-color="blue"] [data-color-scheme="light"],
-[data-layer="2"] [data-color="blue"] [data-color-scheme="light"],
-[data-layer="2"][data-color-scheme="light"][data-color="blue"],
-[data-layer="2"] [data-color-scheme="light"][data-color="blue"],
-[data-layer="2"][data-color-scheme="light"] [data-color="blue"],
-[data-layer="2"] [data-color-scheme="light"] [data-color="blue"],
-[data-color-scheme="light"][data-layer="2"][data-color="blue"],
-[data-color-scheme="light"] [data-layer="2"][data-color="blue"],
-[data-color-scheme="light"][data-layer="2"] [data-color="blue"],
-[data-color-scheme="light"] [data-layer="2"] [data-color="blue"],
-[data-color-scheme="light"][data-color="blue"][data-layer="2"],
-[data-color-scheme="light"] [data-color="blue"][data-layer="2"],
-[data-color-scheme="light"][data-color="blue"] [data-layer="2"],
-[data-color-scheme="light"] [data-color="blue"] [data-layer="2"] {
-    --surface-color: #f8ffff;
-    --text-color: #003bcf;
-    --title-color: #003bcf;
-    --accent-color: #2885ff;
-    --button-label-color: #0059ed;
-}
-
-[data-color="blue"][data-layer="2"][data-color-scheme="dark"],
-[data-color="blue"] [data-layer="2"][data-color-scheme="dark"],
-[data-color="blue"][data-layer="2"] [data-color-scheme="dark"],
-[data-color="blue"] [data-layer="2"] [data-color-scheme="dark"],
-[data-color="blue"][data-color-scheme="dark"][data-layer="2"],
-[data-color="blue"] [data-color-scheme="dark"][data-layer="2"],
-[data-color="blue"][data-color-scheme="dark"] [data-layer="2"],
-[data-color="blue"] [data-color-scheme="dark"] [data-layer="2"],
-[data-layer="2"][data-color="blue"][data-color-scheme="dark"],
-[data-layer="2"] [data-color="blue"][data-color-scheme="dark"],
-[data-layer="2"][data-color="blue"] [data-color-scheme="dark"],
-[data-layer="2"] [data-color="blue"] [data-color-scheme="dark"],
-[data-layer="2"][data-color-scheme="dark"][data-color="blue"],
-[data-layer="2"] [data-color-scheme="dark"][data-color="blue"],
-[data-layer="2"][data-color-scheme="dark"] [data-color="blue"],
-[data-layer="2"] [data-color-scheme="dark"] [data-color="blue"],
-[data-color-scheme="dark"][data-layer="2"][data-color="blue"],
-[data-color-scheme="dark"] [data-layer="2"][data-color="blue"],
-[data-color-scheme="dark"][data-layer="2"] [data-color="blue"],
-[data-color-scheme="dark"] [data-layer="2"] [data-color="blue"],
-[data-color-scheme="dark"][data-color="blue"][data-layer="2"],
-[data-color-scheme="dark"] [data-color="blue"][data-layer="2"],
-[data-color-scheme="dark"][data-color="blue"] [data-layer="2"],
-[data-color-scheme="dark"] [data-color="blue"] [data-layer="2"] {
-    --surface-color: #1d2430;
-    --text-color: #8bb8ff;
-    --title-color: #bfffff;
-    --accent-color: #20e6ff;
-    --button-label-color: #20e6ff;
-}
-
-[data-color="purple"],
-[data-color="purple"][data-color-scheme="light"],
-[data-color="purple"] [data-color-scheme="light"],
-[data-color-scheme="light"][data-color="purple"],
-[data-color-scheme="light"] [data-color="purple"],
-[data-color="purple"][data-layer="0"],
-[data-color="purple"] [data-layer="0"],
-[data-layer="0"][data-color="purple"],
-[data-layer="0"] [data-color="purple"],
-[data-color="purple"][data-layer="0"][data-color-scheme="light"],
-[data-color="purple"] [data-layer="0"][data-color-scheme="light"],
-[data-color="purple"][data-layer="0"] [data-color-scheme="light"],
-[data-color="purple"] [data-layer="0"] [data-color-scheme="light"],
-[data-color="purple"][data-color-scheme="light"][data-layer="0"],
-[data-color="purple"] [data-color-scheme="light"][data-layer="0"],
-[data-color="purple"][data-color-scheme="light"] [data-layer="0"],
-[data-color="purple"] [data-color-scheme="light"] [data-layer="0"],
-[data-layer="0"][data-color="purple"][data-color-scheme="light"],
-[data-layer="0"] [data-color="purple"][data-color-scheme="light"],
-[data-layer="0"][data-color="purple"] [data-color-scheme="light"],
-[data-layer="0"] [data-color="purple"] [data-color-scheme="light"],
-[data-layer="0"][data-color-scheme="light"][data-color="purple"],
-[data-layer="0"] [data-color-scheme="light"][data-color="purple"],
-[data-layer="0"][data-color-scheme="light"] [data-color="purple"],
-[data-layer="0"] [data-color-scheme="light"] [data-color="purple"],
-[data-color-scheme="light"][data-layer="0"][data-color="purple"],
-[data-color-scheme="light"] [data-layer="0"][data-color="purple"],
-[data-color-scheme="light"][data-layer="0"] [data-color="purple"],
-[data-color-scheme="light"] [data-layer="0"] [data-color="purple"],
-[data-color-scheme="light"][data-color="purple"][data-layer="0"],
-[data-color-scheme="light"] [data-color="purple"][data-layer="0"],
-[data-color-scheme="light"][data-color="purple"] [data-layer="0"],
-[data-color-scheme="light"] [data-color="purple"] [data-layer="0"] {
-    --surface-color: #e5d9e8;
-    --text-color: #9800c0;
-    --title-color: #9800c0;
-    --accent-color: #b600e0;
-    --button-label-color: #9200ba;
-}
-
-[data-color="purple"][data-color-scheme="dark"],
-[data-color="purple"] [data-color-scheme="dark"],
-[data-color-scheme="dark"][data-color="purple"],
-[data-color-scheme="dark"] [data-color="purple"],
-[data-color="purple"][data-layer="0"][data-color-scheme="dark"],
-[data-color="purple"] [data-layer="0"][data-color-scheme="dark"],
-[data-color="purple"][data-layer="0"] [data-color-scheme="dark"],
-[data-color="purple"] [data-layer="0"] [data-color-scheme="dark"],
-[data-color="purple"][data-color-scheme="dark"][data-layer="0"],
-[data-color="purple"] [data-color-scheme="dark"][data-layer="0"],
-[data-color="purple"][data-color-scheme="dark"] [data-layer="0"],
-[data-color="purple"] [data-color-scheme="dark"] [data-layer="0"],
-[data-layer="0"][data-color="purple"][data-color-scheme="dark"],
-[data-layer="0"] [data-color="purple"][data-color-scheme="dark"],
-[data-layer="0"][data-color="purple"] [data-color-scheme="dark"],
-[data-layer="0"] [data-color="purple"] [data-color-scheme="dark"],
-[data-layer="0"][data-color-scheme="dark"][data-color="purple"],
-[data-layer="0"] [data-color-scheme="dark"][data-color="purple"],
-[data-layer="0"][data-color-scheme="dark"] [data-color="purple"],
-[data-layer="0"] [data-color-scheme="dark"] [data-color="purple"],
-[data-color-scheme="dark"][data-layer="0"][data-color="purple"],
-[data-color-scheme="dark"] [data-layer="0"][data-color="purple"],
-[data-color-scheme="dark"][data-layer="0"] [data-color="purple"],
-[data-color-scheme="dark"] [data-layer="0"] [data-color="purple"],
-[data-color-scheme="dark"][data-color="purple"][data-layer="0"],
-[data-color-scheme="dark"] [data-color="purple"][data-layer="0"],
-[data-color-scheme="dark"][data-color="purple"] [data-layer="0"],
-[data-color-scheme="dark"] [data-color="purple"] [data-layer="0"] {
-    --surface-color: #110713;
-    --text-color: #c67cdb;
-    --title-color: #ffc2ff;
-    --accent-color: #ff00ff;
-    --button-label-color: #ff00ff;
-}
-
-[data-color="purple"][data-layer="1"],
-[data-color="purple"] [data-layer="1"],
-[data-layer="1"][data-color="purple"],
-[data-layer="1"] [data-color="purple"],
-[data-color="purple"][data-layer="1"][data-color-scheme="light"],
-[data-color="purple"] [data-layer="1"][data-color-scheme="light"],
-[data-color="purple"][data-layer="1"] [data-color-scheme="light"],
-[data-color="purple"] [data-layer="1"] [data-color-scheme="light"],
-[data-color="purple"][data-color-scheme="light"][data-layer="1"],
-[data-color="purple"] [data-color-scheme="light"][data-layer="1"],
-[data-color="purple"][data-color-scheme="light"] [data-layer="1"],
-[data-color="purple"] [data-color-scheme="light"] [data-layer="1"],
-[data-layer="1"][data-color="purple"][data-color-scheme="light"],
-[data-layer="1"] [data-color="purple"][data-color-scheme="light"],
-[data-layer="1"][data-color="purple"] [data-color-scheme="light"],
-[data-layer="1"] [data-color="purple"] [data-color-scheme="light"],
-[data-layer="1"][data-color-scheme="light"][data-color="purple"],
-[data-layer="1"] [data-color-scheme="light"][data-color="purple"],
-[data-layer="1"][data-color-scheme="light"] [data-color="purple"],
-[data-layer="1"] [data-color-scheme="light"] [data-color="purple"],
-[data-color-scheme="light"][data-layer="1"][data-color="purple"],
-[data-color-scheme="light"] [data-layer="1"][data-color="purple"],
-[data-color-scheme="light"][data-layer="1"] [data-color="purple"],
-[data-color-scheme="light"] [data-layer="1"] [data-color="purple"],
-[data-color-scheme="light"][data-color="purple"][data-layer="1"],
-[data-color-scheme="light"] [data-color="purple"][data-layer="1"],
-[data-color-scheme="light"][data-color="purple"] [data-layer="1"],
-[data-color-scheme="light"] [data-color="purple"] [data-layer="1"] {
-    --surface-color: #f5eaf9;
-    --text-color: #a000c9;
-    --title-color: #a000c9;
-    --accent-color: #c700f1;
-    --button-label-color: #9f00c7;
-}
-
-[data-color="purple"][data-layer="1"][data-color-scheme="dark"],
-[data-color="purple"] [data-layer="1"][data-color-scheme="dark"],
-[data-color="purple"][data-layer="1"] [data-color-scheme="dark"],
-[data-color="purple"] [data-layer="1"] [data-color-scheme="dark"],
-[data-color="purple"][data-color-scheme="dark"][data-layer="1"],
-[data-color="purple"] [data-color-scheme="dark"][data-layer="1"],
-[data-color="purple"][data-color-scheme="dark"] [data-layer="1"],
-[data-color="purple"] [data-color-scheme="dark"] [data-layer="1"],
-[data-layer="1"][data-color="purple"][data-color-scheme="dark"],
-[data-layer="1"] [data-color="purple"][data-color-scheme="dark"],
-[data-layer="1"][data-color="purple"] [data-color-scheme="dark"],
-[data-layer="1"] [data-color="purple"] [data-color-scheme="dark"],
-[data-layer="1"][data-color-scheme="dark"][data-color="purple"],
-[data-layer="1"] [data-color-scheme="dark"][data-color="purple"],
-[data-layer="1"][data-color-scheme="dark"] [data-color="purple"],
-[data-layer="1"] [data-color-scheme="dark"] [data-color="purple"],
-[data-color-scheme="dark"][data-layer="1"][data-color="purple"],
-[data-color-scheme="dark"] [data-layer="1"][data-color="purple"],
-[data-color-scheme="dark"][data-layer="1"] [data-color="purple"],
-[data-color-scheme="dark"] [data-layer="1"] [data-color="purple"],
-[data-color-scheme="dark"][data-color="purple"][data-layer="1"],
-[data-color-scheme="dark"] [data-color="purple"][data-layer="1"],
-[data-color-scheme="dark"][data-color="purple"] [data-layer="1"],
-[data-color-scheme="dark"] [data-color="purple"] [data-layer="1"] {
-    --surface-color: #1d1320;
-    --text-color: #d489e9;
-    --title-color: #ffc7ff;
-    --accent-color: #ff00ff;
-    --button-label-color: #ff00ff;
-}
-
-[data-color="purple"][data-layer="2"],
-[data-color="purple"] [data-layer="2"],
-[data-layer="2"][data-color="purple"],
-[data-layer="2"] [data-color="purple"],
-[data-color="purple"][data-layer="2"][data-color-scheme="light"],
-[data-color="purple"] [data-layer="2"][data-color-scheme="light"],
-[data-color="purple"][data-layer="2"] [data-color-scheme="light"],
-[data-color="purple"] [data-layer="2"] [data-color-scheme="light"],
-[data-color="purple"][data-color-scheme="light"][data-layer="2"],
-[data-color="purple"] [data-color-scheme="light"][data-layer="2"],
-[data-color="purple"][data-color-scheme="light"] [data-layer="2"],
-[data-color="purple"] [data-color-scheme="light"] [data-layer="2"],
-[data-layer="2"][data-color="purple"][data-color-scheme="light"],
-[data-layer="2"] [data-color="purple"][data-color-scheme="light"],
-[data-layer="2"][data-color="purple"] [data-color-scheme="light"],
-[data-layer="2"] [data-color="purple"] [data-color-scheme="light"],
-[data-layer="2"][data-color-scheme="light"][data-color="purple"],
-[data-layer="2"] [data-color-scheme="light"][data-color="purple"],
-[data-layer="2"][data-color-scheme="light"] [data-color="purple"],
-[data-layer="2"] [data-color-scheme="light"] [data-color="purple"],
-[data-color-scheme="light"][data-layer="2"][data-color="purple"],
-[data-color-scheme="light"] [data-layer="2"][data-color="purple"],
-[data-color-scheme="light"][data-layer="2"] [data-color="purple"],
-[data-color-scheme="light"] [data-layer="2"] [data-color="purple"],
-[data-color-scheme="light"][data-color="purple"][data-layer="2"],
-[data-color-scheme="light"] [data-color="purple"][data-layer="2"],
-[data-color-scheme="light"][data-color="purple"] [data-layer="2"],
-[data-color-scheme="light"] [data-color="purple"] [data-layer="2"] {
-    --surface-color: #fffbff;
-    --text-color: #a900d1;
-    --title-color: #a900d1;
-    --accent-color: #d810ff;
-    --button-label-color: #ac00d5;
-}
-
-[data-color="purple"][data-layer="2"][data-color-scheme="dark"],
-[data-color="purple"] [data-layer="2"][data-color-scheme="dark"],
-[data-color="purple"][data-layer="2"] [data-color-scheme="dark"],
-[data-color="purple"] [data-layer="2"] [data-color-scheme="dark"],
-[data-color="purple"][data-color-scheme="dark"][data-layer="2"],
-[data-color="purple"] [data-color-scheme="dark"][data-layer="2"],
-[data-color="purple"][data-color-scheme="dark"] [data-layer="2"],
-[data-color="purple"] [data-color-scheme="dark"] [data-layer="2"],
-[data-layer="2"][data-color="purple"][data-color-scheme="dark"],
-[data-layer="2"] [data-color="purple"][data-color-scheme="dark"],
-[data-layer="2"][data-color="purple"] [data-color-scheme="dark"],
-[data-layer="2"] [data-color="purple"] [data-color-scheme="dark"],
-[data-layer="2"][data-color-scheme="dark"][data-color="purple"],
-[data-layer="2"] [data-color-scheme="dark"][data-color="purple"],
-[data-layer="2"][data-color-scheme="dark"] [data-color="purple"],
-[data-layer="2"] [data-color-scheme="dark"] [data-color="purple"],
-[data-color-scheme="dark"][data-layer="2"][data-color="purple"],
-[data-color-scheme="dark"] [data-layer="2"][data-color="purple"],
-[data-color-scheme="dark"][data-layer="2"] [data-color="purple"],
-[data-color-scheme="dark"] [data-layer="2"] [data-color="purple"],
-[data-color-scheme="dark"][data-color="purple"][data-layer="2"],
-[data-color-scheme="dark"] [data-color="purple"][data-layer="2"],
-[data-color-scheme="dark"][data-color="purple"] [data-layer="2"],
-[data-color-scheme="dark"] [data-color="purple"] [data-layer="2"] {
-    --surface-color: #2a1f2e;
-    --text-color: #e195f6;
-    --title-color: #ffcbff;
-    --accent-color: #ff00ff;
-    --button-label-color: #ff00ff;
-}
+ 
 
 
+    
 
+    
+
+:root:not([data-layer]),
+    [data-layer="0"],
+    [data-color-scheme] {
+        --surface-color: var(--surface-color-layer-0);
+        --text-color: var(--text-color-layer-0);
+        --title-color: var(--title-color-layer-0);
+    }
+
+    [data-layer="1"],
+    [data-layer="1"] [data-color-scheme] {
+        --surface-color: var(--surface-color-layer-1);
+        --text-color: var(--text-color-layer-1);
+        --title-color: var(--title-color-layer-1);
+    }
+
+    [data-layer="2"],
+    [data-layer="2"] [data-color-scheme] {
+        --surface-color: var(--surface-color-layer-2);
+        --text-color: var(--text-color-layer-2);
+        --title-color: var(--title-color-layer-2);
+    }
 
     :root,
     [data-color-scheme],
     [data-color],
     [data-layer] {
         color: var(--text-color);
-        accent-color: var(--base-color);
+        accent-color: var(--accent-color);
     }
 
     [data-color-scheme] {
         font-weight: var(--font-weight-text);
     }
 
-
-
 }
+
+
+    
+
 :root {
 
 
@@ -1443,33 +556,10 @@
     --text-font-size: 1.15rem;
     --text-line-height: 1.75;
 }
-.card {
-    padding: 1.25lh;
-    border-radius: 1rlh;
-    background-color: var(--surface-color);
-    box-shadow: var(--card-shadow);
-    display: flex;
-    flex-direction: column;
-    gap: 1.25lh;
-}
-
-.card__title {
-    color: var(--title-color);
-}
 @layer control, control_type;
 
 @layer control {
     .control {
-
-
-        /*   ============= COLOR ============ */
-        --_color: var(--base-color);
-
-        --_default-label-color: var(--button-label-color);
-        --_fill-label-color: oklch(from var(--_color) round(1.2 - l) 0 h);
-
-        --_default-background-color: oklch(from var(--_color) .65 c h / 15%);
-        --_fill-background-color: var(--_color);
 
 
         /*   ============= NUMBER ============ */
@@ -1504,19 +594,23 @@
 
 
     /*   ============= STATES ============ */
+    
 
     @media (hover: hover) {
+
         .control:is(:hover, :focus-visible) {
-            --_default-background-color: oklch(from var(--_color) .7 c h / 20%);
-            /* --_fill-background-color: oklch(from var(--_color) calc(l - .05 + round(1 - l) * .35) c h); */
-            --_fill-background-color: oklch(from var(--_color) calc(l * .9) c h);
+            background-color: var(--_control-default-background-color-hover);
+        }
+        .control_variant_fill:is(:hover, :focus-visible) {
+            background-color: var(--_control-fill-background-color-hover);
         }
     }
-    
+
     .control:active {
-        --_default-background-color: oklch(from var(--_color) .65 c h / 20%);
-        /* --_fill-background-color: oklch(from var(--_color) calc(l - .025 + round(1 - l) * .175) c h); */
-        --_fill-background-color: oklch(from var(--_color) calc(l - .03) c h);
+        background-color: var(--_control-default-background-color-active);
+    }
+    .control_variant_fill:active {
+        background-color: var(--_control-fill-background-color-active);
     }
 
     .control:not(:hover):not(:active):not(:focus):not(:has(:focus)) {
@@ -1591,7 +685,8 @@
     }
 
     .control::placeholder {
-        color: oklch(from currentColor calc(l * .75) calc(c * .5) h / .5);
+        color: currentColor;
+        opacity: 0.35;
     }
 
 
@@ -1601,13 +696,13 @@
     .control,
     .control_variant_outline,
     .control_variant_ghost {
-        background-color: var(--_default-background-color);
-        color: var(--_default-label-color);
+        background-color: var(--_control-default-background-color);
+        color: var(--_control-default-label-color);
     }
 
     .control_variant_fill {
-        background-color: var(--_fill-background-color);
-        color: var(--_fill-label-color);
+        background-color: var(--_control-fill-background-color);
+        color: var(--_control-fill-label-color);
     }
 
     .control_variant_outline {
@@ -1650,6 +745,19 @@
     min-height: 100vh;
     line-height: var(--text-line-height);
 }
+.surface {
+    padding: 1.25lh;
+    border-radius: 1rlh;
+    background-color: var(--surface-color);
+    box-shadow: var(--surface-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25lh;
+}
+
+.surface__title {
+    color: var(--title-color);
+}
 @layer control_type {
     .control_type_button {
         user-select: none;
@@ -1691,14 +799,14 @@
 
 
     .control_type_checkbutton:has(.control__input:checked) {
-        background-color: var(--_fill-background-color);
-        color: var(--_fill-label-color);
+        background-color: var(--_control-fill-background-color);
+        color: var(--_control-fill-label-color);
         box-shadow: none;
     }
 
     .control_variant_ghost.control_type_checkbutton:has(.control__input:checked) {
-        background-color: var(--_default-background-color);
-        color: var(--_default-label-color);
+        background-color: var(--_control-default-background-color);
+        color: var(--_control-default-label-color);
     }
 }
 @layer control_type {
@@ -1718,11 +826,11 @@
 
 
       .control_type_input:required:user-invalid:not(:placeholder-shown) {
-        --_color: var(--red-color);
+        /* --_color: var(--red-color); */
       }
 
       .control_type_input:required:user-valid:not(:placeholder-shown) {
-        --_color: var(--green-color);
+        /* --_color: var(--green-color); */
       }
 }
 @layer control_type {
