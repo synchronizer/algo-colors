@@ -90,14 +90,14 @@
     --title-color-layer-2: oklch(0 0 0);
     --title-color: oklch(0 0 0);
     --surface-shadow-color: oklch(0.25 0 0 / 0.15);
-    --_control-default-background-color: oklch(0.5 0 0 / 0.1);
-    --_control-fill-background-color: oklch(0 0 0);
-    --_control-default-label-color: oklch(0 0 0);
-    --_control-fill-label-color: oklch(1 0 0);
-    --_control-default-background-color-hover: oklch(0.625 0 0 / 0.1);
-    --_control-fill-background-color-hover: oklch(0.25 0 0);
-    --_control-default-background-color-active: oklch(0.5625 0 0 / 0.1);
-    --_control-fill-background-color-active: oklch(0.2 0 0);
+    --_control-default-background-color: oklch(0.15 0 0);
+    --_control-fill-background-color: oklch(0.15 0 0);
+    --_control-default-label-color: oklch(0.15 0 0);
+    --_control-fill-label-color: oklch(0.15 0 0);
+    --_control-default-background-color-hover: oklch(0.15 0 0);
+    --_control-fill-background-color-hover: oklch(0.15 0 0);
+    --_control-default-background-color-active: oklch(0.15 0 0);
+    --_control-fill-background-color-active: oklch(0.15 0 0);
 }
 
 [data-color-scheme="dark"],
@@ -120,14 +120,14 @@
     --title-color-layer-2: oklch(1 0 0);
     --title-color: oklch(1 0 0);
     --surface-shadow-color: oklch(1 0 0 / 0.1);
-    --_control-default-background-color: oklch(0.65 0 0 / 0.15);
-    --_control-fill-background-color: oklch(1 0 0);
-    --_control-default-label-color: oklch(1 0 0);
-    --_control-fill-label-color: oklch(0 0 0);
-    --_control-default-background-color-hover: oklch(0.8125 0 0 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.875 0 0);
-    --_control-default-background-color-active: oklch(0.73125 0 0 / 0.15);
-    --_control-fill-background-color-active: oklch(0.925 0 0);
+    --_control-default-background-color: oklch(0.7 0 0);
+    --_control-fill-background-color: oklch(0.7 0 0);
+    --_control-default-label-color: oklch(0.7 0 0);
+    --_control-fill-label-color: oklch(0.7 0 0);
+    --_control-default-background-color-hover: oklch(0.7 0 0);
+    --_control-fill-background-color-hover: oklch(0.7 0 0);
+    --_control-default-background-color-active: oklch(0.7 0 0);
+    --_control-fill-background-color-active: oklch(0.7 0 0);
 }
 
 [data-color="red"],
@@ -150,14 +150,14 @@
     --title-color-layer-2: oklch(0.505466 0.255466 25.1387);
     --title-color: oklch(0.405466 0.255466 25.1387);
     --surface-shadow-color: oklch(0.25 0.255466 25.1387 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.255466 25.1387 / 0.1);
-    --_control-fill-background-color: oklch(0.629906 0.255466 25.1387);
-    --_control-default-label-color: oklch(0.46875 0.255466 25.1387);
-    --_control-fill-label-color: oklch(1 0 25.1387);
-    --_control-default-background-color-hover: oklch(0.625 0.255466 25.1387 / 0.1);
-    --_control-fill-background-color-hover: oklch(0.551168 0.255466 25.1387);
-    --_control-default-background-color-active: oklch(0.5625 0.255466 25.1387 / 0.1);
-    --_control-fill-background-color-active: oklch(0.582663 0.255466 25.1387);
+    --_control-default-background-color: oklch(0.405466 0.255466 25.1387);
+    --_control-fill-background-color: oklch(0.405466 0.255466 25.1387);
+    --_control-default-label-color: oklch(0.405466 0.255466 25.1387);
+    --_control-fill-label-color: oklch(0.405466 0.255466 25.1387);
+    --_control-default-background-color-hover: oklch(0.405466 0.255466 25.1387);
+    --_control-fill-background-color-hover: oklch(0.405466 0.255466 25.1387);
+    --_control-default-background-color-active: oklch(0.405466 0.255466 25.1387);
+    --_control-fill-background-color-active: oklch(0.405466 0.255466 25.1387);
 }
 
 [data-color="red"][data-color-scheme="dark"],
@@ -179,14 +179,14 @@
     --title-color-layer-2: oklch(1 0.196709 25.1387);
     --title-color: oklch(1 0.204373 25.1387);
     --surface-shadow-color: oklch(1 0.1916 25.1387 / 0.1);
-    --_control-default-background-color: oklch(0.65 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color: oklch(0.629906 0.255466 25.1387);
-    --_control-default-label-color: oklch(1 0.44656 25.1387);
-    --_control-fill-label-color: oklch(1 0 25.1387);
-    --_control-default-background-color-hover: oklch(0.8125 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.551168 0.255466 25.1387);
-    --_control-default-background-color-active: oklch(0.73125 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color-active: oklch(0.582663 0.255466 25.1387);
+    --_control-default-background-color: oklch(0.7 0.127733 25.1387);
+    --_control-fill-background-color: oklch(0.7 0.127733 25.1387);
+    --_control-default-label-color: oklch(0.7 0.127733 25.1387);
+    --_control-fill-label-color: oklch(0.7 0.127733 25.1387);
+    --_control-default-background-color-hover: oklch(0.7 0.127733 25.1387);
+    --_control-fill-background-color-hover: oklch(0.7 0.127733 25.1387);
+    --_control-default-background-color-active: oklch(0.7 0.127733 25.1387);
+    --_control-fill-background-color-active: oklch(0.7 0.127733 25.1387);
 }
 
 [data-color="yellow"],
@@ -209,14 +209,14 @@
     --title-color-layer-2: oklch(0.430852 0.180852 94.227);
     --title-color: oklch(0.330852 0.180852 94.227);
     --surface-shadow-color: oklch(0.25 0.180852 94.227 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.180852 94.227 / 0.1);
-    --_control-fill-background-color: oklch(0.881838 0.180852 94.227);
-    --_control-default-label-color: oklch(0.46875 0.180852 94.227);
-    --_control-fill-label-color: oklch(0 0 94.227);
-    --_control-default-background-color-hover: oklch(0.625 0.180852 94.227 / 0.1);
-    --_control-fill-background-color-hover: oklch(0.771608 0.180852 94.227);
-    --_control-default-background-color-active: oklch(0.5625 0.180852 94.227 / 0.1);
-    --_control-fill-background-color-active: oklch(0.8157 0.180852 94.227);
+    --_control-default-background-color: oklch(0.330852 0.180852 94.227);
+    --_control-fill-background-color: oklch(0.330852 0.180852 94.227);
+    --_control-default-label-color: oklch(0.330852 0.180852 94.227);
+    --_control-fill-label-color: oklch(0.330852 0.180852 94.227);
+    --_control-default-background-color-hover: oklch(0.330852 0.180852 94.227);
+    --_control-fill-background-color-hover: oklch(0.330852 0.180852 94.227);
+    --_control-default-background-color-active: oklch(0.330852 0.180852 94.227);
+    --_control-fill-background-color-active: oklch(0.330852 0.180852 94.227);
 }
 
 [data-color="yellow"][data-color-scheme="dark"],
@@ -238,14 +238,14 @@
     --title-color-layer-2: oklch(1 0.139256 94.227);
     --title-color: oklch(1 0.144682 94.227);
     --surface-shadow-color: oklch(1 0.135639 94.227 / 0.1);
-    --_control-default-background-color: oklch(0.65 0.180852 94.227 / 0.15);
-    --_control-fill-background-color: oklch(0.881838 0.180852 94.227);
-    --_control-default-label-color: oklch(1 0.357023 94.227);
-    --_control-fill-label-color: oklch(0 0 94.227);
-    --_control-default-background-color-hover: oklch(0.8125 0.180852 94.227 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.771608 0.180852 94.227);
-    --_control-default-background-color-active: oklch(0.73125 0.180852 94.227 / 0.15);
-    --_control-fill-background-color-active: oklch(0.8157 0.180852 94.227);
+    --_control-default-background-color: oklch(0.7 0.0904261 94.227);
+    --_control-fill-background-color: oklch(0.7 0.0904261 94.227);
+    --_control-default-label-color: oklch(0.7 0.0904261 94.227);
+    --_control-fill-label-color: oklch(0.7 0.0904261 94.227);
+    --_control-default-background-color-hover: oklch(0.7 0.0904261 94.227);
+    --_control-fill-background-color-hover: oklch(0.7 0.0904261 94.227);
+    --_control-default-background-color-active: oklch(0.7 0.0904261 94.227);
+    --_control-fill-background-color-active: oklch(0.7 0.0904261 94.227);
 }
 
 [data-color="green"],
@@ -268,14 +268,14 @@
     --title-color-layer-2: oklch(0.461406 0.211406 148.36);
     --title-color: oklch(0.361406 0.211406 148.36);
     --surface-shadow-color: oklch(0.25 0.211406 148.36 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.211406 148.36 / 0.1);
-    --_control-fill-background-color: oklch(0.737424 0.211406 148.36);
-    --_control-default-label-color: oklch(0.46875 0.211406 148.36);
-    --_control-fill-label-color: oklch(0 0 148.36);
-    --_control-default-background-color-hover: oklch(0.625 0.211406 148.36 / 0.1);
-    --_control-fill-background-color-hover: oklch(0.645246 0.211406 148.36);
-    --_control-default-background-color-active: oklch(0.5625 0.211406 148.36 / 0.1);
-    --_control-fill-background-color-active: oklch(0.682117 0.211406 148.36);
+    --_control-default-background-color: oklch(0.361406 0.211406 148.36);
+    --_control-fill-background-color: oklch(0.361406 0.211406 148.36);
+    --_control-default-label-color: oklch(0.361406 0.211406 148.36);
+    --_control-fill-label-color: oklch(0.361406 0.211406 148.36);
+    --_control-default-background-color-hover: oklch(0.361406 0.211406 148.36);
+    --_control-fill-background-color-hover: oklch(0.361406 0.211406 148.36);
+    --_control-default-background-color-active: oklch(0.361406 0.211406 148.36);
+    --_control-fill-background-color-active: oklch(0.361406 0.211406 148.36);
 }
 
 [data-color="green"][data-color-scheme="dark"],
@@ -297,14 +297,14 @@
     --title-color-layer-2: oklch(1 0.162782 148.36);
     --title-color: oklch(1 0.169125 148.36);
     --surface-shadow-color: oklch(1 0.158554 148.36 / 0.1);
-    --_control-default-background-color: oklch(0.65 0.211406 148.36 / 0.15);
-    --_control-fill-background-color: oklch(0.737424 0.211406 148.36);
-    --_control-default-label-color: oklch(1 0.393687 148.36);
-    --_control-fill-label-color: oklch(0 0 148.36);
-    --_control-default-background-color-hover: oklch(0.8125 0.211406 148.36 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.645246 0.211406 148.36);
-    --_control-default-background-color-active: oklch(0.73125 0.211406 148.36 / 0.15);
-    --_control-fill-background-color-active: oklch(0.682117 0.211406 148.36);
+    --_control-default-background-color: oklch(0.7 0.105703 148.36);
+    --_control-fill-background-color: oklch(0.7 0.105703 148.36);
+    --_control-default-label-color: oklch(0.7 0.105703 148.36);
+    --_control-fill-label-color: oklch(0.7 0.105703 148.36);
+    --_control-default-background-color-hover: oklch(0.7 0.105703 148.36);
+    --_control-fill-background-color-hover: oklch(0.7 0.105703 148.36);
+    --_control-default-background-color-active: oklch(0.7 0.105703 148.36);
+    --_control-fill-background-color-active: oklch(0.7 0.105703 148.36);
 }
 
 [data-color="blue"],
@@ -327,14 +327,14 @@
     --title-color-layer-2: oklch(0.485919 0.235919 260.222);
     --title-color: oklch(0.385919 0.235919 260.222);
     --surface-shadow-color: oklch(0.25 0.235919 260.222 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.235919 260.222 / 0.1);
-    --_control-fill-background-color: oklch(0.571491 0.235919 260.222);
-    --_control-default-label-color: oklch(0.46875 0.235919 260.222);
-    --_control-fill-label-color: oklch(1 0 260.222);
-    --_control-default-background-color-hover: oklch(0.625 0.235919 260.222 / 0.1);
-    --_control-fill-background-color-hover: oklch(0.500055 0.235919 260.222);
-    --_control-default-background-color-active: oklch(0.5625 0.235919 260.222 / 0.1);
-    --_control-fill-background-color-active: oklch(0.52863 0.235919 260.222);
+    --_control-default-background-color: oklch(0.385919 0.235919 260.222);
+    --_control-fill-background-color: oklch(0.385919 0.235919 260.222);
+    --_control-default-label-color: oklch(0.385919 0.235919 260.222);
+    --_control-fill-label-color: oklch(0.385919 0.235919 260.222);
+    --_control-default-background-color-hover: oklch(0.385919 0.235919 260.222);
+    --_control-fill-background-color-hover: oklch(0.385919 0.235919 260.222);
+    --_control-default-background-color-active: oklch(0.385919 0.235919 260.222);
+    --_control-fill-background-color-active: oklch(0.385919 0.235919 260.222);
 }
 
 [data-color="blue"][data-color-scheme="dark"],
@@ -356,14 +356,14 @@
     --title-color-layer-2: oklch(1 0.181658 260.222);
     --title-color: oklch(1 0.188735 260.222);
     --surface-shadow-color: oklch(1 0.17694 260.222 / 0.1);
-    --_control-default-background-color: oklch(0.65 0.235919 260.222 / 0.15);
-    --_control-fill-background-color: oklch(0.571491 0.235919 260.222);
-    --_control-default-label-color: oklch(1 0.423103 260.222);
-    --_control-fill-label-color: oklch(1 0 260.222);
-    --_control-default-background-color-hover: oklch(0.8125 0.235919 260.222 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.500055 0.235919 260.222);
-    --_control-default-background-color-active: oklch(0.73125 0.235919 260.222 / 0.15);
-    --_control-fill-background-color-active: oklch(0.52863 0.235919 260.222);
+    --_control-default-background-color: oklch(0.7 0.11796 260.222);
+    --_control-fill-background-color: oklch(0.7 0.11796 260.222);
+    --_control-default-label-color: oklch(0.7 0.11796 260.222);
+    --_control-fill-label-color: oklch(0.7 0.11796 260.222);
+    --_control-default-background-color-hover: oklch(0.7 0.11796 260.222);
+    --_control-fill-background-color-hover: oklch(0.7 0.11796 260.222);
+    --_control-default-background-color-active: oklch(0.7 0.11796 260.222);
+    --_control-fill-background-color-active: oklch(0.7 0.11796 260.222);
 }
 
 [data-color="purple"],
@@ -386,14 +386,14 @@
     --title-color-layer-2: oklch(0.559169 0.309169 318.549);
     --title-color: oklch(0.459169 0.309169 318.549);
     --surface-shadow-color: oklch(0.25 0.309169 318.549 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.309169 318.549 / 0.1);
-    --_control-fill-background-color: oklch(0.63936 0.309169 318.549);
-    --_control-default-label-color: oklch(0.46875 0.309169 318.549);
-    --_control-fill-label-color: oklch(1 0 318.549);
-    --_control-default-background-color-hover: oklch(0.625 0.309169 318.549 / 0.1);
-    --_control-fill-background-color-hover: oklch(0.55944 0.309169 318.549);
-    --_control-default-background-color-active: oklch(0.5625 0.309169 318.549 / 0.1);
-    --_control-fill-background-color-active: oklch(0.591408 0.309169 318.549);
+    --_control-default-background-color: oklch(0.459169 0.309169 318.549);
+    --_control-fill-background-color: oklch(0.459169 0.309169 318.549);
+    --_control-default-label-color: oklch(0.459169 0.309169 318.549);
+    --_control-fill-label-color: oklch(0.459169 0.309169 318.549);
+    --_control-default-background-color-hover: oklch(0.459169 0.309169 318.549);
+    --_control-fill-background-color-hover: oklch(0.459169 0.309169 318.549);
+    --_control-default-background-color-active: oklch(0.459169 0.309169 318.549);
+    --_control-fill-background-color-active: oklch(0.459169 0.309169 318.549);
 }
 
 [data-color="purple"][data-color-scheme="dark"],
@@ -415,14 +415,14 @@
     --title-color-layer-2: oklch(1 0.23806 318.549);
     --title-color: oklch(1 0.247335 318.549);
     --surface-shadow-color: oklch(1 0.231876 318.549 / 0.1);
-    --_control-default-background-color: oklch(0.65 0.309169 318.549 / 0.15);
-    --_control-fill-background-color: oklch(0.63936 0.309169 318.549);
-    --_control-default-label-color: oklch(1 0.511002 318.549);
-    --_control-fill-label-color: oklch(1 0 318.549);
-    --_control-default-background-color-hover: oklch(0.8125 0.309169 318.549 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.55944 0.309169 318.549);
-    --_control-default-background-color-active: oklch(0.73125 0.309169 318.549 / 0.15);
-    --_control-fill-background-color-active: oklch(0.591408 0.309169 318.549);
+    --_control-default-background-color: oklch(0.7 0.154584 318.549);
+    --_control-fill-background-color: oklch(0.7 0.154584 318.549);
+    --_control-default-label-color: oklch(0.7 0.154584 318.549);
+    --_control-fill-label-color: oklch(0.7 0.154584 318.549);
+    --_control-default-background-color-hover: oklch(0.7 0.154584 318.549);
+    --_control-fill-background-color-hover: oklch(0.7 0.154584 318.549);
+    --_control-default-background-color-active: oklch(0.7 0.154584 318.549);
+    --_control-fill-background-color-active: oklch(0.7 0.154584 318.549);
 }
 
 
