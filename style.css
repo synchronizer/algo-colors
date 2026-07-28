@@ -90,14 +90,14 @@
     --title-color-layer-2: #000000;
     --title-color: #000000;
     --surface-shadow-color: #222222;
-    --_control-default-background-color: #0b0b0b;
-    --_control-fill-background-color: #0b0b0b;
-    --_control-default-label-color: #0b0b0b;
-    --_control-fill-label-color: #0b0b0b;
-    --_control-default-background-color-hover: #0b0b0b;
-    --_control-fill-background-color-hover: #0b0b0b;
-    --_control-default-background-color-active: #0b0b0b;
-    --_control-fill-background-color-active: #0b0b0b;
+    --_control-default-background-color: #636363;
+    --_control-fill-background-color: #000000;
+    --_control-default-label-color: #000000;
+    --_control-fill-label-color: #ffffff;
+    --_control-default-background-color-hover: #878787;
+    --_control-fill-background-color-hover: #222222;
+    --_control-default-background-color-active: #757575;
+    --_control-fill-background-color-active: #161616;
 }
 
 [data-color-scheme="dark"],
@@ -120,14 +120,14 @@
     --title-color-layer-2: #ffffff;
     --title-color: #ffffff;
     --surface-shadow-color: #ffffff;
-    --_control-default-background-color: #9e9e9e;
-    --_control-fill-background-color: #9e9e9e;
-    --_control-default-label-color: #9e9e9e;
-    --_control-fill-label-color: #9e9e9e;
-    --_control-default-background-color-hover: #9e9e9e;
-    --_control-fill-background-color-hover: #9e9e9e;
-    --_control-default-background-color-active: #9e9e9e;
-    --_control-fill-background-color-active: #9e9e9e;
+    --_control-default-background-color: #8f8f8f;
+    --_control-fill-background-color: #ffffff;
+    --_control-default-label-color: #ffffff;
+    --_control-fill-label-color: #000000;
+    --_control-default-background-color-hover: #c1c2c2;
+    --_control-fill-background-color-hover: #d6d6d6;
+    --_control-default-background-color-active: #a8a8a8;
+    --_control-fill-background-color-active: #e6e6e6;
 }
 
 [data-color="red"],
@@ -150,14 +150,14 @@
     --title-color-layer-2: #d00000;
     --title-color: #ab0000;
     --surface-shadow-color: #710000;
-    --_control-default-background-color: #ab0000;
-    --_control-fill-background-color: #ab0000;
-    --_control-default-label-color: #ab0000;
-    --_control-fill-label-color: #ab0000;
-    --_control-default-background-color-hover: #ab0000;
-    --_control-fill-background-color-hover: #ab0000;
-    --_control-default-background-color-active: #ab0000;
-    --_control-fill-background-color-active: #ab0000;
+    --_control-default-background-color: #ce0000;
+    --_control-fill-background-color: #ff002a;
+    --_control-default-label-color: #c20000;
+    --_control-fill-label-color: #ffffff;
+    --_control-default-background-color-hover: #fd0029;
+    --_control-fill-background-color-hover: #e10005;
+    --_control-default-background-color-active: #e5000d;
+    --_control-fill-background-color-active: #ed0018;
 }
 
 [data-color="red"][data-color-scheme="dark"],
@@ -179,14 +179,14 @@
     --title-color-layer-2: #ffc5ba;
     --title-color: #ffc2b7;
     --surface-shadow-color: #ffc7bc;
-    --_control-default-background-color: #e37d75;
-    --_control-fill-background-color: #e37d75;
-    --_control-default-label-color: #e37d75;
-    --_control-fill-label-color: #e37d75;
-    --_control-default-background-color-hover: #e37d75;
-    --_control-fill-background-color-hover: #e37d75;
-    --_control-default-background-color-active: #e37d75;
-    --_control-fill-background-color-active: #e37d75;
+    --_control-default-background-color: #ff1932;
+    --_control-fill-background-color: #ff002a;
+    --_control-default-label-color: #ff0033;
+    --_control-fill-label-color: #ffffff;
+    --_control-default-background-color-hover: #ff6866;
+    --_control-fill-background-color-hover: #e10005;
+    --_control-default-background-color-active: #ff474c;
+    --_control-fill-background-color-active: #ed0018;
 }
 
 [data-color="yellow"],
@@ -209,14 +209,14 @@
     --title-color-layer-2: #714800;
     --title-color: #542b00;
     --surface-shadow-color: #3d1400;
-    --_control-default-background-color: #542b00;
-    --_control-fill-background-color: #542b00;
-    --_control-default-label-color: #542b00;
-    --_control-fill-label-color: #542b00;
-    --_control-default-background-color-hover: #542b00;
-    --_control-fill-background-color-hover: #542b00;
-    --_control-default-background-color-active: #542b00;
-    --_control-fill-background-color-active: #542b00;
+    --_control-default-background-color: #855c00;
+    --_control-fill-background-color: #ffd400;
+    --_control-default-label-color: #7c5300;
+    --_control-fill-label-color: #000000;
+    --_control-default-background-color-hover: #ab8200;
+    --_control-fill-background-color-hover: #dab000;
+    --_control-default-background-color-active: #986f00;
+    --_control-fill-background-color-active: #e9bf00;
 }
 
 [data-color="yellow"][data-color-scheme="dark"],
@@ -238,14 +238,14 @@
     --title-color-layer-2: #fffe8a;
     --title-color: #fffe84;
     --surface-shadow-color: #fffe8e;
-    --_control-default-background-color: #b19e5a;
-    --_control-fill-background-color: #b19e5a;
-    --_control-default-label-color: #b19e5a;
-    --_control-fill-label-color: #b19e5a;
-    --_control-default-background-color-hover: #b19e5a;
-    --_control-fill-background-color-hover: #b19e5a;
-    --_control-default-background-color-active: #b19e5a;
-    --_control-fill-background-color-active: #b19e5a;
+    --_control-default-background-color: #b38a00;
+    --_control-fill-background-color: #ffd400;
+    --_control-default-label-color: #ffef00;
+    --_control-fill-label-color: #000000;
+    --_control-default-background-color-hover: #e8be00;
+    --_control-fill-background-color-hover: #dab000;
+    --_control-default-background-color-active: #cda300;
+    --_control-fill-background-color-active: #e9bf00;
 }
 
 [data-color="green"],
@@ -268,14 +268,14 @@
     --title-color-layer-2: #007400;
     --title-color: #005600;
     --surface-shadow-color: #003500;
-    --_control-default-background-color: #005600;
-    --_control-fill-background-color: #005600;
-    --_control-default-label-color: #005600;
-    --_control-fill-label-color: #005600;
-    --_control-default-background-color-hover: #005600;
-    --_control-fill-background-color-hover: #005600;
-    --_control-default-background-color-active: #005600;
-    --_control-fill-background-color-active: #005600;
+    --_control-default-background-color: #008000;
+    --_control-fill-background-color: #00cc55;
+    --_control-default-label-color: #007600;
+    --_control-fill-label-color: #000000;
+    --_control-default-background-color-hover: #00a72f;
+    --_control-fill-background-color-hover: #00ae36;
+    --_control-default-background-color-active: #009314;
+    --_control-fill-background-color-active: #00ba43;
 }
 
 [data-color="green"][data-color-scheme="dark"],
@@ -297,14 +297,14 @@
     --title-color-layer-2: #adffc0;
     --title-color: #a9ffbd;
     --surface-shadow-color: #afffc2;
-    --_control-default-background-color: #6eb179;
-    --_control-fill-background-color: #6eb179;
-    --_control-default-label-color: #6eb179;
-    --_control-fill-label-color: #6eb179;
-    --_control-default-background-color-hover: #6eb179;
-    --_control-fill-background-color-hover: #6eb179;
-    --_control-default-background-color-active: #6eb179;
-    --_control-fill-background-color-active: #6eb179;
+    --_control-default-background-color: #00af38;
+    --_control-fill-background-color: #00cc55;
+    --_control-default-label-color: #00ff0f;
+    --_control-fill-label-color: #000000;
+    --_control-default-background-color-hover: #3de56d;
+    --_control-fill-background-color-hover: #00ae36;
+    --_control-default-background-color-active: #00ca53;
+    --_control-fill-background-color-active: #00ba43;
 }
 
 [data-color="blue"],
@@ -327,14 +327,14 @@
     --title-color-layer-2: #004de1;
     --title-color: #0027be;
     --surface-shadow-color: #01008f;
-    --_control-default-background-color: #0027be;
-    --_control-fill-background-color: #0027be;
-    --_control-default-label-color: #0027be;
-    --_control-fill-label-color: #0027be;
-    --_control-default-background-color-hover: #0027be;
-    --_control-fill-background-color-hover: #0027be;
-    --_control-default-background-color-active: #0027be;
-    --_control-fill-background-color-active: #0027be;
+    --_control-default-background-color: #0052e6;
+    --_control-fill-background-color: #006aff;
+    --_control-default-label-color: #0047db;
+    --_control-fill-label-color: #ffffff;
+    --_control-default-background-color-hover: #1e7cff;
+    --_control-fill-background-color-hover: #0052e6;
+    --_control-default-background-color-active: #0067fc;
+    --_control-fill-background-color-active: #005cf0;
 }
 
 [data-color="blue"][data-color-scheme="dark"],
@@ -356,14 +356,14 @@
     --title-color-layer-2: #b5ffff;
     --title-color: #b2ffff;
     --surface-shadow-color: #b7ffff;
-    --_control-default-background-color: #739fe8;
-    --_control-fill-background-color: #739fe8;
-    --_control-default-label-color: #739fe8;
-    --_control-fill-label-color: #739fe8;
-    --_control-default-background-color-hover: #739fe8;
-    --_control-fill-background-color-hover: #739fe8;
-    --_control-default-background-color-active: #739fe8;
-    --_control-fill-background-color-active: #739fe8;
+    --_control-default-background-color: #2885ff;
+    --_control-fill-background-color: #006aff;
+    --_control-default-label-color: #00e2ff;
+    --_control-fill-label-color: #ffffff;
+    --_control-default-background-color-hover: #5fbbff;
+    --_control-fill-background-color-hover: #0052e6;
+    --_control-default-background-color-active: #45a0ff;
+    --_control-fill-background-color-active: #005cf0;
 }
 
 [data-color="purple"],
@@ -386,14 +386,14 @@
     --title-color-layer-2: #b900e3;
     --title-color: #9800c0;
     --surface-shadow-color: #55007a;
-    --_control-default-background-color: #9800c0;
-    --_control-fill-background-color: #9800c0;
-    --_control-default-label-color: #9800c0;
-    --_control-fill-label-color: #9800c0;
-    --_control-default-background-color-hover: #9800c0;
-    --_control-fill-background-color-hover: #9800c0;
-    --_control-default-background-color-active: #9800c0;
-    --_control-fill-background-color-active: #9800c0;
+    --_control-default-background-color: #a500ce;
+    --_control-fill-background-color: #d400ff;
+    --_control-default-label-color: #9b00c4;
+    --_control-fill-label-color: #ffffff;
+    --_control-default-background-color-hover: #d000fa;
+    --_control-fill-background-color-hover: #b900e3;
+    --_control-default-background-color-active: #ba00e4;
+    --_control-fill-background-color-active: #c400ee;
 }
 
 [data-color="purple"][data-color-scheme="dark"],
@@ -415,14 +415,14 @@
     --title-color-layer-2: #ffc5ff;
     --title-color: #ffc2ff;
     --surface-shadow-color: #ffc7ff;
-    --_control-default-background-color: #c67cdb;
-    --_control-fill-background-color: #c67cdb;
-    --_control-default-label-color: #c67cdb;
-    --_control-fill-label-color: #c67cdb;
-    --_control-default-background-color-hover: #c67cdb;
-    --_control-fill-background-color-hover: #c67cdb;
-    --_control-default-background-color-active: #c67cdb;
-    --_control-fill-background-color-active: #c67cdb;
+    --_control-default-background-color: #d810ff;
+    --_control-fill-background-color: #d400ff;
+    --_control-default-label-color: #ff00ff;
+    --_control-fill-label-color: #ffffff;
+    --_control-default-background-color-hover: #ff66ff;
+    --_control-fill-background-color-hover: #b900e3;
+    --_control-default-background-color-active: #f444ff;
+    --_control-fill-background-color-active: #c400ee;
 }
 
 
