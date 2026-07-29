@@ -79,7 +79,7 @@
     --base-color: oklch(0 0 0);
     --accent-color: oklch(0 0 0);
     --fill-surface-color: oklch(0 0 0);
-    --fill-surface-gradient-color: oklch(0 0 60);
+    --fill-surface-gradient-color: oklch(0.4 0 75);
     --fill-text-color: oklch(1 0 0);
     --button-label-color: oklch(0 0 0);
     --surface-color-layer-0: oklch(0.92 0 0);
@@ -95,8 +95,8 @@
     --title-color: oklch(0 0 0);
     --surface-shadow-color: oklch(0.25 0 0 / 0.15);
     --_control-default-background-color: oklch(0.5 0 0 / 0.15);
-    --_control-fill-background-color: oklch(0 0 0);
     --_control-default-label-color: oklch(0 0 0);
+    --_control-fill-background-color: oklch(0 0 0);
     --_control-fill-label-color: oklch(1 0 0);
     --_control-default-background-color-hover: oklch(0.625 0 0 / 0.15);
     --_control-fill-background-color-hover: oklch(0.25 0 0);
@@ -112,7 +112,7 @@
     --base-color: oklch(1 0 0);
     --accent-color: oklch(1 0 0);
     --fill-surface-color: oklch(1 0 0);
-    --fill-surface-gradient-color: oklch(1 0 60);
+    --fill-surface-gradient-color: oklch(0.5 0 75);
     --fill-text-color: oklch(0 0 0);
     --button-label-color: oklch(1 0 0);
     --surface-color-layer-0: oklch(0 0 0);
@@ -128,8 +128,8 @@
     --title-color: oklch(1 0 0);
     --surface-shadow-color: oklch(1 0 0 / 0.1);
     --_control-default-background-color: oklch(0.75 0 0 / 0.15);
-    --_control-fill-background-color: oklch(1 0 0);
     --_control-default-label-color: oklch(1 0 0);
+    --_control-fill-background-color: oklch(1 0 0);
     --_control-fill-label-color: oklch(0 0 0);
     --_control-default-background-color-hover: oklch(0.9375 0 0 / 0.15);
     --_control-fill-background-color-hover: oklch(0.875 0 0);
@@ -145,7 +145,7 @@
     --base-color: oklch(0.629906 0.255466 25.1387);
     --accent-color: oklch(0.405466 0.255466 25.1387);
     --fill-surface-color: oklch(0.405466 0.255466 25.1387);
-    --fill-surface-gradient-color: oklch(0.405466 0.255466 85.1387);
+    --fill-surface-gradient-color: oklch(0.405466 0.255466 100.139);
     --fill-text-color: oklch(1 0 25.1387);
     --button-label-color: oklch(0.3041 0.255466 25.1387);
     --surface-color-layer-0: oklch(0.92 0.01916 25.1387);
@@ -161,8 +161,8 @@
     --title-color: oklch(0.405466 0.255466 25.1387);
     --surface-shadow-color: oklch(0.25 0.255466 25.1387 / 0.15);
     --_control-default-background-color: oklch(0.5 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color: oklch(0.405466 0.255466 25.1387);
     --_control-default-label-color: oklch(0.3041 0.255466 25.1387);
+    --_control-fill-background-color: oklch(0.405466 0.255466 25.1387);
     --_control-fill-label-color: oklch(1 0 25.1387);
     --_control-default-background-color-hover: oklch(0.625 0.255466 25.1387 / 0.15);
     --_control-fill-background-color-hover: oklch(0.354783 0.255466 25.1387);
@@ -177,7 +177,7 @@
     --base-color: oklch(0.629906 0.255466 25.1387);
     --accent-color: oklch(0.8 0.0957999 25.1387);
     --fill-surface-color: oklch(0.8 0.0957999 25.1387);
-    --fill-surface-gradient-color: oklch(0.8 0.0957999 85.1387);
+    --fill-surface-gradient-color: oklch(0.8 0.0957999 100.139);
     --fill-text-color: oklch(0 0 25.1387);
     --button-label-color: oklch(0.8 0.0957999 25.1387);
     --surface-color-layer-0: oklch(0 0.0255466 25.1387);
@@ -193,8 +193,8 @@
     --title-color: oklch(1 0.204373 25.1387);
     --surface-shadow-color: oklch(1 0.1916 25.1387 / 0.1);
     --_control-default-background-color: oklch(0.75 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color: oklch(0.8 0.0957999 25.1387);
     --_control-default-label-color: oklch(0.8 0.0957999 25.1387);
+    --_control-fill-background-color: oklch(0.8 0.0957999 25.1387);
     --_control-fill-label-color: oklch(0 0 25.1387);
     --_control-default-background-color-hover: oklch(0.9375 0.255466 25.1387 / 0.15);
     --_control-fill-background-color-hover: oklch(0.7 0.0957999 25.1387);
@@ -210,7 +210,7 @@
     --base-color: oklch(0.881838 0.180852 94.227);
     --accent-color: oklch(0.330852 0.180852 94.227);
     --fill-surface-color: oklch(0.330852 0.180852 94.227);
-    --fill-surface-gradient-color: oklch(0.330852 0.180852 154.227);
+    --fill-surface-gradient-color: oklch(0.330852 0.180852 169.227);
     --fill-text-color: oklch(1 0 94.227);
     --button-label-color: oklch(0.248139 0.180852 94.227);
     --surface-color-layer-0: oklch(0.92 0.0135639 94.227);
@@ -226,8 +226,8 @@
     --title-color: oklch(0.330852 0.180852 94.227);
     --surface-shadow-color: oklch(0.25 0.180852 94.227 / 0.15);
     --_control-default-background-color: oklch(0.5 0.180852 94.227 / 0.15);
-    --_control-fill-background-color: oklch(0.330852 0.180852 94.227);
     --_control-default-label-color: oklch(0.248139 0.180852 94.227);
+    --_control-fill-background-color: oklch(0.330852 0.180852 94.227);
     --_control-fill-label-color: oklch(1 0 94.227);
     --_control-default-background-color-hover: oklch(0.625 0.180852 94.227 / 0.15);
     --_control-fill-background-color-hover: oklch(0.289496 0.180852 94.227);
@@ -242,7 +242,7 @@
     --base-color: oklch(0.881838 0.180852 94.227);
     --accent-color: oklch(0 0.0678196 94.227);
     --fill-surface-color: oklch(0 0.0678196 94.227);
-    --fill-surface-gradient-color: oklch(0 0.0678196 154.227);
+    --fill-surface-gradient-color: oklch(0.4 0.0678196 169.227);
     --fill-text-color: oklch(0 0 94.227);
     --button-label-color: oklch(0 0.0678196 94.227);
     --surface-color-layer-0: oklch(0 0.0180852 94.227);
@@ -258,8 +258,8 @@
     --title-color: oklch(1 0.144682 94.227);
     --surface-shadow-color: oklch(1 0.135639 94.227 / 0.1);
     --_control-default-background-color: oklch(0.75 0.180852 94.227 / 0.15);
-    --_control-fill-background-color: oklch(0 0.0678196 94.227);
     --_control-default-label-color: oklch(0 0.0678196 94.227);
+    --_control-fill-background-color: oklch(0 0.0678196 94.227);
     --_control-fill-label-color: oklch(0 0 94.227);
     --_control-default-background-color-hover: oklch(0.9375 0.180852 94.227 / 0.15);
     --_control-fill-background-color-hover: oklch(0 0.0678196 94.227);
@@ -275,7 +275,7 @@
     --base-color: oklch(0.737424 0.211406 148.36);
     --accent-color: oklch(0.361406 0.211406 148.36);
     --fill-surface-color: oklch(0.361406 0.211406 148.36);
-    --fill-surface-gradient-color: oklch(0.361406 0.211406 208.36);
+    --fill-surface-gradient-color: oklch(0.361406 0.211406 223.36);
     --fill-text-color: oklch(1 0 148.36);
     --button-label-color: oklch(0.271054 0.211406 148.36);
     --surface-color-layer-0: oklch(0.92 0.0158554 148.36);
@@ -291,8 +291,8 @@
     --title-color: oklch(0.361406 0.211406 148.36);
     --surface-shadow-color: oklch(0.25 0.211406 148.36 / 0.15);
     --_control-default-background-color: oklch(0.5 0.211406 148.36 / 0.15);
-    --_control-fill-background-color: oklch(0.361406 0.211406 148.36);
     --_control-default-label-color: oklch(0.271054 0.211406 148.36);
+    --_control-fill-background-color: oklch(0.361406 0.211406 148.36);
     --_control-fill-label-color: oklch(1 0 148.36);
     --_control-default-background-color-hover: oklch(0.625 0.211406 148.36 / 0.15);
     --_control-fill-background-color-hover: oklch(0.31623 0.211406 148.36);
@@ -307,7 +307,7 @@
     --base-color: oklch(0.737424 0.211406 148.36);
     --accent-color: oklch(0 0.0792771 148.36);
     --fill-surface-color: oklch(0 0.0792771 148.36);
-    --fill-surface-gradient-color: oklch(0 0.0792771 208.36);
+    --fill-surface-gradient-color: oklch(0.4 0.0792771 223.36);
     --fill-text-color: oklch(0 0 148.36);
     --button-label-color: oklch(0 0.0792771 148.36);
     --surface-color-layer-0: oklch(0 0.0211406 148.36);
@@ -323,8 +323,8 @@
     --title-color: oklch(1 0.169125 148.36);
     --surface-shadow-color: oklch(1 0.158554 148.36 / 0.1);
     --_control-default-background-color: oklch(0.75 0.211406 148.36 / 0.15);
-    --_control-fill-background-color: oklch(0 0.0792771 148.36);
     --_control-default-label-color: oklch(0 0.0792771 148.36);
+    --_control-fill-background-color: oklch(0 0.0792771 148.36);
     --_control-fill-label-color: oklch(0 0 148.36);
     --_control-default-background-color-hover: oklch(0.9375 0.211406 148.36 / 0.15);
     --_control-fill-background-color-hover: oklch(0 0.0792771 148.36);
@@ -340,7 +340,7 @@
     --base-color: oklch(0.571491 0.235919 260.222);
     --accent-color: oklch(0.385919 0.235919 260.222);
     --fill-surface-color: oklch(0.385919 0.235919 260.222);
-    --fill-surface-gradient-color: oklch(0.385919 0.235919 320.222);
+    --fill-surface-gradient-color: oklch(0.385919 0.235919 335.222);
     --fill-text-color: oklch(1 0 260.222);
     --button-label-color: oklch(0.28944 0.235919 260.222);
     --surface-color-layer-0: oklch(0.92 0.017694 260.222);
@@ -356,8 +356,8 @@
     --title-color: oklch(0.385919 0.235919 260.222);
     --surface-shadow-color: oklch(0.25 0.235919 260.222 / 0.15);
     --_control-default-background-color: oklch(0.5 0.235919 260.222 / 0.15);
-    --_control-fill-background-color: oklch(0.385919 0.235919 260.222);
     --_control-default-label-color: oklch(0.28944 0.235919 260.222);
+    --_control-fill-background-color: oklch(0.385919 0.235919 260.222);
     --_control-fill-label-color: oklch(1 0 260.222);
     --_control-default-background-color-hover: oklch(0.625 0.235919 260.222 / 0.15);
     --_control-fill-background-color-hover: oklch(0.337679 0.235919 260.222);
@@ -372,7 +372,7 @@
     --base-color: oklch(0.571491 0.235919 260.222);
     --accent-color: oklch(0.8 0.0884698 260.222);
     --fill-surface-color: oklch(0.8 0.0884698 260.222);
-    --fill-surface-gradient-color: oklch(0.8 0.0884698 320.222);
+    --fill-surface-gradient-color: oklch(0.8 0.0884698 335.222);
     --fill-text-color: oklch(0 0 260.222);
     --button-label-color: oklch(0.8 0.0884698 260.222);
     --surface-color-layer-0: oklch(0 0.0235919 260.222);
@@ -388,8 +388,8 @@
     --title-color: oklch(1 0.188735 260.222);
     --surface-shadow-color: oklch(1 0.17694 260.222 / 0.1);
     --_control-default-background-color: oklch(0.75 0.235919 260.222 / 0.15);
-    --_control-fill-background-color: oklch(0.8 0.0884698 260.222);
     --_control-default-label-color: oklch(0.8 0.0884698 260.222);
+    --_control-fill-background-color: oklch(0.8 0.0884698 260.222);
     --_control-fill-label-color: oklch(0 0 260.222);
     --_control-default-background-color-hover: oklch(0.9375 0.235919 260.222 / 0.15);
     --_control-fill-background-color-hover: oklch(0.7 0.0884698 260.222);
@@ -405,7 +405,7 @@
     --base-color: oklch(0.63936 0.309169 318.549);
     --accent-color: oklch(0.459169 0.309169 318.549);
     --fill-surface-color: oklch(0.459169 0.309169 318.549);
-    --fill-surface-gradient-color: oklch(0.459169 0.309169 18.549);
+    --fill-surface-gradient-color: oklch(0.459169 0.309169 33.549);
     --fill-text-color: oklch(1 0 318.549);
     --button-label-color: oklch(0.344376 0.309169 318.549);
     --surface-color-layer-0: oklch(0.92 0.0231876 318.549);
@@ -421,8 +421,8 @@
     --title-color: oklch(0.459169 0.309169 318.549);
     --surface-shadow-color: oklch(0.25 0.309169 318.549 / 0.15);
     --_control-default-background-color: oklch(0.5 0.309169 318.549 / 0.15);
-    --_control-fill-background-color: oklch(0.459169 0.309169 318.549);
     --_control-default-label-color: oklch(0.344376 0.309169 318.549);
+    --_control-fill-background-color: oklch(0.459169 0.309169 318.549);
     --_control-fill-label-color: oklch(1 0 318.549);
     --_control-default-background-color-hover: oklch(0.625 0.309169 318.549 / 0.15);
     --_control-fill-background-color-hover: oklch(0.401772 0.309169 318.549);
@@ -437,7 +437,7 @@
     --base-color: oklch(0.63936 0.309169 318.549);
     --accent-color: oklch(0.8 0.115938 318.549);
     --fill-surface-color: oklch(0.8 0.115938 318.549);
-    --fill-surface-gradient-color: oklch(0.8 0.115938 18.549);
+    --fill-surface-gradient-color: oklch(0.8 0.115938 33.549);
     --fill-text-color: oklch(0 0 318.549);
     --button-label-color: oklch(0.8 0.115938 318.549);
     --surface-color-layer-0: oklch(0 0.0309169 318.549);
@@ -453,8 +453,8 @@
     --title-color: oklch(1 0.247335 318.549);
     --surface-shadow-color: oklch(1 0.231876 318.549 / 0.1);
     --_control-default-background-color: oklch(0.75 0.309169 318.549 / 0.15);
-    --_control-fill-background-color: oklch(0.8 0.115938 318.549);
     --_control-default-label-color: oklch(0.8 0.115938 318.549);
+    --_control-fill-background-color: oklch(0.8 0.115938 318.549);
     --_control-fill-label-color: oklch(0 0 318.549);
     --_control-default-background-color-hover: oklch(0.9375 0.309169 318.549 / 0.15);
     --_control-fill-background-color-hover: oklch(0.7 0.115938 318.549);
@@ -625,6 +625,8 @@
     /*   ============= STATES ============ */
     
 
+
+
     @media (hover: hover) {
 
         .control:is(:hover, :focus-visible) {
@@ -715,6 +717,8 @@
         pointer-events: none;
     }
 
+    
+
     .control::placeholder {
         color: currentColor;
         opacity: 0.35;
@@ -733,8 +737,12 @@
 
     .control_variant_fill {
         background-color: var(--_control-fill-background-color);
+    }
+
+    .control_variant_fill .control__text {
         color: var(--_control-fill-label-color);
     }
+    
 
     .control_variant_outline {
         box-shadow: inset 0 0 0 var(--border-width) currentColor;
