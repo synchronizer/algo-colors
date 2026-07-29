@@ -565,17 +565,14 @@
     --control-size-sm: calc((var(--control-size-m) + var(--control-size-s)) / 2);
 }
 
- @supports (corner-shape: squircle) {
+@supports (corner-shape: squircle) {
     :root {
         --border-radius-xs: .5rlh;
+        --border-radius-s: calc(var(--border-radius-xs) + var(--padding-s));
+        --border-radius-m: calc(var(--border-radius-s) + var(--padding-s));
+        --border-radius-l: calc(var(--border-radius-m) + var(--padding-s));
     }
-} 
-
-
-
-
-
-
+}
 :root {
 
 }
