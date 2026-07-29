@@ -49,8 +49,8 @@
         --darkness: 0;
         --border-width: 2px;
         --surface-shadow: 0 .75rlh 1.5rlh -.5rlh var(--surface-shadow-color);
-        --font-weight-text: 400;
-        --font-weight-title: 900;
+        --font-weight-text: 200;
+        --font-weight-title: 800;
         color-scheme: light;
     }
     
@@ -62,7 +62,7 @@
         --border-width: 1px;
         --surface-shadow: 0 0 0 1px var(--surface-shadow-color);
         --font-weight-text: 200;
-        --font-weight-title: 700;
+        --font-weight-title: 800;
         color-scheme: dark;
     }
 
@@ -124,7 +124,7 @@
     --title-color-layer-1: oklch(1 0 0);
     --title-color-layer-2: oklch(1 0 0);
     --title-color: oklch(1 0 0);
-    --surface-shadow-color: oklch(1 0 0 / 0.15);
+    --surface-shadow-color: oklch(1 0 0 / 0.1);
     --_control-default-background-color: oklch(0.75 0 0 / 0.15);
     --_control-fill-background-color: oklch(1 0 0);
     --_control-default-label-color: oklch(1 0 0);
@@ -187,7 +187,7 @@
     --title-color-layer-1: oklch(1 0.200541 25.1387);
     --title-color-layer-2: oklch(1 0.196709 25.1387);
     --title-color: oklch(1 0.204373 25.1387);
-    --surface-shadow-color: oklch(1 0.1916 25.1387 / 0.15);
+    --surface-shadow-color: oklch(1 0.1916 25.1387 / 0.1);
     --_control-default-background-color: oklch(0.75 0.255466 25.1387 / 0.15);
     --_control-fill-background-color: oklch(0.629906 0.255466 25.1387);
     --_control-default-label-color: oklch(1 0.44656 25.1387);
@@ -250,7 +250,7 @@
     --title-color-layer-1: oklch(1 0.141969 94.227);
     --title-color-layer-2: oklch(1 0.139256 94.227);
     --title-color: oklch(1 0.144682 94.227);
-    --surface-shadow-color: oklch(1 0.135639 94.227 / 0.15);
+    --surface-shadow-color: oklch(1 0.135639 94.227 / 0.1);
     --_control-default-background-color: oklch(0.75 0.180852 94.227 / 0.15);
     --_control-fill-background-color: oklch(0.881838 0.180852 94.227);
     --_control-default-label-color: oklch(1 0.357023 94.227);
@@ -313,7 +313,7 @@
     --title-color-layer-1: oklch(1 0.165953 148.36);
     --title-color-layer-2: oklch(1 0.162782 148.36);
     --title-color: oklch(1 0.169125 148.36);
-    --surface-shadow-color: oklch(1 0.158554 148.36 / 0.15);
+    --surface-shadow-color: oklch(1 0.158554 148.36 / 0.1);
     --_control-default-background-color: oklch(0.75 0.211406 148.36 / 0.15);
     --_control-fill-background-color: oklch(0.737424 0.211406 148.36);
     --_control-default-label-color: oklch(1 0.393687 148.36);
@@ -376,7 +376,7 @@
     --title-color-layer-1: oklch(1 0.185197 260.222);
     --title-color-layer-2: oklch(1 0.181658 260.222);
     --title-color: oklch(1 0.188735 260.222);
-    --surface-shadow-color: oklch(1 0.17694 260.222 / 0.15);
+    --surface-shadow-color: oklch(1 0.17694 260.222 / 0.1);
     --_control-default-background-color: oklch(0.75 0.235919 260.222 / 0.15);
     --_control-fill-background-color: oklch(0.571491 0.235919 260.222);
     --_control-default-label-color: oklch(1 0.423103 260.222);
@@ -439,7 +439,7 @@
     --title-color-layer-1: oklch(1 0.242697 318.549);
     --title-color-layer-2: oklch(1 0.23806 318.549);
     --title-color: oklch(1 0.247335 318.549);
-    --surface-shadow-color: oklch(1 0.231876 318.549 / 0.15);
+    --surface-shadow-color: oklch(1 0.231876 318.549 / 0.1);
     --_control-default-background-color: oklch(0.75 0.309169 318.549 / 0.15);
     --_control-fill-background-color: oklch(0.63936 0.309169 318.549);
     --_control-default-label-color: oklch(1 0.511002 318.549);
@@ -765,6 +765,8 @@
     line-height: 1.6;
     font-size: clamp(1rem,.98vw,1.125rem);
     font-weight: var(--font-weight-text);
+
+    -webkit-text-stroke: min(.025em, 1.5px) oklch(from currentcolor l c h / calc(100% * round(.9 - l)));
 }
 
 .body {
@@ -805,6 +807,10 @@
 .surface_variant_fill {
     background-color: var(--fill-surface-color);
     box-shadow: none;
+}
+.surface_variant_outline {
+    background-color: transparent;
+    box-shadow: 0 0 0 var(--border-width);
 }
 .surface_variant_fill,
 .surface_variant_fill * {
