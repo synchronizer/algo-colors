@@ -78,6 +78,8 @@
 [data-color-scheme="light"] [data-color="default"] {
     --base-color: oklch(0 0 0);
     --accent-color: oklch(0 0 0);
+    --fill-surface-color: oklch(0 0 0);
+    --fill-text-color: oklch(1 0 0);
     --button-label-color: oklch(0 0 0);
     --surface-color-layer-0: oklch(0.92 0 0);
     --surface-color-layer-1: oklch(0.975 0 0);
@@ -91,13 +93,13 @@
     --title-color-layer-2: oklch(0 0 0);
     --title-color: oklch(0 0 0);
     --surface-shadow-color: oklch(0.25 0 0 / 0.15);
-    --_control-default-background-color: oklch(0.5 0 0 / 0.25);
+    --_control-default-background-color: oklch(0.5 0 0 / 0.15);
     --_control-fill-background-color: oklch(0 0 0);
     --_control-default-label-color: oklch(0 0 0);
     --_control-fill-label-color: oklch(1 0 0);
-    --_control-default-background-color-hover: oklch(0.625 0 0 / 0.25);
+    --_control-default-background-color-hover: oklch(0.625 0 0 / 0.15);
     --_control-fill-background-color-hover: oklch(0.25 0 0);
-    --_control-default-background-color-active: oklch(0.5625 0 0 / 0.25);
+    --_control-default-background-color-active: oklch(0.5625 0 0 / 0.15);
     --_control-fill-background-color-active: oklch(0.2 0 0);
 }
 
@@ -108,6 +110,8 @@
 [data-color-scheme="dark"] [data-color="default"] {
     --base-color: oklch(1 0 0);
     --accent-color: oklch(1 0 0);
+    --fill-surface-color: oklch(1 0 0);
+    --fill-text-color: oklch(0 0 0);
     --button-label-color: oklch(1 0 0);
     --surface-color-layer-0: oklch(0 0 0);
     --surface-color-layer-1: oklch(0.19 0 0);
@@ -121,13 +125,13 @@
     --title-color-layer-2: oklch(1 0 0);
     --title-color: oklch(1 0 0);
     --surface-shadow-color: oklch(1 0 0 / 0.15);
-    --_control-default-background-color: oklch(0.65 0 0 / 0.25);
+    --_control-default-background-color: oklch(0.75 0 0 / 0.15);
     --_control-fill-background-color: oklch(1 0 0);
     --_control-default-label-color: oklch(1 0 0);
     --_control-fill-label-color: oklch(0 0 0);
-    --_control-default-background-color-hover: oklch(0.8125 0 0 / 0.25);
+    --_control-default-background-color-hover: oklch(0.9375 0 0 / 0.15);
     --_control-fill-background-color-hover: oklch(0.875 0 0);
-    --_control-default-background-color-active: oklch(0.73125 0 0 / 0.25);
+    --_control-default-background-color-active: oklch(0.84375 0 0 / 0.15);
     --_control-fill-background-color-active: oklch(0.925 0 0);
 }
 
@@ -138,6 +142,8 @@
 [data-color-scheme="light"] [data-color="red"] {
     --base-color: oklch(0.629906 0.255466 25.1387);
     --accent-color: oklch(0.625 0.255466 25.1387);
+    --fill-surface-color: oklch(0.689953 0.319333 25.1387);
+    --fill-text-color: oklch(1 0 25.1387);
     --button-label-color: oklch(0.46875 0.255466 25.1387);
     --surface-color-layer-0: oklch(0.92 0.01916 25.1387);
     --surface-color-layer-1: oklch(0.975 0.0127733 25.1387);
@@ -151,14 +157,14 @@
     --title-color-layer-2: oklch(0.505466 0.255466 25.1387);
     --title-color: oklch(0.405466 0.255466 25.1387);
     --surface-shadow-color: oklch(0.25 0.255466 25.1387 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.255466 25.1387 / 0.25);
-    --_control-fill-background-color: oklch(0.629906 0.255466 25.1387);
+    --_control-default-background-color: oklch(0.5 0.255466 25.1387 / 0.15);
+    --_control-fill-background-color: oklch(0.689953 0.319333 25.1387);
     --_control-default-label-color: oklch(0.46875 0.255466 25.1387);
     --_control-fill-label-color: oklch(1 0 25.1387);
-    --_control-default-background-color-hover: oklch(0.625 0.255466 25.1387 / 0.25);
-    --_control-fill-background-color-hover: oklch(0.551168 0.255466 25.1387);
-    --_control-default-background-color-active: oklch(0.5625 0.255466 25.1387 / 0.25);
-    --_control-fill-background-color-active: oklch(0.582663 0.255466 25.1387);
+    --_control-default-background-color-hover: oklch(0.625 0.255466 25.1387 / 0.15);
+    --_control-fill-background-color-hover: oklch(0.603709 0.319333 25.1387);
+    --_control-default-background-color-active: oklch(0.5625 0.255466 25.1387 / 0.15);
+    --_control-fill-background-color-active: oklch(0.638206 0.319333 25.1387);
 }
 
 [data-color="red"][data-color-scheme="dark"],
@@ -167,6 +173,8 @@
 [data-color-scheme="dark"] [data-color="red"] {
     --base-color: oklch(0.629906 0.255466 25.1387);
     --accent-color: oklch(1 0.44656 25.1387);
+    --fill-surface-color: oklch(0.629906 0.255466 25.1387);
+    --fill-text-color: oklch(1 0 25.1387);
     --button-label-color: oklch(1 0.44656 25.1387);
     --surface-color-layer-0: oklch(0 0.0255466 25.1387);
     --surface-color-layer-1: oklch(0.19 0.0255466 25.1387);
@@ -180,13 +188,13 @@
     --title-color-layer-2: oklch(1 0.196709 25.1387);
     --title-color: oklch(1 0.204373 25.1387);
     --surface-shadow-color: oklch(1 0.1916 25.1387 / 0.15);
-    --_control-default-background-color: oklch(0.65 0.255466 25.1387 / 0.25);
+    --_control-default-background-color: oklch(0.75 0.255466 25.1387 / 0.15);
     --_control-fill-background-color: oklch(0.629906 0.255466 25.1387);
     --_control-default-label-color: oklch(1 0.44656 25.1387);
     --_control-fill-label-color: oklch(1 0 25.1387);
-    --_control-default-background-color-hover: oklch(0.8125 0.255466 25.1387 / 0.25);
+    --_control-default-background-color-hover: oklch(0.9375 0.255466 25.1387 / 0.15);
     --_control-fill-background-color-hover: oklch(0.551168 0.255466 25.1387);
-    --_control-default-background-color-active: oklch(0.73125 0.255466 25.1387 / 0.25);
+    --_control-default-background-color-active: oklch(0.84375 0.255466 25.1387 / 0.15);
     --_control-fill-background-color-active: oklch(0.582663 0.255466 25.1387);
 }
 
@@ -197,6 +205,8 @@
 [data-color-scheme="light"] [data-color="yellow"] {
     --base-color: oklch(0.881838 0.180852 94.227);
     --accent-color: oklch(0.625 0.180852 94.227);
+    --fill-surface-color: oklch(0.815919 0.226065 94.227);
+    --fill-text-color: oklch(0 0 94.227);
     --button-label-color: oklch(0.46875 0.180852 94.227);
     --surface-color-layer-0: oklch(0.92 0.0135639 94.227);
     --surface-color-layer-1: oklch(0.975 0.00904261 94.227);
@@ -210,14 +220,14 @@
     --title-color-layer-2: oklch(0.430852 0.180852 94.227);
     --title-color: oklch(0.330852 0.180852 94.227);
     --surface-shadow-color: oklch(0.25 0.180852 94.227 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.180852 94.227 / 0.25);
-    --_control-fill-background-color: oklch(0.881838 0.180852 94.227);
+    --_control-default-background-color: oklch(0.5 0.180852 94.227 / 0.15);
+    --_control-fill-background-color: oklch(0.815919 0.226065 94.227);
     --_control-default-label-color: oklch(0.46875 0.180852 94.227);
     --_control-fill-label-color: oklch(0 0 94.227);
-    --_control-default-background-color-hover: oklch(0.625 0.180852 94.227 / 0.25);
-    --_control-fill-background-color-hover: oklch(0.771608 0.180852 94.227);
-    --_control-default-background-color-active: oklch(0.5625 0.180852 94.227 / 0.25);
-    --_control-fill-background-color-active: oklch(0.8157 0.180852 94.227);
+    --_control-default-background-color-hover: oklch(0.625 0.180852 94.227 / 0.15);
+    --_control-fill-background-color-hover: oklch(0.713929 0.226065 94.227);
+    --_control-default-background-color-active: oklch(0.5625 0.180852 94.227 / 0.15);
+    --_control-fill-background-color-active: oklch(0.754725 0.226065 94.227);
 }
 
 [data-color="yellow"][data-color-scheme="dark"],
@@ -226,6 +236,8 @@
 [data-color-scheme="dark"] [data-color="yellow"] {
     --base-color: oklch(0.881838 0.180852 94.227);
     --accent-color: oklch(1 0.357023 94.227);
+    --fill-surface-color: oklch(0.881838 0.180852 94.227);
+    --fill-text-color: oklch(0 0 94.227);
     --button-label-color: oklch(1 0.357023 94.227);
     --surface-color-layer-0: oklch(0 0.0180852 94.227);
     --surface-color-layer-1: oklch(0.19 0.0180852 94.227);
@@ -239,13 +251,13 @@
     --title-color-layer-2: oklch(1 0.139256 94.227);
     --title-color: oklch(1 0.144682 94.227);
     --surface-shadow-color: oklch(1 0.135639 94.227 / 0.15);
-    --_control-default-background-color: oklch(0.65 0.180852 94.227 / 0.25);
+    --_control-default-background-color: oklch(0.75 0.180852 94.227 / 0.15);
     --_control-fill-background-color: oklch(0.881838 0.180852 94.227);
     --_control-default-label-color: oklch(1 0.357023 94.227);
     --_control-fill-label-color: oklch(0 0 94.227);
-    --_control-default-background-color-hover: oklch(0.8125 0.180852 94.227 / 0.25);
+    --_control-default-background-color-hover: oklch(0.9375 0.180852 94.227 / 0.15);
     --_control-fill-background-color-hover: oklch(0.771608 0.180852 94.227);
-    --_control-default-background-color-active: oklch(0.73125 0.180852 94.227 / 0.25);
+    --_control-default-background-color-active: oklch(0.84375 0.180852 94.227 / 0.15);
     --_control-fill-background-color-active: oklch(0.8157 0.180852 94.227);
 }
 
@@ -256,6 +268,8 @@
 [data-color-scheme="light"] [data-color="green"] {
     --base-color: oklch(0.737424 0.211406 148.36);
     --accent-color: oklch(0.625 0.211406 148.36);
+    --fill-surface-color: oklch(0.743712 0.264257 148.36);
+    --fill-text-color: oklch(0 0 148.36);
     --button-label-color: oklch(0.46875 0.211406 148.36);
     --surface-color-layer-0: oklch(0.92 0.0158554 148.36);
     --surface-color-layer-1: oklch(0.975 0.0105703 148.36);
@@ -269,14 +283,14 @@
     --title-color-layer-2: oklch(0.461406 0.211406 148.36);
     --title-color: oklch(0.361406 0.211406 148.36);
     --surface-shadow-color: oklch(0.25 0.211406 148.36 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.211406 148.36 / 0.25);
-    --_control-fill-background-color: oklch(0.737424 0.211406 148.36);
+    --_control-default-background-color: oklch(0.5 0.211406 148.36 / 0.15);
+    --_control-fill-background-color: oklch(0.743712 0.264257 148.36);
     --_control-default-label-color: oklch(0.46875 0.211406 148.36);
     --_control-fill-label-color: oklch(0 0 148.36);
-    --_control-default-background-color-hover: oklch(0.625 0.211406 148.36 / 0.25);
-    --_control-fill-background-color-hover: oklch(0.645246 0.211406 148.36);
-    --_control-default-background-color-active: oklch(0.5625 0.211406 148.36 / 0.25);
-    --_control-fill-background-color-active: oklch(0.682117 0.211406 148.36);
+    --_control-default-background-color-hover: oklch(0.625 0.211406 148.36 / 0.15);
+    --_control-fill-background-color-hover: oklch(0.650748 0.264257 148.36);
+    --_control-default-background-color-active: oklch(0.5625 0.211406 148.36 / 0.15);
+    --_control-fill-background-color-active: oklch(0.687934 0.264257 148.36);
 }
 
 [data-color="green"][data-color-scheme="dark"],
@@ -285,6 +299,8 @@
 [data-color-scheme="dark"] [data-color="green"] {
     --base-color: oklch(0.737424 0.211406 148.36);
     --accent-color: oklch(1 0.393687 148.36);
+    --fill-surface-color: oklch(0.737424 0.211406 148.36);
+    --fill-text-color: oklch(0 0 148.36);
     --button-label-color: oklch(1 0.393687 148.36);
     --surface-color-layer-0: oklch(0 0.0211406 148.36);
     --surface-color-layer-1: oklch(0.19 0.0211406 148.36);
@@ -298,13 +314,13 @@
     --title-color-layer-2: oklch(1 0.162782 148.36);
     --title-color: oklch(1 0.169125 148.36);
     --surface-shadow-color: oklch(1 0.158554 148.36 / 0.15);
-    --_control-default-background-color: oklch(0.65 0.211406 148.36 / 0.25);
+    --_control-default-background-color: oklch(0.75 0.211406 148.36 / 0.15);
     --_control-fill-background-color: oklch(0.737424 0.211406 148.36);
     --_control-default-label-color: oklch(1 0.393687 148.36);
     --_control-fill-label-color: oklch(0 0 148.36);
-    --_control-default-background-color-hover: oklch(0.8125 0.211406 148.36 / 0.25);
+    --_control-default-background-color-hover: oklch(0.9375 0.211406 148.36 / 0.15);
     --_control-fill-background-color-hover: oklch(0.645246 0.211406 148.36);
-    --_control-default-background-color-active: oklch(0.73125 0.211406 148.36 / 0.25);
+    --_control-default-background-color-active: oklch(0.84375 0.211406 148.36 / 0.15);
     --_control-fill-background-color-active: oklch(0.682117 0.211406 148.36);
 }
 
@@ -315,6 +331,8 @@
 [data-color-scheme="light"] [data-color="blue"] {
     --base-color: oklch(0.571491 0.235919 260.222);
     --accent-color: oklch(0.625 0.235919 260.222);
+    --fill-surface-color: oklch(0.660746 0.294899 260.222);
+    --fill-text-color: oklch(1 0 260.222);
     --button-label-color: oklch(0.46875 0.235919 260.222);
     --surface-color-layer-0: oklch(0.92 0.017694 260.222);
     --surface-color-layer-1: oklch(0.975 0.011796 260.222);
@@ -328,14 +346,14 @@
     --title-color-layer-2: oklch(0.485919 0.235919 260.222);
     --title-color: oklch(0.385919 0.235919 260.222);
     --surface-shadow-color: oklch(0.25 0.235919 260.222 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.235919 260.222 / 0.25);
-    --_control-fill-background-color: oklch(0.571491 0.235919 260.222);
+    --_control-default-background-color: oklch(0.5 0.235919 260.222 / 0.15);
+    --_control-fill-background-color: oklch(0.660746 0.294899 260.222);
     --_control-default-label-color: oklch(0.46875 0.235919 260.222);
     --_control-fill-label-color: oklch(1 0 260.222);
-    --_control-default-background-color-hover: oklch(0.625 0.235919 260.222 / 0.25);
-    --_control-fill-background-color-hover: oklch(0.500055 0.235919 260.222);
-    --_control-default-background-color-active: oklch(0.5625 0.235919 260.222 / 0.25);
-    --_control-fill-background-color-active: oklch(0.52863 0.235919 260.222);
+    --_control-default-background-color-hover: oklch(0.625 0.235919 260.222 / 0.15);
+    --_control-fill-background-color-hover: oklch(0.578153 0.294899 260.222);
+    --_control-default-background-color-active: oklch(0.5625 0.235919 260.222 / 0.15);
+    --_control-fill-background-color-active: oklch(0.61119 0.294899 260.222);
 }
 
 [data-color="blue"][data-color-scheme="dark"],
@@ -344,6 +362,8 @@
 [data-color-scheme="dark"] [data-color="blue"] {
     --base-color: oklch(0.571491 0.235919 260.222);
     --accent-color: oklch(1 0.423103 260.222);
+    --fill-surface-color: oklch(0.571491 0.235919 260.222);
+    --fill-text-color: oklch(1 0 260.222);
     --button-label-color: oklch(1 0.423103 260.222);
     --surface-color-layer-0: oklch(0 0.0235919 260.222);
     --surface-color-layer-1: oklch(0.19 0.0235919 260.222);
@@ -357,13 +377,13 @@
     --title-color-layer-2: oklch(1 0.181658 260.222);
     --title-color: oklch(1 0.188735 260.222);
     --surface-shadow-color: oklch(1 0.17694 260.222 / 0.15);
-    --_control-default-background-color: oklch(0.65 0.235919 260.222 / 0.25);
+    --_control-default-background-color: oklch(0.75 0.235919 260.222 / 0.15);
     --_control-fill-background-color: oklch(0.571491 0.235919 260.222);
     --_control-default-label-color: oklch(1 0.423103 260.222);
     --_control-fill-label-color: oklch(1 0 260.222);
-    --_control-default-background-color-hover: oklch(0.8125 0.235919 260.222 / 0.25);
+    --_control-default-background-color-hover: oklch(0.9375 0.235919 260.222 / 0.15);
     --_control-fill-background-color-hover: oklch(0.500055 0.235919 260.222);
-    --_control-default-background-color-active: oklch(0.73125 0.235919 260.222 / 0.25);
+    --_control-default-background-color-active: oklch(0.84375 0.235919 260.222 / 0.15);
     --_control-fill-background-color-active: oklch(0.52863 0.235919 260.222);
 }
 
@@ -374,6 +394,8 @@
 [data-color-scheme="light"] [data-color="purple"] {
     --base-color: oklch(0.63936 0.309169 318.549);
     --accent-color: oklch(0.625 0.309169 318.549);
+    --fill-surface-color: oklch(0.69468 0.386461 318.549);
+    --fill-text-color: oklch(1 0 318.549);
     --button-label-color: oklch(0.46875 0.309169 318.549);
     --surface-color-layer-0: oklch(0.92 0.0231876 318.549);
     --surface-color-layer-1: oklch(0.975 0.0154584 318.549);
@@ -387,14 +409,14 @@
     --title-color-layer-2: oklch(0.559169 0.309169 318.549);
     --title-color: oklch(0.459169 0.309169 318.549);
     --surface-shadow-color: oklch(0.25 0.309169 318.549 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.309169 318.549 / 0.25);
-    --_control-fill-background-color: oklch(0.63936 0.309169 318.549);
+    --_control-default-background-color: oklch(0.5 0.309169 318.549 / 0.15);
+    --_control-fill-background-color: oklch(0.69468 0.386461 318.549);
     --_control-default-label-color: oklch(0.46875 0.309169 318.549);
     --_control-fill-label-color: oklch(1 0 318.549);
-    --_control-default-background-color-hover: oklch(0.625 0.309169 318.549 / 0.25);
-    --_control-fill-background-color-hover: oklch(0.55944 0.309169 318.549);
-    --_control-default-background-color-active: oklch(0.5625 0.309169 318.549 / 0.25);
-    --_control-fill-background-color-active: oklch(0.591408 0.309169 318.549);
+    --_control-default-background-color-hover: oklch(0.625 0.309169 318.549 / 0.15);
+    --_control-fill-background-color-hover: oklch(0.607845 0.386461 318.549);
+    --_control-default-background-color-active: oklch(0.5625 0.309169 318.549 / 0.15);
+    --_control-fill-background-color-active: oklch(0.642579 0.386461 318.549);
 }
 
 [data-color="purple"][data-color-scheme="dark"],
@@ -403,6 +425,8 @@
 [data-color-scheme="dark"] [data-color="purple"] {
     --base-color: oklch(0.63936 0.309169 318.549);
     --accent-color: oklch(1 0.511002 318.549);
+    --fill-surface-color: oklch(0.63936 0.309169 318.549);
+    --fill-text-color: oklch(1 0 318.549);
     --button-label-color: oklch(1 0.511002 318.549);
     --surface-color-layer-0: oklch(0 0.0309169 318.549);
     --surface-color-layer-1: oklch(0.19 0.0309169 318.549);
@@ -416,13 +440,13 @@
     --title-color-layer-2: oklch(1 0.23806 318.549);
     --title-color: oklch(1 0.247335 318.549);
     --surface-shadow-color: oklch(1 0.231876 318.549 / 0.15);
-    --_control-default-background-color: oklch(0.65 0.309169 318.549 / 0.25);
+    --_control-default-background-color: oklch(0.75 0.309169 318.549 / 0.15);
     --_control-fill-background-color: oklch(0.63936 0.309169 318.549);
     --_control-default-label-color: oklch(1 0.511002 318.549);
     --_control-fill-label-color: oklch(1 0 318.549);
-    --_control-default-background-color-hover: oklch(0.8125 0.309169 318.549 / 0.25);
+    --_control-default-background-color-hover: oklch(0.9375 0.309169 318.549 / 0.15);
     --_control-fill-background-color-hover: oklch(0.55944 0.309169 318.549);
-    --_control-default-background-color-active: oklch(0.73125 0.309169 318.549 / 0.25);
+    --_control-default-background-color-active: oklch(0.84375 0.309169 318.549 / 0.15);
     --_control-fill-background-color-active: oklch(0.591408 0.309169 318.549);
 }
 
@@ -778,9 +802,15 @@
     
 }
 
-.surface__title {
-    color: var(--title-color);
+.surface_variant_fill {
+    background-color: var(--fill-surface-color);
+    box-shadow: none;
 }
+.surface_variant_fill,
+.surface_variant_fill * {
+    color: var(--fill-text-color);
+}
+
 
 
 @layer control_type {
