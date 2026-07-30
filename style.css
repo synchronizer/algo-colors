@@ -43,26 +43,24 @@
 
     /* @compile:state */
     :root:not([data-color-scheme]),
-    [data-color-scheme="light"],
-    [data-color-scheme="light"] [data-color],
-    [data-color] [data-color-scheme="light"]  {
+    [data-color-scheme="light"] {
         --darkness: 0;
         --border-width: 2px;
         --surface-shadow: 0 .75rlh 1.5rlh -.5rlh var(--surface-shadow-color);
-        --font-weight-text: 200;
-        --font-weight-title: 800;
+        --font-weight-text: 400;
+        --font-weight-title: 900;
+        --font-weight-highlighted: inherit;
         color-scheme: light;
     }
     
     
-    [data-color-scheme="dark"],
-    [data-color-scheme="dark"] [data-color],
-    [data-color] [data-color-scheme="dark"] {
+    [data-color-scheme="dark"] {
         --darkness: 1;
         --border-width: 1px;
-        --surface-shadow: 0 0 0 1px var(--surface-shadow-color);
+        --surface-shadow: inset 0 0 0 1px var(--surface-shadow-color);
         --font-weight-text: 200;
-        --font-weight-title: 800;
+        --font-weight-title: 700;
+        --font-weight-highlighted: bolder;
         color-scheme: dark;
     }
 
@@ -79,7 +77,8 @@
     --base-color: oklch(0 0 0);
     --accent-color: oklch(0 0 0);
     --fill-surface-color: oklch(0 0 0);
-    --fill-surface-gradient-color: oklch(0 0 60);
+    --fill-half-surface-gradient-color: color(srgb 0 0 0);
+    --fill-surface-gradient-color: oklch(0.55 0 0);
     --fill-text-color: oklch(1 0 0);
     --button-label-color: oklch(0 0 0);
     --surface-color-layer-0: oklch(0.92 0 0);
@@ -95,13 +94,10 @@
     --title-color: oklch(0 0 0);
     --surface-shadow-color: oklch(0.25 0 0 / 0.15);
     --_control-default-background-color: oklch(0.5 0 0 / 0.15);
-    --_control-default-label-color: oklch(0 0 0);
-    --_control-fill-background-color: oklch(0 0 0);
-    --_control-fill-label-color: oklch(1 0 0);
     --_control-default-background-color-hover: oklch(0.625 0 0 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.25 0 0);
     --_control-default-background-color-active: oklch(0.5625 0 0 / 0.15);
-    --_control-fill-background-color-active: oklch(0.2 0 0);
+    --_control-fill-hover-fade: oklch(1 0 0 / 0.15);
+    --_control-fill-active-fade: oklch(1 0 0 / 0.1);
 }
 
 [data-color-scheme="dark"],
@@ -112,7 +108,8 @@
     --base-color: oklch(1 0 0);
     --accent-color: oklch(1 0 0);
     --fill-surface-color: oklch(1 0 0);
-    --fill-surface-gradient-color: oklch(1 0 60);
+    --fill-half-surface-gradient-color: color(srgb 0.999871 0.999903 1.00007);
+    --fill-surface-gradient-color: oklch(0.450007 0.0000640145 325.585);
     --fill-text-color: oklch(0 0 0);
     --button-label-color: oklch(1 0 0);
     --surface-color-layer-0: oklch(0 0 0);
@@ -126,15 +123,12 @@
     --title-color-layer-1: oklch(1 0 0);
     --title-color-layer-2: oklch(1 0 0);
     --title-color: oklch(1 0 0);
-    --surface-shadow-color: oklch(1 0 0 / 0.1);
-    --_control-default-background-color: oklch(0.75 0 0 / 0.15);
-    --_control-default-label-color: oklch(1 0 0);
-    --_control-fill-background-color: oklch(1 0 0);
-    --_control-fill-label-color: oklch(0 0 0);
-    --_control-default-background-color-hover: oklch(0.9375 0 0 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.875 0 0);
-    --_control-default-background-color-active: oklch(0.84375 0 0 / 0.15);
-    --_control-fill-background-color-active: oklch(0.925 0 0);
+    --surface-shadow-color: oklch(1 0 0 / 0.05);
+    --_control-default-background-color: oklch(0.375 0 0 / 0.37);
+    --_control-default-background-color-hover: oklch(0.46875 0 0 / 0.37);
+    --_control-default-background-color-active: oklch(0.421875 0 0 / 0.37);
+    --_control-fill-hover-fade: oklch(0 0 0 / 0.15);
+    --_control-fill-active-fade: oklch(0 0 0 / 0.1);
 }
 
 [data-color="red"],
@@ -145,7 +139,8 @@
     --base-color: oklch(0.629906 0.255466 25.1387);
     --accent-color: oklch(0.689953 0.319333 25.1387);
     --fill-surface-color: oklch(0.689953 0.319333 25.1387);
-    --fill-surface-gradient-color: oklch(0.689953 0.319333 85.1387);
+    --fill-half-surface-gradient-color: color(srgb 1.18666 0.520301 -0.262172);
+    --fill-surface-gradient-color: oklch(0.802761 0.238985 52.7661);
     --fill-text-color: oklch(1 0 25.1387);
     --button-label-color: oklch(0.517465 0.319333 25.1387);
     --surface-color-layer-0: oklch(0.92 0.01916 25.1387);
@@ -161,13 +156,10 @@
     --title-color: oklch(0.405466 0.255466 25.1387);
     --surface-shadow-color: oklch(0.25 0.255466 25.1387 / 0.15);
     --_control-default-background-color: oklch(0.5 0.255466 25.1387 / 0.15);
-    --_control-default-label-color: oklch(0.517465 0.319333 25.1387);
-    --_control-fill-background-color: oklch(0.689953 0.319333 25.1387);
-    --_control-fill-label-color: oklch(1 0 25.1387);
     --_control-default-background-color-hover: oklch(0.625 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.603709 0.319333 25.1387);
     --_control-default-background-color-active: oklch(0.5625 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color-active: oklch(0.638206 0.319333 25.1387);
+    --_control-fill-hover-fade: oklch(1 0 25.1387 / 0.15);
+    --_control-fill-active-fade: oklch(1 0 25.1387 / 0.1);
 }
 
 [data-color="red"][data-color-scheme="dark"],
@@ -175,11 +167,12 @@
 [data-color-scheme="dark"][data-color="red"],
 [data-color-scheme="dark"] [data-color="red"] {
     --base-color: oklch(0.629906 0.255466 25.1387);
-    --accent-color: oklch(0.629906 0.255466 25.1387);
-    --fill-surface-color: oklch(0.629906 0.255466 25.1387);
-    --fill-surface-gradient-color: oklch(0.629906 0.255466 85.1387);
+    --accent-color: oklch(0.708644 0.319333 25.1387);
+    --fill-surface-color: oklch(0.708644 0.319333 25.1387);
+    --fill-half-surface-gradient-color: color(srgb 1.21589 0.512696 -0.24121);
+    --fill-surface-gradient-color: oklch(0.811455 0.243918 50.0521);
     --fill-text-color: oklch(1 0 25.1387);
-    --button-label-color: oklch(0.629906 0.255466 25.1387);
+    --button-label-color: oklch(0.708644 0.319333 25.1387);
     --surface-color-layer-0: oklch(0 0.0255466 25.1387);
     --surface-color-layer-1: oklch(0.19 0.0255466 25.1387);
     --surface-color-layer-2: oklch(0.23 0.0255466 25.1387);
@@ -191,15 +184,12 @@
     --title-color-layer-1: oklch(1 0.200541 25.1387);
     --title-color-layer-2: oklch(1 0.196709 25.1387);
     --title-color: oklch(1 0.204373 25.1387);
-    --surface-shadow-color: oklch(1 0.1916 25.1387 / 0.1);
-    --_control-default-background-color: oklch(0.75 0.255466 25.1387 / 0.15);
-    --_control-default-label-color: oklch(0.629906 0.255466 25.1387);
-    --_control-fill-background-color: oklch(0.629906 0.255466 25.1387);
-    --_control-fill-label-color: oklch(1 0 25.1387);
-    --_control-default-background-color-hover: oklch(0.9375 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.551168 0.255466 25.1387);
-    --_control-default-background-color-active: oklch(0.84375 0.255466 25.1387 / 0.15);
-    --_control-fill-background-color-active: oklch(0.582663 0.255466 25.1387);
+    --surface-shadow-color: oklch(1 0.1916 25.1387 / 0.05);
+    --_control-default-background-color: oklch(0.375 0.159667 25.1387 / 0.37);
+    --_control-default-background-color-hover: oklch(0.46875 0.159667 25.1387 / 0.37);
+    --_control-default-background-color-active: oklch(0.421875 0.159667 25.1387 / 0.37);
+    --_control-fill-hover-fade: oklch(1 0 25.1387 / 0.15);
+    --_control-fill-active-fade: oklch(1 0 25.1387 / 0.1);
 }
 
 [data-color="yellow"],
@@ -210,7 +200,8 @@
     --base-color: oklch(0.881838 0.180852 94.227);
     --accent-color: oklch(0.815919 0.226065 94.227);
     --fill-surface-color: oklch(0.815919 0.226065 94.227);
-    --fill-surface-gradient-color: oklch(0.815919 0.226065 154.227);
+    --fill-half-surface-gradient-color: color(srgb 0.16905 0.951731 -0.378644);
+    --fill-surface-gradient-color: oklch(0.832495 0.330948 137.216);
     --fill-text-color: oklch(0 0 94.227);
     --button-label-color: oklch(0.611939 0.226065 94.227);
     --surface-color-layer-0: oklch(0.92 0.0135639 94.227);
@@ -226,13 +217,10 @@
     --title-color: oklch(0.330852 0.180852 94.227);
     --surface-shadow-color: oklch(0.25 0.180852 94.227 / 0.15);
     --_control-default-background-color: oklch(0.5 0.180852 94.227 / 0.15);
-    --_control-default-label-color: oklch(0.611939 0.226065 94.227);
-    --_control-fill-background-color: oklch(0.815919 0.226065 94.227);
-    --_control-fill-label-color: oklch(0 0 94.227);
     --_control-default-background-color-hover: oklch(0.625 0.180852 94.227 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.713929 0.226065 94.227);
     --_control-default-background-color-active: oklch(0.5625 0.180852 94.227 / 0.15);
-    --_control-fill-background-color-active: oklch(0.754725 0.226065 94.227);
+    --_control-fill-hover-fade: oklch(0 0 94.227 / 0.15);
+    --_control-fill-active-fade: oklch(0 0 94.227 / 0.1);
 }
 
 [data-color="yellow"][data-color-scheme="dark"],
@@ -240,11 +228,12 @@
 [data-color-scheme="dark"][data-color="yellow"],
 [data-color-scheme="dark"] [data-color="yellow"] {
     --base-color: oklch(0.881838 0.180852 94.227);
-    --accent-color: oklch(0.881838 0.180852 94.227);
-    --fill-surface-color: oklch(0.881838 0.180852 94.227);
-    --fill-surface-gradient-color: oklch(0.881838 0.180852 154.227);
+    --accent-color: oklch(0.992068 0.226065 94.227);
+    --fill-surface-color: oklch(0.992068 0.226065 94.227);
+    --fill-half-surface-gradient-color: color(srgb 0.28926 1.18732 -0.301084);
+    --fill-surface-gradient-color: oklch(0.991236 0.348383 139.402);
     --fill-text-color: oklch(0 0 94.227);
-    --button-label-color: oklch(0.881838 0.180852 94.227);
+    --button-label-color: oklch(0.992068 0.226065 94.227);
     --surface-color-layer-0: oklch(0 0.0180852 94.227);
     --surface-color-layer-1: oklch(0.19 0.0180852 94.227);
     --surface-color-layer-2: oklch(0.23 0.0180852 94.227);
@@ -256,15 +245,12 @@
     --title-color-layer-1: oklch(1 0.141969 94.227);
     --title-color-layer-2: oklch(1 0.139256 94.227);
     --title-color: oklch(1 0.144682 94.227);
-    --surface-shadow-color: oklch(1 0.135639 94.227 / 0.1);
-    --_control-default-background-color: oklch(0.75 0.180852 94.227 / 0.15);
-    --_control-default-label-color: oklch(0.881838 0.180852 94.227);
-    --_control-fill-background-color: oklch(0.881838 0.180852 94.227);
-    --_control-fill-label-color: oklch(0 0 94.227);
-    --_control-default-background-color-hover: oklch(0.9375 0.180852 94.227 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.771608 0.180852 94.227);
-    --_control-default-background-color-active: oklch(0.84375 0.180852 94.227 / 0.15);
-    --_control-fill-background-color-active: oklch(0.8157 0.180852 94.227);
+    --surface-shadow-color: oklch(1 0.135639 94.227 / 0.05);
+    --_control-default-background-color: oklch(0.375 0.113033 94.227 / 0.37);
+    --_control-default-background-color-hover: oklch(0.46875 0.113033 94.227 / 0.37);
+    --_control-default-background-color-active: oklch(0.421875 0.113033 94.227 / 0.37);
+    --_control-fill-hover-fade: oklch(0 0 94.227 / 0.15);
+    --_control-fill-active-fade: oklch(0 0 94.227 / 0.1);
 }
 
 [data-color="green"],
@@ -272,64 +258,60 @@
 [data-color="green"] [data-color-scheme="light"],
 [data-color-scheme="light"][data-color="green"],
 [data-color-scheme="light"] [data-color="green"] {
-    --base-color: oklch(0.737424 0.211406 148.36);
-    --accent-color: oklch(0.743712 0.264257 148.36);
-    --fill-surface-color: oklch(0.743712 0.264257 148.36);
-    --fill-surface-gradient-color: oklch(0.743712 0.264257 208.36);
-    --fill-text-color: oklch(0 0 148.36);
-    --button-label-color: oklch(0.557784 0.264257 148.36);
-    --surface-color-layer-0: oklch(0.92 0.0158554 148.36);
-    --surface-color-layer-1: oklch(0.975 0.0105703 148.36);
-    --surface-color-layer-2: oklch(1 0.00528514 148.36);
-    --text-color-layer-0: oklch(0.361406 0.211406 148.36);
-    --text-color-layer-1: oklch(0.386406 0.211406 148.36);
-    --text-color-layer-2: oklch(0.411406 0.211406 148.36);
-    --text-color: oklch(0.361406 0.211406 148.36);
-    --title-color-layer-0: oklch(0.361406 0.211406 148.36);
-    --title-color-layer-1: oklch(0.411406 0.211406 148.36);
-    --title-color-layer-2: oklch(0.461406 0.211406 148.36);
-    --title-color: oklch(0.361406 0.211406 148.36);
-    --surface-shadow-color: oklch(0.25 0.211406 148.36 / 0.15);
-    --_control-default-background-color: oklch(0.5 0.211406 148.36 / 0.15);
-    --_control-default-label-color: oklch(0.557784 0.264257 148.36);
-    --_control-fill-background-color: oklch(0.743712 0.264257 148.36);
-    --_control-fill-label-color: oklch(0 0 148.36);
-    --_control-default-background-color-hover: oklch(0.625 0.211406 148.36 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.650748 0.264257 148.36);
-    --_control-default-background-color-active: oklch(0.5625 0.211406 148.36 / 0.15);
-    --_control-fill-background-color-active: oklch(0.687934 0.264257 148.36);
+    --base-color: oklch(0.872238 0.251555 148.126);
+    --accent-color: oklch(0.811119 0.314443 148.126);
+    --fill-surface-color: oklch(0.811119 0.314443 148.126);
+    --fill-half-surface-gradient-color: color(srgb -0.446639 0.780125 0.948784);
+    --fill-surface-gradient-color: oklch(0.741791 0.190325 213.009);
+    --fill-text-color: oklch(0 0 148.126);
+    --button-label-color: oklch(0.608339 0.314443 148.126);
+    --surface-color-layer-0: oklch(0.92 0.0188666 148.126);
+    --surface-color-layer-1: oklch(0.975 0.0125777 148.126);
+    --surface-color-layer-2: oklch(1 0.00628887 148.126);
+    --text-color-layer-0: oklch(0.401555 0.251555 148.126);
+    --text-color-layer-1: oklch(0.426555 0.251555 148.126);
+    --text-color-layer-2: oklch(0.451555 0.251555 148.126);
+    --text-color: oklch(0.401555 0.251555 148.126);
+    --title-color-layer-0: oklch(0.401555 0.251555 148.126);
+    --title-color-layer-1: oklch(0.451555 0.251555 148.126);
+    --title-color-layer-2: oklch(0.501555 0.251555 148.126);
+    --title-color: oklch(0.401555 0.251555 148.126);
+    --surface-shadow-color: oklch(0.25 0.251555 148.126 / 0.15);
+    --_control-default-background-color: oklch(0.5 0.251555 148.126 / 0.15);
+    --_control-default-background-color-hover: oklch(0.625 0.251555 148.126 / 0.15);
+    --_control-default-background-color-active: oklch(0.5625 0.251555 148.126 / 0.15);
+    --_control-fill-hover-fade: oklch(0 0 148.126 / 0.15);
+    --_control-fill-active-fade: oklch(0 0 148.126 / 0.1);
 }
 
 [data-color="green"][data-color-scheme="dark"],
 [data-color="green"] [data-color-scheme="dark"],
 [data-color-scheme="dark"][data-color="green"],
 [data-color-scheme="dark"] [data-color="green"] {
-    --base-color: oklch(0.737424 0.211406 148.36);
-    --accent-color: oklch(0.737424 0.211406 148.36);
-    --fill-surface-color: oklch(0.737424 0.211406 148.36);
-    --fill-surface-gradient-color: oklch(0.737424 0.211406 208.36);
-    --fill-text-color: oklch(0 0 148.36);
-    --button-label-color: oklch(0.737424 0.211406 148.36);
-    --surface-color-layer-0: oklch(0 0.0211406 148.36);
-    --surface-color-layer-1: oklch(0.19 0.0211406 148.36);
-    --surface-color-layer-2: oklch(0.23 0.0211406 148.36);
-    --text-color-layer-0: oklch(0.8 0.0792771 148.36);
-    --text-color-layer-1: oklch(0.8375 0.0792771 148.36);
-    --text-color-layer-2: oklch(0.875 0.0792771 148.36);
-    --text-color: oklch(0.8 0.0792771 148.36);
-    --title-color-layer-0: oklch(1 0.169125 148.36);
-    --title-color-layer-1: oklch(1 0.165953 148.36);
-    --title-color-layer-2: oklch(1 0.162782 148.36);
-    --title-color: oklch(1 0.169125 148.36);
-    --surface-shadow-color: oklch(1 0.158554 148.36 / 0.1);
-    --_control-default-background-color: oklch(0.75 0.211406 148.36 / 0.15);
-    --_control-default-label-color: oklch(0.737424 0.211406 148.36);
-    --_control-fill-background-color: oklch(0.737424 0.211406 148.36);
-    --_control-fill-label-color: oklch(0 0 148.36);
-    --_control-default-background-color-hover: oklch(0.9375 0.211406 148.36 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.645246 0.211406 148.36);
-    --_control-default-background-color-active: oklch(0.84375 0.211406 148.36 / 0.15);
-    --_control-fill-background-color-active: oklch(0.682117 0.211406 148.36);
+    --base-color: oklch(0.872238 0.251555 148.126);
+    --accent-color: oklch(0.981268 0.314443 148.126);
+    --fill-surface-color: oklch(0.981268 0.314443 148.126);
+    --fill-half-surface-gradient-color: color(srgb -0.344907 0.811819 1.18452);
+    --fill-surface-gradient-color: oklch(0.801931 0.206895 234.653);
+    --fill-text-color: oklch(0 0 148.126);
+    --button-label-color: oklch(0.981268 0.314443 148.126);
+    --surface-color-layer-0: oklch(0 0.0251555 148.126);
+    --surface-color-layer-1: oklch(0.19 0.0251555 148.126);
+    --surface-color-layer-2: oklch(0.23 0.0251555 148.126);
+    --text-color-layer-0: oklch(0.8 0.0943331 148.126);
+    --text-color-layer-1: oklch(0.8375 0.0943331 148.126);
+    --text-color-layer-2: oklch(0.875 0.0943331 148.126);
+    --text-color: oklch(0.8 0.0943331 148.126);
+    --title-color-layer-0: oklch(1 0.201244 148.126);
+    --title-color-layer-1: oklch(1 0.197471 148.126);
+    --title-color-layer-2: oklch(1 0.193697 148.126);
+    --title-color: oklch(1 0.201244 148.126);
+    --surface-shadow-color: oklch(1 0.188666 148.126 / 0.05);
+    --_control-default-background-color: oklch(0.375 0.157222 148.126 / 0.37);
+    --_control-default-background-color-hover: oklch(0.46875 0.157222 148.126 / 0.37);
+    --_control-default-background-color-active: oklch(0.421875 0.157222 148.126 / 0.37);
+    --_control-fill-hover-fade: oklch(0 0 148.126 / 0.15);
+    --_control-fill-active-fade: oklch(0 0 148.126 / 0.1);
 }
 
 [data-color="blue"],
@@ -340,7 +322,8 @@
     --base-color: oklch(0.571491 0.235919 260.222);
     --accent-color: oklch(0.660746 0.294899 260.222);
     --fill-surface-color: oklch(0.660746 0.294899 260.222);
-    --fill-surface-gradient-color: oklch(0.660746 0.294899 320.222);
+    --fill-half-surface-gradient-color: color(srgb 0.304332 -0.118289 1.26029);
+    --fill-surface-gradient-color: oklch(0.552805 0.366215 272.864);
     --fill-text-color: oklch(1 0 260.222);
     --button-label-color: oklch(0.495559 0.294899 260.222);
     --surface-color-layer-0: oklch(0.92 0.017694 260.222);
@@ -356,13 +339,10 @@
     --title-color: oklch(0.385919 0.235919 260.222);
     --surface-shadow-color: oklch(0.25 0.235919 260.222 / 0.15);
     --_control-default-background-color: oklch(0.5 0.235919 260.222 / 0.15);
-    --_control-default-label-color: oklch(0.495559 0.294899 260.222);
-    --_control-fill-background-color: oklch(0.660746 0.294899 260.222);
-    --_control-fill-label-color: oklch(1 0 260.222);
     --_control-default-background-color-hover: oklch(0.625 0.235919 260.222 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.578153 0.294899 260.222);
     --_control-default-background-color-active: oklch(0.5625 0.235919 260.222 / 0.15);
-    --_control-fill-background-color-active: oklch(0.61119 0.294899 260.222);
+    --_control-fill-hover-fade: oklch(1 0 260.222 / 0.15);
+    --_control-fill-active-fade: oklch(1 0 260.222 / 0.1);
 }
 
 [data-color="blue"][data-color-scheme="dark"],
@@ -370,11 +350,12 @@
 [data-color-scheme="dark"][data-color="blue"],
 [data-color-scheme="dark"] [data-color="blue"] {
     --base-color: oklch(0.571491 0.235919 260.222);
-    --accent-color: oklch(0.571491 0.235919 260.222);
-    --fill-surface-color: oklch(0.571491 0.235919 260.222);
-    --fill-surface-gradient-color: oklch(0.571491 0.235919 320.222);
+    --accent-color: oklch(0.642928 0.294899 260.222);
+    --fill-surface-color: oklch(0.642928 0.294899 260.222);
+    --fill-half-surface-gradient-color: color(srgb 0.290398 -0.134012 1.23412);
+    --fill-surface-gradient-color: oklch(0.540294 0.362676 272.542);
     --fill-text-color: oklch(1 0 260.222);
-    --button-label-color: oklch(0.571491 0.235919 260.222);
+    --button-label-color: oklch(0.642928 0.294899 260.222);
     --surface-color-layer-0: oklch(0 0.0235919 260.222);
     --surface-color-layer-1: oklch(0.19 0.0235919 260.222);
     --surface-color-layer-2: oklch(0.23 0.0235919 260.222);
@@ -386,15 +367,12 @@
     --title-color-layer-1: oklch(1 0.185197 260.222);
     --title-color-layer-2: oklch(1 0.181658 260.222);
     --title-color: oklch(1 0.188735 260.222);
-    --surface-shadow-color: oklch(1 0.17694 260.222 / 0.1);
-    --_control-default-background-color: oklch(0.75 0.235919 260.222 / 0.15);
-    --_control-default-label-color: oklch(0.571491 0.235919 260.222);
-    --_control-fill-background-color: oklch(0.571491 0.235919 260.222);
-    --_control-fill-label-color: oklch(1 0 260.222);
-    --_control-default-background-color-hover: oklch(0.9375 0.235919 260.222 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.500055 0.235919 260.222);
-    --_control-default-background-color-active: oklch(0.84375 0.235919 260.222 / 0.15);
-    --_control-fill-background-color-active: oklch(0.52863 0.235919 260.222);
+    --surface-shadow-color: oklch(1 0.17694 260.222 / 0.05);
+    --_control-default-background-color: oklch(0.375 0.14745 260.222 / 0.37);
+    --_control-default-background-color-hover: oklch(0.46875 0.14745 260.222 / 0.37);
+    --_control-default-background-color-active: oklch(0.421875 0.14745 260.222 / 0.37);
+    --_control-fill-hover-fade: oklch(1 0 260.222 / 0.15);
+    --_control-fill-active-fade: oklch(1 0 260.222 / 0.1);
 }
 
 [data-color="purple"],
@@ -405,7 +383,8 @@
     --base-color: oklch(0.63936 0.309169 318.549);
     --accent-color: oklch(0.69468 0.386461 318.549);
     --fill-surface-color: oklch(0.69468 0.386461 318.549);
-    --fill-surface-gradient-color: oklch(0.69468 0.386461 18.549);
+    --fill-half-surface-gradient-color: color(srgb 1.18725 -0.277473 0.303862);
+    --fill-surface-gradient-color: oklch(0.692004 0.321657 16.9523);
     --fill-text-color: oklch(1 0 318.549);
     --button-label-color: oklch(0.52101 0.386461 318.549);
     --surface-color-layer-0: oklch(0.92 0.0231876 318.549);
@@ -421,13 +400,10 @@
     --title-color: oklch(0.459169 0.309169 318.549);
     --surface-shadow-color: oklch(0.25 0.309169 318.549 / 0.15);
     --_control-default-background-color: oklch(0.5 0.309169 318.549 / 0.15);
-    --_control-default-label-color: oklch(0.52101 0.386461 318.549);
-    --_control-fill-background-color: oklch(0.69468 0.386461 318.549);
-    --_control-fill-label-color: oklch(1 0 318.549);
     --_control-default-background-color-hover: oklch(0.625 0.309169 318.549 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.607845 0.386461 318.549);
     --_control-default-background-color-active: oklch(0.5625 0.309169 318.549 / 0.15);
-    --_control-fill-background-color-active: oklch(0.642579 0.386461 318.549);
+    --_control-fill-hover-fade: oklch(1 0 318.549 / 0.15);
+    --_control-fill-active-fade: oklch(1 0 318.549 / 0.1);
 }
 
 [data-color="purple"][data-color-scheme="dark"],
@@ -435,11 +411,12 @@
 [data-color-scheme="dark"][data-color="purple"],
 [data-color-scheme="dark"] [data-color="purple"] {
     --base-color: oklch(0.63936 0.309169 318.549);
-    --accent-color: oklch(0.63936 0.309169 318.549);
-    --fill-surface-color: oklch(0.63936 0.309169 318.549);
-    --fill-surface-gradient-color: oklch(0.63936 0.309169 18.549);
+    --accent-color: oklch(0.71928 0.386461 318.549);
+    --fill-surface-color: oklch(0.71928 0.386461 318.549);
+    --fill-half-surface-gradient-color: color(srgb 1.22285 -0.250114 0.334509);
+    --fill-surface-gradient-color: oklch(0.715729 0.320647 16.8988);
     --fill-text-color: oklch(1 0 318.549);
-    --button-label-color: oklch(0.63936 0.309169 318.549);
+    --button-label-color: oklch(0.71928 0.386461 318.549);
     --surface-color-layer-0: oklch(0 0.0309169 318.549);
     --surface-color-layer-1: oklch(0.19 0.0309169 318.549);
     --surface-color-layer-2: oklch(0.23 0.0309169 318.549);
@@ -451,15 +428,12 @@
     --title-color-layer-1: oklch(1 0.242697 318.549);
     --title-color-layer-2: oklch(1 0.23806 318.549);
     --title-color: oklch(1 0.247335 318.549);
-    --surface-shadow-color: oklch(1 0.231876 318.549 / 0.1);
-    --_control-default-background-color: oklch(0.75 0.309169 318.549 / 0.15);
-    --_control-default-label-color: oklch(0.63936 0.309169 318.549);
-    --_control-fill-background-color: oklch(0.63936 0.309169 318.549);
-    --_control-fill-label-color: oklch(1 0 318.549);
-    --_control-default-background-color-hover: oklch(0.9375 0.309169 318.549 / 0.15);
-    --_control-fill-background-color-hover: oklch(0.55944 0.309169 318.549);
-    --_control-default-background-color-active: oklch(0.84375 0.309169 318.549 / 0.15);
-    --_control-fill-background-color-active: oklch(0.591408 0.309169 318.549);
+    --surface-shadow-color: oklch(1 0.231876 318.549 / 0.05);
+    --_control-default-background-color: oklch(0.375 0.19323 318.549 / 0.37);
+    --_control-default-background-color-hover: oklch(0.46875 0.19323 318.549 / 0.37);
+    --_control-default-background-color-active: oklch(0.421875 0.19323 318.549 / 0.37);
+    --_control-fill-hover-fade: oklch(1 0 318.549 / 0.15);
+    --_control-fill-active-fade: oklch(1 0 318.549 / 0.1);
 }
 
 
@@ -470,10 +444,11 @@
         --default-color: hsl(0 0% 50%);
         --red-color: hsl(350 100% 50%);
         --yellow-color: hsl(50 100% 50%);
-        --green-color: hsl(145 100% 40%);
+        --green-color: hsl(145 100% 50%);
         --blue-color: hsl(215 100% 50%);
         --purple-color: hsl(290 100% 50%);
     }
+    
 
    
 
@@ -558,7 +533,7 @@
 :root {
 
 
-    --gap-l: 1.6lh;
+    --gap-l: 1.5lh;
     --gap-m: calc(var(--gap-l) * .5);
     --gap-s: calc(var(--gap-m) * .5);
 
@@ -582,9 +557,103 @@
         --border-radius-s: 1.25lh;
     }
 }
-:root {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+* {
+    text-box-trim: trim-both;
+    text-box-edge: text text;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-title);
+    color: var(--title-color);
+    margin-block-start: var(--gap-l);
+}
+
+p {
+    color: var(--text-color);
+}
+
+:is(h1, h2, h3, h4, h5, h6):first-child {
+    margin-block-start: 0;
+}
+
+
+h1 {
+    font-size: 3em;
+    line-height: 1;
+    letter-spacing: -.005em;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 1.125;
+    letter-spacing: -.0025em;
+}
+
+h3 {
+    font-size: 1.125em;
+    line-height: 1.25;
+}
+
+ul,
+ol {
+    display: grid;
+    gap: var(--gap-m);
+    padding-inline-start: var(--padding-m);
+}
+
+li {
+    padding-inline-start: .5em;
+}
+
+li::marker {
+    color: var(--title-color);
+    font-weight: bolder;
+}
+
+strong {
+    color: var(--accent-color);
+}
+
+:is(h1, h2, h3, h4, h5, h6) strong {
+    font-weight: inherit;
+}
+
+.text-gradient {
+            color: transparent;
+            background-image: linear-gradient(in oklch to right, var(--fill-surface-color), var(--fill-surface-gradient-color));
+            background-clip: text;
+}
+
+.text-highlighted {
+    background-color: var(--fill-surface-color);
+    color: var(--fill-text-color);
 
 }
+.text-highlighted-gradient {
+    background-image: linear-gradient(in oklch to right, var(--fill-surface-color), var(--fill-surface-gradient-color));
+    color: var(--fill-text-color);
+}
+
+
+.text-highlighted, .text-highlighted-gradient {
+    font-weight: var(--font-weight-highlighted);
+}
+
+
 @layer control, control_type;
 
 @layer control {
@@ -607,7 +676,7 @@
         height: var(--_height);
         min-width: var(--_height);
         gap: var(--_padding);
-        font-size: .95rem;
+        font-size: .9rem;
         cursor: pointer;
         position: relative;
         display: inline-flex;
@@ -619,7 +688,9 @@
         background-color: var(--_background-color);
         color: var(--_label-color);
         isolation: isolate;
+        vertical-align: middle;
     }
+
 
 
     /*   ============= STATES ============ */
@@ -634,7 +705,11 @@
         }
 
         .control_variant_fill:is(:hover, :focus-visible) {
-            background-color: var(--_control-fill-background-color-hover);
+            background-color: var(--fill-surface-color);
+            background-image: linear-gradient(to left, var(--_control-fill-hover-fade), var(--_control-fill-hover-fade));
+        }
+        .control_variant_gradient:is(:hover, :focus-visible) {
+            background-image: linear-gradient(to left, var(--_control-fill-hover-fade), var(--_control-fill-hover-fade)), linear-gradient(in oklch to right, var(--fill-surface-color), var(--fill-surface-gradient-color));
         }
     }
 
@@ -643,11 +718,15 @@
     }
 
     .control_variant_fill:active {
-        background-color: var(--_control-fill-background-color-active);
+        background-color: var(--fill-surface-color);
+        background-image: linear-gradient(to left, var(--_control-fill-active-fade), var(--_control-fill-active-fade));
+    }
+    .control_variant_gradient:active {
+        background-image: linear-gradient(to left, var(--_control-fill-active-fade), var(--_control-fill-active-fade)), linear-gradient(in oklch to right, var(--fill-surface-color), var(--fill-surface-gradient-color));
     }
 
     .control:not(:hover):not(:active):not(:focus):not(:has(:focus)) {
-        transition: background-color .2s ease;
+        transition: background-color .2s ease, background-color .2s ease;
     }
 
     .control:disabled:not(.control_loading) {
@@ -717,8 +796,6 @@
         pointer-events: none;
     }
 
-    
-
     .control::placeholder {
         color: currentColor;
         opacity: 0.35;
@@ -732,17 +809,24 @@
     .control_variant_outline,
     .control_variant_ghost {
         background-color: var(--_control-default-background-color);
-        color: var(--_control-default-label-color);
+        color: var(--button-label-color);
     }
+
+
 
     .control_variant_fill {
-        background-color: var(--_control-fill-background-color);
-    }
-
-    .control_variant_fill .control__text {
-        color: var(--_control-fill-label-color);
+        background-color: var(--fill-surface-color);
+        color: var(--fill-text-color);
+        box-shadow: none;
     }
     
+    
+    .control_variant_gradient {
+        background-image: linear-gradient(in oklch to right, var(--fill-surface-color), var(--fill-surface-gradient-color));
+        box-shadow: none;
+        color: var(--fill-text-color);
+    }
+
 
     .control_variant_outline {
         box-shadow: inset 0 0 0 var(--border-width) currentColor;
@@ -760,6 +844,21 @@
         corner-shape: round;
         border-radius: 100vmax;
     }
+
+
+
+    .control_type_contents {
+        height: unset;
+        padding: var(--gap-m);
+        display: unset;
+        font-family: unset;
+    }
+
+}
+
+.control_variant_fill *,
+.control_variant_gradient * {
+    color: var(--fill-text-color);
 }
 .main {
     width: min(90vw, 60ch);
@@ -776,11 +875,10 @@
 .html {
     font-family: System-ui;
     background-color: var(--surface-color);
-    line-height: 1.6;
+    line-height: 1.725;
     font-size: clamp(1rem,.98vw,1.125rem);
     font-weight: var(--font-weight-text);
 
-    -webkit-text-stroke: min(.0375em, 1.5px) oklch(from currentcolor l c h / calc(100% * round(.9 - l)));
 }
 
 .body {
@@ -820,15 +918,21 @@
 
 .surface_variant_fill {
     background-color: var(--fill-surface-color);
-    /* background-image: linear-gradient(in oklch to right, var(--fill-surface-color), var(--fill-surface-gradient-color)); */
+    box-shadow: none;
+}
+.surface_variant_gradient {
+    background-image: linear-gradient(in oklch to right, var(--fill-surface-color), var(--fill-surface-gradient-color));
     box-shadow: none;
 }
 .surface_variant_outline {
     background-color: transparent;
     box-shadow: 0 0 0 var(--border-width);
 }
+
 .surface_variant_fill,
-.surface_variant_fill * {
+.surface_variant_fill *,
+.surface_variant_gradient,
+.surface_variant_gradient * {
     color: var(--fill-text-color);
 }
 
@@ -843,7 +947,7 @@
 @layer control_type {
     .control_type_checkbox {
         --_height: var(--control-size-s);
-        aspect-ratio: 1;
+        width: var(--_height);
         padding: 0;
     }
 
@@ -914,7 +1018,7 @@
     .control_type_radio {
         appearance: none;
         --_height: var(--control-size-s);
-        aspect-ratio: 1;
+        width: var(--_height);
         padding: 0;
         border-radius: var(--_height);
         corner-shape: round;
